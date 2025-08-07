@@ -45,12 +45,9 @@ const responsive = {
 };
 
 const CustomArrow = ({ direction, onClick }) => {
-  const Icon = direction === 'left' ? FaChevronLeft : FaChevronRight;
+  const Icon = direction === "left" ? FaChevronLeft : FaChevronRight;
   return (
-    <div 
-      className={`custom-arrow custom-${direction}`}
-      onClick={onClick}
-    >
+    <div className={`custom-arrow custom-${direction}`} onClick={onClick}>
       <Icon size={20} />
     </div>
   );
@@ -58,7 +55,13 @@ const CustomArrow = ({ direction, onClick }) => {
 
 const LatestBlogs = () => {
   return (
-    <section style={{ backgroundColor: "#f9f9f9", padding: "60px 0", position: "relative" }}>
+    <section
+      style={{
+        backgroundColor: "#f9f9f9",
+        padding: "60px 0",
+        position: "relative",
+      }}
+    >
       <Container>
         <Row className="justify-content-between align-items-center mb-4">
           <Col xs="auto">
@@ -71,7 +74,7 @@ const LatestBlogs = () => {
           </Col>
         </Row>
 
-        <div style={{ position: "relative" }}>
+        <div className="carousel-wrapper">
           <Carousel
             responsive={responsive}
             infinite={true}
@@ -82,6 +85,7 @@ const LatestBlogs = () => {
             customRightArrow={<CustomArrow direction="right" />}
             containerClass="custom-carousel-container"
             itemClass="carousel-item-padding-40-px"
+            centerMode={false}
           >
             {blogs.map((blog, index) => (
               <div key={index} className="carousel-item-wrapper">
@@ -90,6 +94,8 @@ const LatestBlogs = () => {
                   style={{
                     borderRadius: "14px",
                     minHeight: "480px",
+                    width: "100%",
+                    maxWidth: "380px",
                   }}
                 >
                   <div
@@ -114,11 +120,21 @@ const LatestBlogs = () => {
 
                   <Card.Body className="d-flex flex-column justify-content-between">
                     <div>
-                      <Card.Title className="fw-semibold mb-2" style={{ fontSize: "1rem" }}>
-                        {blog.title.length > 60 ? blog.title.slice(0, 60) + "..." : blog.title}
+                      <Card.Title
+                        className="fw-semibold mb-2"
+                        style={{ fontSize: "1rem" }}
+                      >
+                        {blog.title.length > 60
+                          ? blog.title.slice(0, 60) + "..."
+                          : blog.title}
                       </Card.Title>
-                      <Card.Text className="text-muted" style={{ fontSize: "0.9rem" }}>
-                        {blog.desc.length > 100 ? blog.desc.slice(0, 100) + "..." : blog.desc}
+                      <Card.Text
+                        className="text-muted"
+                        style={{ fontSize: "0.9rem" }}
+                      >
+                        {blog.desc.length > 100
+                          ? blog.desc.slice(0, 100) + "..."
+                          : blog.desc}
                       </Card.Text>
                       <small className="text-muted">{blog.date}</small>
                     </div>
@@ -138,16 +154,22 @@ const LatestBlogs = () => {
       </Container>
 
       <style jsx>{`
+        .carousel-wrapper {
+          display: flex;
+          justify-content: center;
+        }
+
         .carousel-item-wrapper {
           padding: 0 12px;
-          height: 100%;
+          display: flex;
+          justify-content: center;
         }
-        
+
         .custom-carousel-container {
           padding: 0 30px;
           position: relative;
         }
-        
+
         .custom-arrow {
           position: absolute;
           top: 50%;
@@ -160,38 +182,42 @@ const LatestBlogs = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
           cursor: pointer;
           color: #d60000;
           border: none;
           transition: all 0.3s ease;
         }
-        
+
         .custom-arrow:hover {
           background: #d60000;
           color: white;
         }
-        
+
         .custom-left {
           left: 0;
         }
-        
+
         .custom-right {
           right: 0;
         }
-        
+
         .carousel-item-padding-40-px {
           padding: 0 12px;
         }
-        
+
         @media (max-width: 768px) {
           .custom-arrow {
             width: 30px;
             height: 30px;
           }
-          
+
           .custom-carousel-container {
-            padding: 0 20px;
+            padding: 0 15px;
+          }
+
+          .carousel-item-wrapper {
+            padding: 0 6px;
           }
         }
       `}</style>

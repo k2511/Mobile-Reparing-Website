@@ -16,96 +16,84 @@ const FAQ = () => {
 
       <Accordion flush alwaysOpen>
         <Accordion.Item eventKey="0">
-          <Accordion.Header>1. What kind of mobile repair services does Ongofix.com offer?</Accordion.Header>
-          <Accordion.Body>
+          <Accordion.Header style={{fontWeight:"700"}}>1. What kind of mobile repair services does Ongofix.com offer?</Accordion.Header>
+          <Accordion.Body style={{color:"rgb(128 111 115)", fontSize:"0.85rem"}}>
             Ongofix provides a wide range of mobile repair services including screen replacement, battery replacement, charging port fixes, and more.
           </Accordion.Body>
         </Accordion.Item>
 
-        <Accordion.Item eventKey="1">
-          <Accordion.Header>2. How long does it take to repair a smartphone?</Accordion.Header>
-          <Accordion.Body>
+        <Accordion.Item eventKey="1" >
+          <Accordion.Header style={{fontWeight:"700"}}>2. How long does it take to repair a smartphone?</Accordion.Header>
+          <Accordion.Body style={{color:"rgb(128 111 115)", fontSize:"0.85rem"}}>
             Most smartphone repairs are completed within 1–2 hours depending on the issue and availability of parts.
           </Accordion.Body>
         </Accordion.Item>
 
-        <Accordion.Item eventKey="2">
-          <Accordion.Header>3. Does Ongofix provide warranty on mobile repair services?</Accordion.Header>
-          <Accordion.Body>
+        <Accordion.Item eventKey="2" >
+          <Accordion.Header style={{fontWeight:"700"}}>3. Does Ongofix provide warranty on mobile repair services?</Accordion.Header>
+          <Accordion.Body style={{color:"rgb(128 111 115)", fontSize:"0.85rem"}}>
             Yes, Ongofix provides a warranty on selected repairs and parts. Terms and conditions apply.
           </Accordion.Body>
         </Accordion.Item>
 
-        <Accordion.Item eventKey="3">
-          <Accordion.Header>4. What is the cost of mobile repair online?</Accordion.Header>
-          <Accordion.Body>
+        <Accordion.Item eventKey="3" >
+          <Accordion.Header style={{fontWeight:"700"}}>4. What is the cost of mobile repair online?</Accordion.Header>
+          <Accordion.Body style={{color:"rgb(128 111 115)", fontSize:"0.85rem"}}>
             The cost varies based on the brand and issue. You can get an estimate online or by contacting support.
           </Accordion.Body>
         </Accordion.Item>
 
-        <Accordion.Item eventKey="4">
-          <Accordion.Header>5. Where can I get my mobile repair online?</Accordion.Header>
-          <Accordion.Body>
+        <Accordion.Item eventKey="4" >
+          <Accordion.Header style={{fontWeight:"700"}}>5. Where can I get my mobile repair online?</Accordion.Header>
+          <Accordion.Body style={{color:"rgb(128 111 115)", fontSize:"0.85rem"}}>
             You can schedule a doorstep pickup or visit a nearby Ongofix center through our website.
           </Accordion.Body>
         </Accordion.Item>
 
-        <Accordion.Item eventKey="5">
-          <Accordion.Header>6. Is online mobile repair service safe and secure?</Accordion.Header>
-          <Accordion.Body>
+        <Accordion.Item eventKey="5" >
+          <Accordion.Header style={{fontWeight:"700"}}>6. Is online mobile repair service safe and secure?</Accordion.Header>
+          <Accordion.Body style={{color:"rgb(128 111 115)", fontSize:"0.85rem"}}>
             Absolutely. We use encrypted systems, genuine parts, and certified technicians to ensure secure and quality repairs.
           </Accordion.Body>
         </Accordion.Item>
       </Accordion>
 
- {/* Why Choose Us Section */}
-      <Row className="mt-5">
-        <Col>
-          <h4>Why Choose Ongofix for Mobile Repair?</h4>
-          Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using genuine parts and innovative solutions. Be it a broken screen, display, back glass replacement, battery, charging port, earpiece issue, or anything else, we fix everything. Choose us for reliable, efficient, and customer-centric mobile repair services, prioritizing your satisfaction. Trust us to fix everything, from phone screen/display replacement to faulty charging ports, battery replacement, broken screens, earpiece issues, and more for your smartphones and tablets fixed at home.
-        </Col>
-        
-      </Row>
+<Row className="mt-5">
+  <Col>
+    <h4 className="fw-bold">Why Choose Ongofix for Mobile Repair?</h4>
+    <p className="text-muted" style={{ fontSize: "1rem" }}>
+      Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using genuine parts and innovative solutions. Be it a broken screen, display, back glass replacement, battery, charging port, earpiece issue, or anything else, we fix everything. Choose us for reliable, efficient, and customer-centric mobile repair services, prioritizing your satisfaction. Trust us to fix everything, from phone screen/display replacement to faulty charging ports, battery replacement, broken screens, earpiece issues, and more for your smartphones and tablets fixed at home.
+    </p>
+  </Col>
+</Row>
 
-       <Row className="mt-3">
-        <Col>
-          <h4 style={{fontWeight:"bold"}}>How Does Ongofix Work?</h4>
-          <p style={{fontWeight:"lighter"}}>Ongofix simplifies mobile repair. Schedule a service online, and our skilled technicians come to your location. Enjoy hassle-free diagnostics, transparent pricing, and swift repairs, ensuring your device's seamless performance.</p>
-        </Col>
-        
-      </Row>
+<Row className="mt-4">
+  <Col>
+    <h4 className="fw-bold">How Does Ongofix Work?</h4>
+    <p className="text-muted" style={{ fontSize: "1rem" }}>
+      Ongofix simplifies mobile repair. Schedule a service online, and our skilled technicians come to your location. Enjoy hassle-free diagnostics, transparent pricing, and swift repairs, ensuring your device's seamless performance.
+    </p>
+  </Col>
+</Row>
 
+<Row className="mt-4">
+  <Col>
+    <h4 className="fw-bold">Mobile Screen Repair</h4>
+    <p className="text-muted" style={{ fontSize: "1rem" }}>
+      Revitalize your device with Ongofix's premier mobile screen repair service. Our experts deliver precise, efficient, and affordable solutions, restoring your screen to its optimal condition. Trust us for quality repairs that exceed expectations.
+    </p>
+  </Col>
+</Row>
 
-       <Row className="mt-3">
-        <Col>
-          <h4>Mobile Screen Repair</h4>
-          <p>
-            Revitalize your device with Ongofix's premier mobile screen repair service. Our experts deliver precise, efficient, and affordable solutions, restoring your screen to its optimal condition. Trust us for quality repairs that exceed expectations.
-          </p>
-          
-        </Col>
-        
-      </Row>
+<Row className="mt-4">
+  <Col>
 
-
-       <Row className="mt-3">
-        <Col>
-          <h4>Mobile Battery Repair</h4>
-          <p>
-           Experience Ongofix's expertise in mobile battery repair. We employ cutting-edge techniques to diagnose and fix battery issues swiftly. Count on us for reliable solutions that extend your device's battery life, ensuring uninterrupted performance.
-          </p>
-        </Col>      
-      </Row>
-        
-       <Row className="mt-3">
-        <Col>
-          <h4>Why Choose Ongofix for Mobile Repair?</h4>
-          <p>
-         Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using genuine parts and innovative solutions. Be it a broken screen, display, back glass replacement, battery, charging port, earpiece issue, or anything else, we fix everything. Choose us for reliable, efficient, and customer-centric mobile repair services, prioritizing your satisfaction. Trust us to fix everything, from phone screen/display replacement to faulty charging ports, battery replacement, broken screens, earpiece issues, and more for your smartphones and tablets fixed at home.
-          </p>
-        </Col>
-        
-      </Row>
+    <h4 className="fw-bold">Mobile Battery Repair</h4>
+    <p className="text-muted" style={{ fontSize: "1rem" }}>
+      Experience Ongofix's expertise in mobile battery repair. We employ cutting-edge techniques to diagnose and fix battery issues swiftly. Count on us for reliable solutions that extend your device's battery life, ensuring uninterrupted performance.
+    </p>
+  </Col>
+</Row>
     </Container>
 
     

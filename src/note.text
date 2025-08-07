@@ -91,3 +91,105 @@ const FeedBack = () => {
 };
 
 export default FeedBack;
+
+
+
+
+///
+.feedback-container {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1050;
+}
+
+/* Enquiry Button */
+.enquiry-button {
+  background-color: rgb(255, 0, 0);
+  color: white;
+  border: none;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  box-shadow: -5px 10px 6px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  font-weight: 600;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1050;
+}
+
+.enquiry-text {
+  line-height: 1;
+  font-size: 14px;
+}
+
+/* Feedback Form Container */
+.feedback-form-container {
+  position: fixed;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+  width: 390px;
+  display: none;
+  z-index: 1040;
+}
+
+.feedback-form-container.open {
+  display: block;
+}
+
+/* Card */
+.feedback-card {
+  position: relative;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  background: white;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .feedback-form-container {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transform: none;
+    padding: 1rem;
+    background: white;
+    display: none;
+    overflow-y: auto;
+  }
+
+  .feedback-form-container.open {
+    display: block;
+  }
+
+  .feedback-card {
+    border-radius: 0;
+    height: 100%;
+    max-height: none;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  .enquiry-button {
+    top: unset;
+    bottom: 60px;
+    right: 10px;
+    transform: none;
+    border-radius: 10px;
+    padding: 6px 10px;
+    box-shadow: -2px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .enquiry-text li {
+    font-size: 12px;
+  }
+}

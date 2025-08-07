@@ -16,9 +16,10 @@ import FeedBack from "./components/FeedBack";
 import Scrollar from "./hooks/Scrollar";
 import ValueProps from "./components/valueProps";
 import LatestBlogs from "./components/LatestBlogs";
-import FAQ from "./components/FAQ";
+
 import LatestStories from "./components/LatestStories";
 import ContactButtons from "./components/ContactButtons";
+import FAQ from "./components/FAQ";
 
 const App = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -52,7 +53,7 @@ const App = () => {
       <ValueProps />
       <LatestBlogs />
       <LatestStories />
-      <FAQ />
+      <FAQ/>
       <Footer />
       {showPopup && <Scrollar onClose={() => setShowPopup(false)} />}
       <FeedBack />

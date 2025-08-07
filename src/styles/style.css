@@ -86,7 +86,7 @@ body {
 }
 
 /*-------------------------------- Services Section ----------------------*/
-.services-section {
+/* .services-section {
   padding: 4rem 0;
   background: #f8fafc;
 }
@@ -100,11 +100,11 @@ body {
 
 .service-card {
   background: white;
-  /* border-radius: 12px; */
   padding: 2rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: unset !important;
 }
 
 .service-card:hover {
@@ -113,12 +113,20 @@ body {
 }
 
  .service-card img {
-  width: 85%;
+  /* width: 85%;
  
-  object-fit: cover;
+  object-fit: cover; */
 
-} 
 
+
+
+@media (max-width: 768px) {
+    .service-item {
+        width: 150px;
+        height: 146px;
+        padding: 12px;
+    }
+}
 
 
 
@@ -131,10 +139,52 @@ body {
 .service-card p {
   color: #64748b;
   margin-bottom: 1.5rem;
+} */
+
+
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding: 1rem;
+  background: #f5f5f5;
 }
 
+.square-card {
+  width: 160px;
+  aspect-ratio: 1 / 1; /* Makes it a perfect square */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+}
 
+.image-wrapper {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.card-title {
+  margin-top: 0.5rem;
+  font-size: 14px;
+  font-weight: 500;
+}
 
 
 
@@ -849,4 +899,22 @@ span {
 
 
 /*----------------- Customer Stories------------------------*/
+
+
+/*---------------- Equiry form -----------------*/
+@media (max-width: 768px) {
+    .feedback-form-container {
+        width: 100vw;
+        height: 100vh;
+        top: -320px !important;
+        right: 0;
+        transform: none;
+        padding: 1rem;
+        background: white;
+        display: none;
+        overflow-y: auto;
+    }
+}
+
+
 
