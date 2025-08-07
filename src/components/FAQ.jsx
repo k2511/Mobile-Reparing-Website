@@ -62,27 +62,15 @@ const FAQ = () => {
       <Row className="mt-5">
         <Col>
           <h4>Why Choose Ongofix for Mobile Repair?</h4>
-          <p>
-            Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs using genuine parts and state-of-the-art tools. Whether it's a screen replacement, battery issue, or software troubleshooting, we prioritize quality, speed, and transparency. Enjoy doorstep service, quick turnaround, and reliable support every step of the way.
-          </p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
+          Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using genuine parts and innovative solutions. Be it a broken screen, display, back glass replacement, battery, charging port, earpiece issue, or anything else, we fix everything. Choose us for reliable, efficient, and customer-centric mobile repair services, prioritizing your satisfaction. Trust us to fix everything, from phone screen/display replacement to faulty charging ports, battery replacement, broken screens, earpiece issues, and more for your smartphones and tablets fixed at home.
         </Col>
         
       </Row>
 
        <Row className="mt-3">
         <Col>
-          <h4>Why Choose Ongofix for Mobile Repair?</h4>
-          <p>
-            Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs using genuine parts and state-of-the-art tools. Whether it's a screen replacement, battery issue, or software troubleshooting, we prioritize quality, speed, and transparency. Enjoy doorstep service, quick turnaround, and reliable support every step of the way.
-          </p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
+          <h4>How Does Ongofix Work?</h4>
+          <p>Ongofix simplifies mobile repair. Schedule a service online, and our skilled technicians come to your location. Enjoy hassle-free diagnostics, transparent pricing, and swift repairs, ensuring your device's seamless performance.</p>
         </Col>
         
       </Row>
@@ -90,14 +78,11 @@ const FAQ = () => {
 
        <Row className="mt-3">
         <Col>
-          <h4>Why Choose Ongofix for Mobile Repair?</h4>
+          <h4>Mobile Screen Repair</h4>
           <p>
-            Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs using genuine parts and state-of-the-art tools. Whether it's a screen replacement, battery issue, or software troubleshooting, we prioritize quality, speed, and transparency. Enjoy doorstep service, quick turnaround, and reliable support every step of the way.
+            Revitalize your device with Ongofix's premier mobile screen repair service. Our experts deliver precise, efficient, and affordable solutions, restoring your screen to its optimal condition. Trust us for quality repairs that exceed expectations.
           </p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
+          
         </Col>
         
       </Row>
@@ -105,29 +90,19 @@ const FAQ = () => {
 
        <Row className="mt-3">
         <Col>
-          <h4>Why Choose Ongofix for Mobile Repair?</h4>
+          <h4>Mobile Battery Repair</h4>
           <p>
-            Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs using genuine parts and state-of-the-art tools. Whether it's a screen replacement, battery issue, or software troubleshooting, we prioritize quality, speed, and transparency. Enjoy doorstep service, quick turnaround, and reliable support every step of the way.
+           Experience Ongofix's expertise in mobile battery repair. We employ cutting-edge techniques to diagnose and fix battery issues swiftly. Count on us for reliable solutions that extend your device's battery life, ensuring uninterrupted performance.
           </p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-        </Col>
-        
+        </Col>      
       </Row>
-
-
+        
        <Row className="mt-3">
         <Col>
           <h4>Why Choose Ongofix for Mobile Repair?</h4>
           <p>
-            Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs using genuine parts and state-of-the-art tools. Whether it's a screen replacement, battery issue, or software troubleshooting, we prioritize quality, speed, and transparency. Enjoy doorstep service, quick turnaround, and reliable support every step of the way.
+         Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using genuine parts and innovative solutions. Be it a broken screen, display, back glass replacement, battery, charging port, earpiece issue, or anything else, we fix everything. Choose us for reliable, efficient, and customer-centric mobile repair services, prioritizing your satisfaction. Trust us to fix everything, from phone screen/display replacement to faulty charging ports, battery replacement, broken screens, earpiece issues, and more for your smartphones and tablets fixed at home.
           </p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
-          <p>Discover unparalleled expertise at Ongofix, your trusted Mobile Repair Service in Mumbai. Our certified technicians ensure top-notch repairs, using</p>
         </Col>
         
       </Row>
