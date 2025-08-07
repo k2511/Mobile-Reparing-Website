@@ -1,8 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-
-import Mi from "../assets/image/mi.png";
 import Samsung from "../assets/image/samsung.png";
+import Mi from "../assets/image/mi.png";
 import Vivo from "../assets/image/vivo.png";
 import OnePlus from "../assets/image/oneplus.png";
 import Oppo from "../assets/image/oppo.png";
@@ -19,9 +18,8 @@ import Asus from "../assets/image/asus.png";
 import Huawei from "../assets/image/huawei.png";
 
 const brands = [
-  { name: "Apple", image: "https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" },
-  { name: "Mi", image: Mi },
   { name: "Samsung", image: Samsung },
+  { name: "Mi", image: Mi },
   { name: "Vivo", image: Vivo },
   { name: "OnePlus", image: OnePlus },
   { name: "Oppo", image: Oppo },

@@ -69,8 +69,8 @@ const FAQ = () => {
 
        <Row className="mt-3">
         <Col>
-          <h4>How Does Ongofix Work?</h4>
-          <p>Ongofix simplifies mobile repair. Schedule a service online, and our skilled technicians come to your location. Enjoy hassle-free diagnostics, transparent pricing, and swift repairs, ensuring your device's seamless performance.</p>
+          <h4 style={{fontWeight:"bold"}}>How Does Ongofix Work?</h4>
+          <p style={{fontWeight:"lighter"}}>Ongofix simplifies mobile repair. Schedule a service online, and our skilled technicians come to your location. Enjoy hassle-free diagnostics, transparent pricing, and swift repairs, ensuring your device's seamless performance.</p>
         </Col>
         
       </Row>

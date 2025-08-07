@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
 import "./styles/style.css";
@@ -18,6 +18,7 @@ import ValueProps from "./components/valueProps";
 import LatestBlogs from "./components/LatestBlogs";
 import FAQ from "./components/FAQ";
 import LatestStories from "./components/LatestStories";
+import ContactButtons from "./components/ContactButtons";
 
 const App = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -46,15 +47,17 @@ const App = () => {
       <Brand />
       <ProcessSteps />
       <VideoEmbed />
-      <WhyUs/>
+      <WhyUs />
       <Services />
-      <ValueProps/>
-      <LatestBlogs/>
-      <LatestStories/>
-       <FAQ/>
+      <ValueProps />
+      <LatestBlogs />
+      <LatestStories />
+      <FAQ />
       <Footer />
       {showPopup && <Scrollar onClose={() => setShowPopup(false)} />}
-      <FeedBack/>
+      <FeedBack />
+      <ContactButtons />
+      
     </div>
   );
 };
