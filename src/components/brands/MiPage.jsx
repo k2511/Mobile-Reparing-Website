@@ -420,7 +420,7 @@ const MiPage = () => {
     { name: "Redmi Note 8", image: mi4 },
     { name: "Redmi Note 7/7 Pro", image: mi5 },
     { name: "Redmi Note 6 Pro", image: mi7 },
-    { name: "Redmi Note 5 Pro", image: mi1 }, // Use mi1 as placeholder
+    { name: "Redmi Note 5 Pro", image: mi1 }, 
     { name: "Redmi Note 5", image: mi9 },
     { name: "Redmi Note 4", image: mi10 },
     { name: "Mi Note 3", image: mi11 },
