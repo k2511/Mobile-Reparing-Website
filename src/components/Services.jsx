@@ -13,7 +13,6 @@ const ServicesAvailable = () => {
     { name: "Battery", image: batteryImg },
     { name: "Mic", image: micImg },
     { name: "Receiver", image: receiverImg },
-    // { name: "Charging", image: chargingImg },
     { name: "Speaker", image: speakerImg },
     { name: "Back Glass", image: backGlassImg },
   ];
@@ -102,14 +101,14 @@ const ServicesAvailable = () => {
           }
 
           .service-item {
-            width: 120px;
-            height: 140px;
+            // width: 120px;
+            // height: 140px;
             padding: 12px;
           }
 
           .service-image {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 55px;
           }
 
           .service-title {

@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { Routes, Route, Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import Slider from "./components/Slider";
 import "./styles/style.css";
@@ -8,44 +9,48 @@ import Footer from "./components/Footer";
 import TopBar from "./components/TopBar";
 import ProcessSteps from "./components/ProcessSteps";
 import Services from "./components/Services";
-import Brand from "./components/Brand";
 import Doorstep from "./components/Doorstep";
 import VideoEmbed from "./components/VideoEmbed";
 import WhyUs from "./components/WhyUs";
 import FeedBack from "./components/FeedBack";
-import Scrollar from "./hooks/Scrollar";
 import ValueProps from "./components/valueProps";
 import LatestBlogs from "./components/LatestBlogs";
-
 import LatestStories from "./components/LatestStories";
 import ContactButtons from "./components/ContactButtons";
 import FAQ from "./components/FAQ";
+import Brand from "./components/Brand";
+import LaptopRepairPage from "./components/pages/LaptopRepairPage";
+import CctvRepairPage from "./components/pages/CctvRepairPage";
+import TabletRepairPage from "./components/pages/TabletRepairPage";
+import SamsungModels from "./components/brands/SamsungPage";
+import AsusPage from "./components/brands/AsusPage";
+import NothingPage from "./components/brands/NothingPage";
+import VivoPage from "./components/brands/VivoPage";
+import OppoPage from "./components/brands/OppoPage";
+import RealmePage from "./components/brands/RealmePage";
+import GooglePage from "./components/brands/GooglePage";
+import MiPage from "./components/brands/MiPage";
 
-const App = () => {
-  const [showPopup, setShowPopup] = useState(false);
-  const [hasScrolled, setHasScrolled] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!hasScrolled) {
-        setHasScrolled(true);
-        setTimeout(() => {
-          setShowPopup(true);
-        }, 2000); // 2 seconds delay after scroll
-      }
-    };
+// Layout component to wrap pages with common elements
+const MainLayout = () => (
+  <div>
+    <TopBar />
+    <Header />
+    <Outlet /> {/* Renders child routes */}
+    <Footer />
+    <ContactButtons />
+  </div>
+);
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [hasScrolled]);
-
+const HomePage = () => {
   return (
     <div>
-      <TopBar />
-      <Header />
       <Slider />
       <Doorstep />
-      <Brand />
+      <div id="brand-section">
+        <Brand />
+      </div>
       <ProcessSteps />
       <VideoEmbed />
       <WhyUs />
@@ -53,13 +58,39 @@ const App = () => {
       <ValueProps />
       <LatestBlogs />
       <LatestStories />
-      <FAQ/>
-      <Footer />
-      {showPopup && <Scrollar onClose={() => setShowPopup(false)} />}
+      <FAQ />
       <FeedBack />
-      <ContactButtons />
-      
     </div>
+  );
+};
+
+const App = () => {
+  return (
+    <Routes>
+      <Route element={<MainLayout />}>
+        {/* Home page route */}
+        <Route path="/" element={<HomePage />} />
+
+        {/* Specific repair pages */}
+        <Route path="/macbook-repair" element={<LaptopRepairPage />} />
+        <Route path="/cctv-repair" element={<CctvRepairPage />} />
+        <Route path="/tablet-repair" element={<TabletRepairPage />} />
+
+        {/* Specific brand pages */}
+        <Route path="/brand/samsung" element={<SamsungModels />} />
+        <Route path="/brand/asus" element={<AsusPage />} />
+        <Route path="/brand/nothing" element={<NothingPage />} />
+        <Route path="/brand/vivo" element={<VivoPage />} />
+        <Route path="/brand/oppo" element={<OppoPage/>}/>
+        <Route path="/brand/realme" element={<RealmePage/>}/>
+        <Route path="/brand/google" element={<GooglePage/>} />
+        <Route path="brand/mi" element={<MiPage/>}/>
+       
+
+        {/* Dynamic route for all other brands. This should be placed last to avoid conflicts with the specific routes. */}
+        <Route path="/brand/:brandName" element={<LaptopRepairPage />} />
+      </Route>
+    </Routes>
   );
 };
 

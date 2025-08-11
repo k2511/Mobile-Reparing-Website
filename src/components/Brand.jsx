@@ -1,5 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+
 import Samsung from "../assets/image/samsung.png";
 import Mi from "../assets/image/mi.png";
 import Vivo from "../assets/image/vivo.png";
@@ -7,10 +9,10 @@ import OnePlus from "../assets/image/oneplus.png";
 import Oppo from "../assets/image/oppo.png";
 import Google from "../assets/image/google.png";
 import Realme from "../assets/image/realme.png";
-import Motorola from "../assets/image/motorala.png"; 
+import Motorola from "../assets/image/motorala.png";
 import iQOO from "../assets/image/iqoo.png";
 import Poco from "../assets/image/poco.png";
-import Tecno from "../assets/image/techno.png";         
+import Tecno from "../assets/image/techno.png";
 import Nothing from "../assets/image/nothing.png";
 import Nokia from "../assets/image/nokia.png";
 import Honor from "../assets/image/honor.png";
@@ -36,10 +38,18 @@ const brands = [
   { name: "Huawei", image: Huawei },
 ];
 
-const BrandSelector = () => {
+const Brand = () => {
+  const navigate = useNavigate();
+
+  const handleBrandClick = (brandName) => {
+    navigate(`/brand/${brandName.toLowerCase()}`);
+  };
+
   return (
     <Container className="my-5 text-center">
-      <h3 className="mb-2" style={{fontSize:"25px", fontWeight:"700"}}>CHOOSE YOUR BRANDS</h3>
+      <h3 className="mb-2" style={{ fontSize: "25px", fontWeight: "700" }}>
+        CHOOSE YOUR BRANDS
+      </h3>
       <div className="brand-underline mx-auto mb-4"></div>
 
       <style>{`
@@ -55,43 +65,38 @@ const BrandSelector = () => {
           border: 2px solid transparent;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
           margin: auto;
+          cursor: pointer;
         }
-
         .brand-card:hover {
-          border-color: #e60000; /* red border */
+          border-color: #e60000;
           box-shadow: 0 6px 20px rgba(230, 0, 0, 0.1);
         }
-
         .brand-logo {
           max-height: 60px;
           max-width: 80%;
           object-fit: contain;
         }
-
         .brand-underline {
           width: 200px;
           height: 2px;
           background-color: #e60000;
         }
-
-
       `}</style>
 
       <Row xs={3} sm={4} md={5} lg={6} className="g-4">
         {brands.map((brand, idx) => (
           <Col key={idx} className="d-flex justify-content-center">
-            <div className="brand-card">
+            <div
+              className="brand-card"
+              onClick={() => handleBrandClick(brand.name)}
+            >
               <img src={brand.image} alt={brand.name} className="brand-logo" />
             </div>
           </Col>
         ))}
       </Row>
-
-      <Row>
-        <img src="" alt="" />
-      </Row>
     </Container>
   );
 };
 
-export default BrandSelector;
+export default Brand;

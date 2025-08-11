@@ -86,38 +86,14 @@ body {
 }
 
 /*-------------------------------- Services Section ----------------------*/
-/* .services-section {
-  padding: 4rem 0;
-  background: #f8fafc;
+
+
+
+@media (max-width: 768px) {
+    .service-card {
+        margin-bottom: 1.5 rem;
+    }
 }
-
-.services-section h2 {
-  color: #1e293b;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.service-card {
-  background: white;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-radius: unset !important;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
- .service-card img {
-  /* width: 85%;
- 
-  object-fit: cover; */
-
-
 
 
 @media (max-width: 768px) {
@@ -154,7 +130,7 @@ body {
 
 .square-card {
   width: 160px;
-  aspect-ratio: 1 / 1; /* Makes it a perfect square */
+  aspect-ratio: 1 / 1;
   background: white;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
@@ -623,11 +599,11 @@ span {
 }
 
 /*----------------------------FAQ-----------------------------------*/
-.accordion-button:not(.collapsed) {
+/* .accordion-button:not(.collapsed) {
     color: unset !important; 
      background-color: unset !important; 
     box-shadow:unset !important; 
-}
+} */
 
 
 /*---------------------- Slider -------------------------------*/

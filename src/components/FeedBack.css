@@ -62,7 +62,47 @@
     height: 100vh;
     top:0;
     right: 0;
-    /* transform: none; */
+    transform: none;
+    padding: 1rem;
+    background: white;
+    display: none;
+    overflow-y: auto;
+  }
+
+  .feedback-form-container.open {
+    display: block;
+  }
+
+  .feedback-card {
+    border-radius: 0;
+    height: 100%;
+    max-height: none;
+    padding: 1rem;
+    overflow-y: auto;
+  }
+
+  .enquiry-button {
+    top: unset;
+    bottom: 60px;
+    right: 10px;
+    transform: none;
+    border-radius: 10px;
+    padding: 6px 10px;
+    box-shadow: -2px 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .enquiry-text li {
+    font-size: 12px;
+  }
+}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .feedback-form-container {
+    width: 100vw;
+    height: 100vh;
+    top:0;
+    right: 0;
+    transform: none;
     padding: 1rem;
     background: white;
     display: none;

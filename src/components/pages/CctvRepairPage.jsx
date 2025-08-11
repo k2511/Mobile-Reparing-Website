@@ -1,0 +1,147 @@
+import React, { useState } from "react";
+
+const CctvRepairPage = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const cctvModels = [
+    { name: "Hikvision DS-2CD2143G0", year: "(2023)" },
+    { name: "Dahua N52A", year: "(2022)" },
+    { name: "CP Plus CP-UNC-TA21PL3", year: "(2023)" },
+    { name: "Bosch NBN-73023BA", year: "(2021)" },
+    { name: "Panasonic WV-S2131L", year: "(2022)" },
+    { name: "Samsung SND-L6083R", year: "(2020)" },
+    { name: "Sony SNC-VB770", year: "(2022)" },
+    { name: "Axis P5635-E", year: "(2023)" },
+  ];
+
+  const filteredModels = cctvModels.filter(
+    (model) =>
+      model.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      model.year.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const handleModelClick = (model) => {
+    alert(`Selected ${model.name} ${model.year} for repair/replacement`);
+  };
+
+  return (
+    <div style={{ minHeight: "100vh", backgroundColor: "#f8f9fa" }}>
+      {/* Header */}
+      <div style={{ backgroundColor: "white", borderBottom: "1px solid #dee2e6", padding: "20px 0" }}>
+        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}>
+          <div style={{ marginBottom: "10px", color: "#6c757d", fontSize: "14px" }}>
+            Home / Repair / CCTV
+          </div>
+          <h1 style={{ fontSize: "32px", fontWeight: "bold", color: "#212529", margin: 0 }}>
+            CCTV Repair & Replacement
+          </h1>
+        </div>
+      </div>
+
+      {/* Content */}
+      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "40px 20px" }}>
+        {/* Search Box */}
+        <div style={{ textAlign: "center", marginBottom: "40px" }}>
+          <input
+            type="text"
+            placeholder="Search CCTV models..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            style={{
+              width: "300px",
+              padding: "12px 20px",
+              border: "1px solid #ced4da",
+              borderRadius: "25px",
+              fontSize: "16px",
+              outline: "none",
+            }}
+          />
+        </div>
+
+        {/* CCTV Models Grid */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+            gap: "20px",
+            marginBottom: "40px",
+          }}
+        >
+          {filteredModels.map((model, index) => (
+            <div
+              key={index}
+              onClick={() => handleModelClick(model)}
+              style={{
+                backgroundColor: "white",
+                border: "1px solid #dee2e6",
+                borderRadius: "10px",
+                padding: "20px",
+                textAlign: "center",
+                cursor: "pointer",
+                transition: "all 0.3s ease",
+                boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+              }}
+              onMouseOver={(e) => {
+                e.currentTarget.style.borderColor = "#007bff";
+                e.currentTarget.style.transform = "translateY(-2px)";
+              }}
+              onMouseOut={(e) => {
+                e.currentTarget.style.borderColor = "#dee2e6";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            >
+              <div
+                style={{
+                  width: "80px",
+                  height: "50px",
+                  backgroundColor: "#343a40",
+                  borderRadius: "5px",
+                  margin: "0 auto 15px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                <div
+                  style={{
+                    width: "60px",
+                    height: "35px",
+                    backgroundColor: "#495057",
+                    borderRadius: "3px",
+                  }}
+                ></div>
+              </div>
+              <h3 style={{ fontSize: "16px", fontWeight: "600", margin: "10px 0 5px" }}>
+                {model.name}
+              </h3>
+              <p style={{ fontSize: "14px", color: "#6c757d", margin: 0 }}>{model.year}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom Section */}
+        <div
+          style={{
+            backgroundColor: "white",
+            border: "1px solid #dee2e6",
+            borderRadius: "10px",
+            padding: "40px",
+            textAlign: "center",
+          }}
+        >
+          <h2 style={{ fontSize: "24px", fontWeight: "bold", marginBottom: "20px" }}>
+            CCTV REPAIR & REPLACEMENT
+          </h2>
+          <p style={{ color: "#6c757d", lineHeight: "1.6", maxWidth: "800px", margin: "0 auto" }}>
+            Our CCTV repair and replacement services cover all major brands and models, ensuring your security system stays operational at all times.
+          </p>
+          <h3 style={{ fontSize: "18px", fontWeight: "600", marginTop: "30px" }}>
+            WE CAN FIX YOUR CCTV
+          </h3>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default CctvRepairPage;
