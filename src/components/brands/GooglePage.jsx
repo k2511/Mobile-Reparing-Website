@@ -14,27 +14,27 @@ import google10 from "../../assets/google/google-10.png";
 import google11 from "../../assets/google/google-11.png";
 import google12 from "../../assets/google/google-12.png";
 import google13 from "../../assets/google/google-13.png";
-import google14 from "../../assets/google/google-14.png";
+
 
 
 const GooglePage = () => {
   const [searchQuery, setSearchQuery] = useState("");
 
   const googleModels = [
-    { name: "Google Pixel 8 Pro", image: google1 },
-    { name: "Google Pixel 8", image: google2 },
-    { name: "Google Pixel 7A", image: google3 },
-    { name: "Google Pixel 6 Pro", image: google4 },
-    { name: "Google Pixel 6", image: google5 },
-    { name: "Google Pixel 5A", image: google6 },
-    { name: "Google Pixel 5", image: google7 },
-    { name: "Google Pixel 4A 4G", image: google8 },
-    { name: "Google Pixel 7 Pro", image: google9 },
-    { name: "Google Pixel 7", image: google10 },
-    { name: "Google Pixel 6A", image: google11 },
-    { name: "Google Pixel 4A 5G", image: google12 },
-    { name: "Google Pixel 3A", image: google13 },
-    { name: "Google Pixel 3A XL", image: google14 },
+    { name: "Google Pixel 5", image: google1 },
+    { name: "Google Pixel  7", image: google2 },
+    { name: "Google Pixel 9 Pro", image: google3 },
+    { name: "Google Pixel 6A", image: google4 },
+    { name: "Google Pixel 9 Pro", image: google5 },
+    { name: "Google Pixel 3A", image: google6 },
+    { name: "Google Pixel 9 Pro XL", image: google7 },
+    { name: "Google Pixel 3", image: google8 },
+    { name: "Google Pixel 9", image: google9 },
+    { name: "Google Pixel 3/XL", image: google10 },
+    { name: "Google Pixel 8A", image: google11 },
+    { name: "Google Pixel 2 XL", image: google12 },
+    { name: "Google Pixel 8 Pro", image: google13 },
+
   ];
 
   const filteredModels = googleModels.filter((model) =>

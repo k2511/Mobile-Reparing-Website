@@ -30,6 +30,15 @@ import OppoPage from "./components/brands/OppoPage";
 import RealmePage from "./components/brands/RealmePage";
 import GooglePage from "./components/brands/GooglePage";
 import MiPage from "./components/brands/MiPage";
+import OnePlusPage from "./components/brands/OnePlusPage";
+import MotorolaPage from "./components/brands/MotorolaPage";
+import IqooPage from "./components/brands/IQOOPAGE";
+import PocoPage from "./components/brands/PocoPage";
+import TecnoPage from "./components/brands/TecnoPage";
+import NokiaPage from "./components/brands/NokiaPage";
+import HonorPage from "./components/brands/HonorPage";
+
+
 
 
 // Layout component to wrap pages with common elements
@@ -85,6 +94,15 @@ const App = () => {
         <Route path="/brand/realme" element={<RealmePage/>}/>
         <Route path="/brand/google" element={<GooglePage/>} />
         <Route path="brand/mi" element={<MiPage/>}/>
+        <Route path="brand/oneplus" element={<OnePlusPage/>}/>
+        <Route path="brand/motorola" element={<MotorolaPage/>}/>
+        <Route path="brand/iqoo" element={<IqooPage/>}/>
+        <Route path="brand/poco" element={<PocoPage/>}/>
+        <Route path="brand/tecno" element={<TecnoPage/>}/>
+        <Route path="brand/nokia" element={<NokiaPage/>}/>
+        <Route path="brand/honor" element={<HonorPage/>}/>
+  
+      
        
 
         {/* Dynamic route for all other brands. This should be placed last to avoid conflicts with the specific routes. */}
@@ -95,3 +113,5 @@ const App = () => {
 };
 
 export default App;
+
+

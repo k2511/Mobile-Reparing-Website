@@ -13,11 +13,11 @@ const NothingPage = () => {
   const nothingModels = [
     { id: 1, name: "CMF by Nothing Phone 2 Pro", image: nothing1 },
     { id: 2, name: "Nothing Phone 3a Pro", image: nothing2 },
-    { id: 3, name: "Nothing Phone 3a", image: nothing3 },
-    { id: 4, name: "CMF by Nothing Phone 1", image: nothing4 },
-    { id: 5, name: "Nothing Phone 2a Plus", image: nothing5 },
-    { id: 6, name: "Nothing Phone 2", image: nothing7 },
-    { id: 7, name: "Nothing Phone 1", image: nothing8 },
+    { id: 3, name: "Nothing Phone 2a 5G", image: nothing3 },
+    { id: 4, name: "Nothing Phone 1", image: nothing4 },
+    { id: 5, name: "Nothing 2a Plus", image: nothing5 },
+    { id: 6, name: "CMF by Nothing Phone 1", image: nothing7 },
+    { id: 7, name: "Nothing Phone 3a", image: nothing8 },
   ];
 
   const filteredModels = nothingModels.filter((model) =>
