@@ -23,6 +23,8 @@ import samsung17 from "../../assets/samsung/samsung (17).png";
 import samsung18 from "../../assets/samsung/samsung (18).png";
 import samsung19 from "../../assets/samsung/samsung (19).png";
 import samsung20 from "../../assets/samsung/samsung (20).png";
+
+
 import samsung21 from "../../assets/samsung/samsung (21).png";
 import samsung22 from "../../assets/samsung/samsung (22).png";
 import samsung23 from "../../assets/samsung/samsung (23).png";
@@ -53,6 +55,7 @@ import samsung47 from "../../assets/samsung/samsung (47).png";
 import samsung48 from "../../assets/samsung/samsung (48).png";
 import samsung49 from "../../assets/samsung/samsung (49).png";
 import samsung50 from "../../assets/samsung/samsung (50).png";
+
 import samsung51 from "../../assets/samsung/samsung (51).png";
 import samsung52 from "../../assets/samsung/samsung (52).png";
 import samsung53 from "../../assets/samsung/samsung (53).png";
