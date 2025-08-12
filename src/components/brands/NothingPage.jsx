@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Resposive.css';
 import { useNavigate } from "react-router-dom";
 import nothing1 from "../../assets/nothing/nothing-8.png"; // CMF by Nothing Phone 2 Pro
 import nothing2 from "../../assets/nothing/nothing-7.png"; // Nothing Phone 3a Pro
@@ -92,13 +93,13 @@ const NothingPage = () => {
         </div>
 
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+          // }}
         >
           {filteredModels.map((model) => (
             <div 

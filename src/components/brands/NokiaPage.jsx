@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Resposive.css';
 // Import Nokia phone images
 import nokia1 from "../../assets/nokia/nokia (1).png";
 import nokia2 from "../../assets/nokia/nokia (2).png";
@@ -120,13 +121,15 @@ const NokiaPage = () => {
           />
         </div>
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+
+          
+          // }}
         >
           {filteredModels.map((model, index) => (
             <div onClick={() => {

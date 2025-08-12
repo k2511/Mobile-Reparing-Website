@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Resposive.css';
 // Import Tecno phone images
 import tecno1 from "../../assets/techno/techno (1).png";
 import tecno2 from "../../assets/techno/techno (2).png";
@@ -116,13 +117,16 @@ const TecnoPage = () => {
           />
         </div>
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+
+
+           
+          // }}
         >
           {filteredModels.map((model, index) => (
             <div  onClick={() => {

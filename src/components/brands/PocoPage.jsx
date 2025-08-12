@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Resposive.css';
 // Import Poco phone images
 import poco1 from "../../assets/poco/poco (1).png";
 import poco2 from "../../assets/poco/poco (2).png";
@@ -138,13 +139,16 @@ const [searchQuery, setSearchQuery] = useState("");
           />
         </div>
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+
+
+             
+          // }}
         >
           {filteredModels.map((model, index) => (
             <div

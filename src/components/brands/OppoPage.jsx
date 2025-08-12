@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Resposive.css';
 import { useNavigate } from "react-router-dom";
 import oppo1 from "../../assets/oppo/oppo (1).png";
 import oppo2 from "../../assets/oppo/oppo (2).png";
@@ -193,13 +194,15 @@ const OppoPage = () => {
         </div>
 
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+
+
+          // }}
         >
           {filteredModels.map((model) => (
             <div 

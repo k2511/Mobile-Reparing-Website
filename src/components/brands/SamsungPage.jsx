@@ -1,7 +1,6 @@
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import './Resposive.css';
 // Import Samsung images in order
 import samsung1 from "../../assets/samsung/samsung (1).png";
 import samsung2 from "../../assets/samsung/samsung (2).png";
@@ -333,13 +332,16 @@ const SamsungPage = () => {
         </div>
 
         {/* Samsung Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div  className="main"
+          // style={{
+
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px", 
+          // }}
+          
+  
         >
           {filteredModels.map((model) => (
             <div
@@ -439,3 +441,15 @@ const SamsungPage = () => {
 };
 
 export default SamsungPage;
+
+
+
+
+
+
+
+
+
+
+
+

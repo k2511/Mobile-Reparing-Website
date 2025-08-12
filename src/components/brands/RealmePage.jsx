@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Resposive.css';
 import { useNavigate } from "react-router-dom";
 import realme1 from "../../assets/realme/realme (1).png";
 import realme2 from "../../assets/realme/realme (2).png";
@@ -293,13 +294,14 @@ const RealmePage = () => {
         </div>
 
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+
+          // }}
         >
           {filteredModels.map((model) => (
             <div     onClick={() => {

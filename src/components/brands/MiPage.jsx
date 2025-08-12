@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Resposive.css';
 // Import Xiaomi/Redmi phone images
 import mi1 from "../../assets/mi/mi-1.png";
 import mi2 from "../../assets/mi/mi-2.png";
@@ -174,13 +175,16 @@ const MiPage = () => {
         </div>
         
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+
+
+             
+          // }}
         >
           {filteredModels.map((model, index) => (
             <div 

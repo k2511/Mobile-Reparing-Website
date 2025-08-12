@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Resposive.css';
 // Import Honor phone images
 import honor1 from "../../assets/honor/honor (1).png";
 import honor2 from "../../assets/honor/honor (2).png";
@@ -112,13 +113,15 @@ const HonorPage = () => {
         </div>
         
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+
+            
+          // }}
         >
           {filteredModels.map((model, index) => (
             <div     onClick={() => {

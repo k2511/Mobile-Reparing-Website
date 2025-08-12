@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Resposive.css';
 // Import your Google phone images here
 import google1 from "../../assets/google/google-1.png";
 import google2 from "../../assets/google/google-2.png";
@@ -111,13 +112,16 @@ const GooglePage = () => {
         </div>
 
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+
+          //    gridTemplateColumns:
+          //  window.innerWidth >= 1024 ? "repeat(6, 1fr)" : "repeat(3, 1fr)",
+          // }}
         >
           {filteredModels.map((model, index) => (
             <div  onClick={() => {

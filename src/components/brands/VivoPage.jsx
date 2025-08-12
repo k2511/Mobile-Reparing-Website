@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import './Resposive.css';
 import vivo1 from "../../assets/vivo/vivo (1).png";
 import vivo2 from "../../assets/vivo/vivo (2).png";
 import vivo3 from "../../assets/vivo/vivo (3).png";
@@ -302,13 +302,16 @@ const VivoPage = () => {
         </div>
 
         {/* Vivo Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+
+
+          
+          // }}
         >
           {filteredModels.map((model) => (
             <div

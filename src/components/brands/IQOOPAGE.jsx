@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Resposive.css';
 // Import iQOO phone images
 import iqoo1 from "../../assets/iqoo/iqoo-1.png";
 import iqoo2 from "../../assets/iqoo/iqoo-2.png";
@@ -138,13 +139,14 @@ const IqooPage = () => {
           />
         </div>
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+
+          // }}
         >
           {filteredModels.map((model, index) => (
             <div  onClick={() => {

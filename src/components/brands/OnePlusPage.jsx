@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Resposive.css';
 // Import OnePlus phone images
 import onePlus1 from "../../assets/onePlus/onePlus (1).png";
 import onePlus2 from "../../assets/onePlus/onePlus (2).png";
@@ -144,13 +145,17 @@ const OnePlusPage = () => {
           />
         </div>
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+
+
+          //    gridTemplateColumns:
+          //  window.innerWidth >= 1024 ? "repeat(6, 1fr)" : "repeat(3, 1fr)",
+          // }}
         >
           {filteredModels.map((model, index) => (
             <div 

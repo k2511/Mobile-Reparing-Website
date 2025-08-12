@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import './Resposive.css';
 // Import Motorola phone images
 import motorola1 from "../../assets/motorola/motorola (1).png";
 import motorola2 from "../../assets/motorola/motorola (2).png";
@@ -168,13 +169,14 @@ const MotorolaPage = () => {
           />
         </div>
         {/* Models Grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-            gap: "20px",
-            marginBottom: "40px",
-          }}
+        <div className="main"
+          // style={{
+          //   display: "grid",
+          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+          //   gap: "20px",
+          //   marginBottom: "40px",
+          // }}
+
         >
           {filteredModels.map((model, index) => (
             <div  onClick={() => {
@@ -262,3 +264,6 @@ const MotorolaPage = () => {
 };
 
 export default MotorolaPage;
+
+
+
