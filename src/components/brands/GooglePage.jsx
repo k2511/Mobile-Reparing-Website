@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 // Import your Google phone images here
 import google1 from "../../assets/google/google-1.png";
 import google2 from "../../assets/google/google-2.png";
@@ -18,7 +18,8 @@ import google13 from "../../assets/google/google-13.png";
 
 
 const GooglePage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+ const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const googleModels = [
     { name: "Google Pixel 5", image: google1 },
@@ -119,7 +120,11 @@ const GooglePage = () => {
           }}
         >
           {filteredModels.map((model, index) => (
-            <div
+            <div  onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
               key={index}
               style={{
                 backgroundColor: "white",

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 // Import Honor phone images
 import honor1 from "../../assets/honor/honor (1).png";
 import honor2 from "../../assets/honor/honor (2).png";
@@ -18,7 +18,8 @@ import honor13 from "../../assets/honor/honor (13).png";
 import honor15 from "../../assets/honor/honor (15).png";
 
 const HonorPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+ const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const honorModels = [
     { name: "Honor 20", image: honor1 },
@@ -120,7 +121,11 @@ const HonorPage = () => {
           }}
         >
           {filteredModels.map((model, index) => (
-            <div
+            <div     onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
               key={index}
               style={{
                 backgroundColor: "white",

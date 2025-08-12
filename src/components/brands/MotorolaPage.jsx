@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 // Import Motorola phone images
 import motorola1 from "../../assets/motorola/motorola (1).png";
 import motorola2 from "../../assets/motorola/motorola (2).png";
@@ -47,7 +47,8 @@ import motorola43 from "../../assets/motorola/motorola (43).png";
 import motorola44 from "../../assets/motorola/motorola (44).png";
 
 const MotorolaPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+ const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const motorolaModels = [
     { name: "Motorola edge 60 Pro", image: motorola1 },
@@ -176,7 +177,11 @@ const MotorolaPage = () => {
           }}
         >
           {filteredModels.map((model, index) => (
-            <div
+            <div  onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
               key={index}
               style={{
                 backgroundColor: "white",

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 // Import Poco phone images
 import poco1 from "../../assets/poco/poco (1).png";
 import poco2 from "../../assets/poco/poco (2).png";
@@ -32,7 +32,8 @@ import poco27 from "../../assets/poco/poco(27).png";
 // import poco29 from "../../assets/poco/poco (29).png";
 
 const PocoPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const pocoModels = [
     { name: "Poco M4 Pro ", image: poco1 },
@@ -147,6 +148,11 @@ const PocoPage = () => {
         >
           {filteredModels.map((model, index) => (
             <div
+            onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
               key={index}
               style={{
                 backgroundColor: "white",

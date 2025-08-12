@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 // Import OnePlus phone images
 import onePlus1 from "../../assets/onePlus/onePlus (1).png";
 import onePlus2 from "../../assets/onePlus/onePlus (2).png";
@@ -35,7 +35,8 @@ import onePlus31 from "../../assets/onePlus/onePlus (31).png";
 import onePlus32 from "../../assets/onePlus/onePlus (32).png";
 
 const OnePlusPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+ const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const onePlusModels = [
     { name: "OnePlus 10 Pro 5G", image: onePlus1 },
@@ -152,7 +153,12 @@ const OnePlusPage = () => {
           }}
         >
           {filteredModels.map((model, index) => (
-            <div
+            <div 
+             onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
               key={index}
               style={{
                 backgroundColor: "white",

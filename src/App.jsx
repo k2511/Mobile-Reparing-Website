@@ -37,6 +37,7 @@ import PocoPage from "./components/brands/PocoPage";
 import TecnoPage from "./components/brands/TecnoPage";
 import NokiaPage from "./components/brands/NokiaPage";
 import HonorPage from "./components/brands/HonorPage";
+import BrandIssues from './components/pages/BrandIssues '
 
 
 
@@ -101,17 +102,19 @@ const App = () => {
         <Route path="brand/tecno" element={<TecnoPage/>}/>
         <Route path="brand/nokia" element={<NokiaPage/>}/>
         <Route path="brand/honor" element={<HonorPage/>}/>
-  
-      
-       
-
         {/* Dynamic route for all other brands. This should be placed last to avoid conflicts with the specific routes. */}
         <Route path="/brand/:brandName" element={<LaptopRepairPage />} />
+
+        {/* Brand issue */}
+        <Route path="/brand-issues/:mobile-name" element={<BrandIssues />} />
       </Route>
     </Routes>
   );
 };
 
 export default App;
+
+
+
 
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 // Import iQOO phone images
 import iqoo1 from "../../assets/iqoo/iqoo-1.png";
 import iqoo2 from "../../assets/iqoo/iqoo-2.png";
@@ -32,7 +32,8 @@ import iqoo28 from "../../assets/iqoo/iqoo-28.png";
 import iqoo29 from "../../assets/iqoo/iqoo-29.png";
 
 const IqooPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+ const [searchQuery, setSearchQuery] = useState("");
+   const navigate = useNavigate();
 
   const iqooModels = [
     { name: "iQOO 7 Legend 5G", image: iqoo1 },
@@ -146,7 +147,11 @@ const IqooPage = () => {
           }}
         >
           {filteredModels.map((model, index) => (
-            <div
+            <div  onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
               key={index}
               style={{
                 backgroundColor: "white",

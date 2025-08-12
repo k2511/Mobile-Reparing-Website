@@ -1,4 +1,6 @@
+
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Import Samsung images in order
 import samsung1 from "../../assets/samsung/samsung (1).png";
@@ -128,137 +130,138 @@ import samsung123 from "../../assets/samsung/samsung (46).webp";
 import samsung124 from "../../assets/samsung/samsung (47).webp";
 import samsung125 from "../../assets/samsung/samsung (48).webp";
 
-// List of models - only including models that have corresponding image files
-const samsungModels = [
-  { name: "Samsung S8", image: samsung1 },
-  { name: "Samsung Galaxy M52 5G", image: samsung2 },
-  { name: "Samsung Galaxy A22 5G", image: samsung3 },
-  { name: "Samsung Galaxy A31", image: samsung4 },
-  { name: "Samsung Galaxy M20", image: samsung5 },
-  { name: "Samsung Galaxy S20 Plus", image: samsung6 },
-  { name: "Samsung F12", image: samsung7 },
-  { name: "Samsung S10e", image: samsung8 },
-  { name: "Samsung Galaxy Z Fold3 5G", image: samsung9 },
-  { name: "Samsung Galaxy S10 Plus", image: samsung10 },
-  { name: "Samsung Galaxy S10", image: samsung11 },
-  { name: "Samsung Galaxy S9 Plus", image: samsung12 },
-  { name: "Samsung Galaxy S9", image: samsung13 },
-  { name: "Samsung Galaxy S8", image: samsung14 },
-  { name: "Samsung Galaxy Note 10", image: samsung15 },
-  { name: "Samsung Galaxy Note 10 lite", image: samsung16 },
-  { name: "Samsung Galaxy Note 9", image: samsung17 },
-  { name: "Samsung Galaxy Note 8", image: samsung18 },
-  { name: "Samsung M51 5G", image: samsung19 },
-  { name: "Samsung M40 5G", image: samsung20 },
-  { name: "Samsung M33 5G", image: samsung21 },
-  { name: "Samsung M32 5G", image: samsung22 },
-  { name: "Samsung M32", image: samsung23 },
-  { name: "Samsung M31", image: samsung24 },
-  { name: "Samsung M31s", image: samsung25 },
-  { name: "Samsung M30", image: samsung26 },
-  { name: "Samsung M20s", image: samsung27 },
-  { name: "Samsung M02", image: samsung28 },
-  { name: "Samsung M01 core", image: samsung29 },
-  { name: "Samsung M10", image: samsung30 },
-  { name: "Samsung M02s", image: samsung31 },
-  { name: "Samsung M02", image: samsung32 },
-  { name: "Samsung M01 core", image: samsung33 },
-  { name: "Samsung M13", image: samsung34 },
-  { name: "Samsung M01", image: samsung35 },
-  { name: "Samsung F14 4G", image: samsung36 },
-  { name: "Samsung J7 Duo", image: samsung37 },
-  { name: "Samsung J7 Max /On Max", image: samsung38 },
-  { name: "Samsung J7 Prime/ Prime 2/ On NXT", image: samsung39 },
-  { name: "Samsung J6", image: samsung40 },
-  { name: "Samsung F62", image: samsung41 },
-  { name: "Samsung A04", image: samsung42 },
-  { name: "Samsung F42 5G", image: samsung43 },
-  { name: "Samsung F41", image: samsung44 },
-  { name: "Samsung F23 5G", image: samsung45 },
-  { name: "Samsung F02s", image: samsung46 },
-  { name: "Samsung C9 Pro", image: samsung47 },
-  { name: "Samsung C7 Pro", image: samsung48 },
-  { name: "Samsung A80", image: samsung49 },
-  { name: "Samsung Galaxy A72", image: samsung50 },
-  { name: "Samsung Galaxy A71", image: samsung51 },
-  { name: "Samsung Galaxy A70", image: samsung52 },
-  { name: "Samsung A52 Plus s", image: samsung53 },
-  { name: "Samsung A52 s", image: samsung54 },
-  { name: "Samsung A51", image: samsung55 },
-  { name: "Samsung A50s", image: samsung56 },
-  { name: "Samsung A50", image: samsung57 },
-  { name: "Samsung A33 5G", image: samsung58 },
-  { name: "Samsung A32", image: samsung59 },
-  { name: "Samsung A30", image: samsung60 },
-  { name: "Samsung A30", image: samsung61 },
-  { name: "Samsung A23", image: samsung62 },
-  { name: "Samsung A21s", image: samsung63 },
-  { name: "Samsung A20s", image: samsung64 },
-  { name: "Samsung A20", image: samsung65 },
-  { name: "Samsung A13", image: samsung66 },
-  { name: "Samsung M42", image: samsung67 },
-  { name: "Samsung A10s", image: samsung68 },
-  { name: "Samsung A10 5G", image: samsung69 },
-  { name: "Samsung A9 (2018)5G", image: samsung70 },
-  { name: "Samsung A8 Star", image: samsung71 },
-  { name: "Samsung A7 (2018)", image: samsung72 },
-  { name: "Samsung A6 Plus", image: samsung73 },
-  { name: "Samsung M30s", image: samsung74 },
-  { name: "Samsung A03 S", image: samsung75 },
-  { name: "Samsung A03", image: samsung76 },
-  { name: "Samsung M2 Core", image: samsung77 },
-  { name: "Samsung Galaxy S25 Plus 5G", image: samsung78 },
-  { name: "Samsung Galaxy S25 5G", image: samsung79 },
-  { name: "Samsung Galaxy S24 FE 5G", image: samsung80 },
-  { name: "Samsung Galaxy S24 Ultra 5G", image: samsung81 },
-  { name: "Samsung Glalxy Z Flod6 5G", image: samsung82 },
-  { name: "Samsung Glalxy Z Flod5 5G", image: samsung83 },
-  { name: "Samsung Glalxy Z Flod4 5G", image: samsung84 },
-  { name: "Samsung Glalxy Z Flod3 5G", image: samsung85 },
-  { name: "Samsung Glalxy Z Flod2 5G", image: samsung86 },
-  { name: "Samsung Galaxy Fold", image: samsung87 },
-  { name: "Samsung Galaxy Z Flip6 5G", image: samsung88 },
-  { name: "Samsung Galaxy Z Flip5 5G", image: samsung89 },
-  { name: "Samsung Z Flip4", image: samsung90 },
-  { name: "Samsung Galaxy Z Flip3 Flip 5G", image: samsung91 },
-  { name: "Samsung Galaxy Z Flip 5G", image: samsung92 },
-  { name: "Samsung J4 Plus", image: samsung93 },
-  { name: "Samsung F62 5G", image: samsung94 },
-  { name: "Samsung F41", image: samsung95 },
-  { name: "Samsung A23 5G", image: samsung96 },
-  { name: "Samsung F14", image: samsung97 },
-  { name: "Samsung F15 5G", image: samsung98 },
-  { name: "Samsung Galaxy A54 5G", image: samsung99 },
-  { name: "Samsung Galaxy F23", image: samsung100 },
-  { name: "Samsung Galaxy S23 Ultra FE 5G", image: samsung101 },
-  { name: "Samsung Galaxy S23 Plus 5G", image: samsung102 },
-  { name: "Samsung Galaxy S23 FE 5G", image: samsung103 },
-  { name: "Samsung Galalaxy S22 Ultra 5G", image: samsung104 },
-  { name: "Samsung Galaxy S22 ", image: samsung105 },
-  { name: "Samsung Galaxy S22 Plus 5G", image: samsung106 },
-  { name: "Samsung S21 Ultra Plus", image: samsung107 },
-  { name: "Samsung S20 Ultra", image: samsung108 },
-  { name: "Samsung S20", image: samsung109 },
-  { name: "Samsung M04", image: samsung110 },
-  { name: "Samsung M13", image: samsung111 },
-  { name: "Samsung A03M34 5G", image: samsung112 },
-  { name: "Samsung F34 5G", image: samsung113 },
-  { name: "Samsung F34 5G", image: samsung114 },
-  { name: "Samsung F13", image: samsung115 },
-  { name: "Samsung A34 5G", image: samsung116 },
-  { name: "Samsung A25 5G", image: samsung117 },
-  { name: "Samsung A14", image: samsung118 },
-  { name: "Samsung A05s", image: samsung119 },
-  { name: "Samsung A05", image: samsung120 },
-  { name: "Samsung  A04 e", image: samsung121 },
-  { name: "Samsung A04", image: samsung122 },
-  { name: "Samsung A04", image: samsung123 },
-  { name: "Samsung S21 Ultra 5G", image: samsung124 },
-  { name: "Samsung S21 5G", image: samsung125 },
-];
-
 const SamsungPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
+
+  // List of models - only including models that have corresponding image files
+  const samsungModels = [
+    { id: 1, name: "Samsung S8", image: samsung1 },
+    { id: 2, name: "Samsung Galaxy M52 5G", image: samsung2 },
+    { id: 3, name: "Samsung Galaxy A22 5G", image: samsung3 },
+    { id: 4, name: "Samsung Galaxy A31", image: samsung4 },
+    { id: 5, name: "Samsung Galaxy M20", image: samsung5 },
+    { id: 6, name: "Samsung Galaxy S20 Plus", image: samsung6 },
+    { id: 7, name: "Samsung F12", image: samsung7 },
+    { id: 8, name: "Samsung S10e", image: samsung8 },
+    { id: 9, name: "Samsung Galaxy Z Fold3 5G", image: samsung9 },
+    { id: 10, name: "Samsung Galaxy S10 Plus", image: samsung10 },
+    { id: 11, name: "Samsung Galaxy S10", image: samsung11 },
+    { id: 12, name: "Samsung Galaxy S9 Plus", image: samsung12 },
+    { id: 13, name: "Samsung Galaxy S9", image: samsung13 },
+    { id: 14, name: "Samsung Galaxy S8", image: samsung14 },
+    { id: 15, name: "Samsung Galaxy Note 10", image: samsung15 },
+    { id: 16, name: "Samsung Galaxy Note 10 lite", image: samsung16 },
+    { id: 17, name: "Samsung Galaxy Note 9", image: samsung17 },
+    { id: 18, name: "Samsung Galaxy Note 8", image: samsung18 },
+    { id: 19, name: "Samsung M51 5G", image: samsung19 },
+    { id: 20, name: "Samsung M40 5G", image: samsung20 },
+    { id: 21, name: "Samsung M33 5G", image: samsung21 },
+    { id: 22, name: "Samsung M32 5G", image: samsung22 },
+    { id: 23, name: "Samsung M32", image: samsung23 },
+    { id: 24, name: "Samsung M31", image: samsung24 },
+    { id: 25, name: "Samsung M31s", image: samsung25 },
+    { id: 26, name: "Samsung M30", image: samsung26 },
+    { id: 27, name: "Samsung M20s", image: samsung27 },
+    { id: 28, name: "Samsung M02", image: samsung28 },
+    { id: 29, name: "Samsung M01 core", image: samsung29 },
+    { id: 30, name: "Samsung M10", image: samsung30 },
+    { id: 31, name: "Samsung M02s", image: samsung31 },
+    { id: 32, name: "Samsung M02", image: samsung32 },
+    { id: 33, name: "Samsung M01 core", image: samsung33 },
+    { id: 34, name: "Samsung M13", image: samsung34 },
+    { id: 35, name: "Samsung M01", image: samsung35 },
+    { id: 36, name: "Samsung F14 4G", image: samsung36 },
+    { id: 37, name: "Samsung J7 Duo", image: samsung37 },
+    { id: 38, name: "Samsung J7 Max /On Max", image: samsung38 },
+    { id: 39, name: "Samsung J7 Prime/ Prime 2/ On NXT", image: samsung39 },
+    { id: 40, name: "Samsung J6", image: samsung40 },
+    { id: 41, name: "Samsung F62", image: samsung41 },
+    { id: 42, name: "Samsung A04", image: samsung42 },
+    { id: 43, name: "Samsung F42 5G", image: samsung43 },
+    { id: 44, name: "Samsung F41", image: samsung44 },
+    { id: 45, name: "Samsung F23 5G", image: samsung45 },
+    { id: 46, name: "Samsung F02s", image: samsung46 },
+    { id: 47, name: "Samsung C9 Pro", image: samsung47 },
+    { id: 48, name: "Samsung C7 Pro", image: samsung48 },
+    { id: 49, name: "Samsung A80", image: samsung49 },
+    { id: 50, name: "Samsung Galaxy A72", image: samsung50 },
+    { id: 51, name: "Samsung Galaxy A71", image: samsung51 },
+    { id: 52, name: "Samsung Galaxy A70", image: samsung52 },
+    { id: 53, name: "Samsung A52 Plus s", image: samsung53 },
+    { id: 54, name: "Samsung A52 s", image: samsung54 },
+    { id: 55, name: "Samsung A51", image: samsung55 },
+    { id: 56, name: "Samsung A50s", image: samsung56 },
+    { id: 57, name: "Samsung A50", image: samsung57 },
+    { id: 58, name: "Samsung A33 5G", image: samsung58 },
+    { id: 59, name: "Samsung A32", image: samsung59 },
+    { id: 60, name: "Samsung A30", image: samsung60 },
+    { id: 61, name: "Samsung A30", image: samsung61 },
+    { id: 62, name: "Samsung A23", image: samsung62 },
+    { id: 63, name: "Samsung A21s", image: samsung63 },
+    { id: 64, name: "Samsung A20s", image: samsung64 },
+    { id: 65, name: "Samsung A20", image: samsung65 },
+    { id: 66, name: "Samsung A13", image: samsung66 },
+    { id: 67, name: "Samsung M42", image: samsung67 },
+    { id: 68, name: "Samsung A10s", image: samsung68 },
+    { id: 69, name: "Samsung A10 5G", image: samsung69 },
+    { id: 70, name: "Samsung A9 (2018)5G", image: samsung70 },
+    { id: 71, name: "Samsung A8 Star", image: samsung71 },
+    { id: 72, name: "Samsung A7 (2018)", image: samsung72 },
+    { id: 73, name: "Samsung A6 Plus", image: samsung73 },
+    { id: 74, name: "Samsung M30s", image: samsung74 },
+    { id: 75, name: "Samsung A03 S", image: samsung75 },
+    { id: 76, name: "Samsung A03", image: samsung76 },
+    { id: 77, name: "Samsung M2 Core", image: samsung77 },
+    { id: 78, name: "Samsung Galaxy S25 Plus 5G", image: samsung78 },
+    { id: 79, name: "Samsung Galaxy S25 5G", image: samsung79 },
+    { id: 80, name: "Samsung Galaxy S24 FE 5G", image: samsung80 },
+    { id: 81, name: "Samsung Galaxy S24 Ultra 5G", image: samsung81 },
+    { id: 82, name: "Samsung Glalxy Z Flod6 5G", image: samsung82 },
+    { id: 83, name: "Samsung Glalxy Z Flod5 5G", image: samsung83 },
+    { id: 84, name: "Samsung Glalxy Z Flod4 5G", image: samsung84 },
+    { id: 85, name: "Samsung Glalxy Z Flod3 5G", image: samsung85 },
+    { id: 86, name: "Samsung Glalxy Z Flod2 5G", image: samsung86 },
+    { id: 87, name: "Samsung Galaxy Fold", image: samsung87 },
+    { id: 88, name: "Samsung Galaxy Z Flip6 5G", image: samsung88 },
+    { id: 89, name: "Samsung Galaxy Z Flip5 5G", image: samsung89 },
+    { id: 90, name: "Samsung Z Flip4", image: samsung90 },
+    { id: 91, name: "Samsung Galaxy Z Flip3 Flip 5G", image: samsung91 },
+    { id: 92, name: "Samsung Galaxy Z Flip 5G", image: samsung92 },
+    { id: 93, name: "Samsung J4 Plus", image: samsung93 },
+    { id: 94, name: "Samsung F62 5G", image: samsung94 },
+    { id: 95, name: "Samsung F41", image: samsung95 },
+    { id: 96, name: "Samsung A23 5G", image: samsung96 },
+    { id: 97, name: "Samsung F14", image: samsung97 },
+    { id: 98, name: "Samsung F15 5G", image: samsung98 },
+    { id: 99, name: "Samsung Galaxy A54 5G", image: samsung99 },
+    { id: 100, name: "Samsung Galaxy F23", image: samsung100 },
+    { id: 101, name: "Samsung Galaxy S23 Ultra FE 5G", image: samsung101 },
+    { id: 102, name: "Samsung Galaxy S23 Plus 5G", image: samsung102 },
+    { id: 103, name: "Samsung Galaxy S23 FE 5G", image: samsung103 },
+    { id: 104, name: "Samsung Galalaxy S22 Ultra 5G", image: samsung104 },
+    { id: 105, name: "Samsung Galaxy S22 ", image: samsung105 },
+    { id: 106, name: "Samsung Galaxy S22 Plus 5G", image: samsung106 },
+    { id: 107, name: "Samsung S21 Ultra Plus", image: samsung107 },
+    { id: 108, name: "Samsung S20 Ultra", image: samsung108 },
+    { id: 109, name: "Samsung S20", image: samsung109 },
+    { id: 110, name: "Samsung M04", image: samsung110 },
+    { id: 111, name: "Samsung M13", image: samsung111 },
+    { id: 112, name: "Samsung A03M34 5G", image: samsung112 },
+    { id: 113, name: "Samsung F34 5G", image: samsung113 },
+    { id: 114, name: "Samsung F34 5G", image: samsung114 },
+    { id: 115, name: "Samsung F13", image: samsung115 },
+    { id: 116, name: "Samsung A34 5G", image: samsung116 },
+    { id: 117, name: "Samsung A25 5G", image: samsung117 },
+    { id: 118, name: "Samsung A14", image: samsung118 },
+    { id: 119, name: "Samsung A05s", image: samsung119 },
+    { id: 120, name: "Samsung A05", image: samsung120 },
+    { id: 121, name: "Samsung  A04 e", image: samsung121 },
+    { id: 122, name: "Samsung A04", image: samsung122 },
+    { id: 123, name: "Samsung A04", image: samsung123 },
+    { id: 124, name: "Samsung S21 Ultra 5G", image: samsung124 },
+    { id: 125, name: "Samsung S21 5G", image: samsung125 },
+  ];
 
   const filteredModels = samsungModels.filter((model) =>
     model.name.toLowerCase().includes(searchQuery.toLowerCase())
@@ -267,19 +270,50 @@ const SamsungPage = () => {
   return (
     <div style={{ minHeight: "100vh", backgroundColor: "#f8f9fa" }}>
       {/* Header */}
-      <div style={{ backgroundColor: "white", borderBottom: "1px solid #dee2e6", padding: "20px 0" }}>
-        <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "0 20px" }}>
-          <div style={{ marginBottom: "10px", color: "#6c757d", fontSize: "14px" }}>
+      <div
+        style={{
+          backgroundColor: "white",
+          borderBottom: "1px solid #dee2e6",
+          padding: "20px 0",
+        }}
+      >
+        <div
+          style={{
+            maxWidth: "1200px",
+            margin: "0 auto",
+            padding: "0 20px",
+          }}
+        >
+          <div
+            style={{
+              marginBottom: "10px",
+              color: "#6c757d",
+              fontSize: "14px",
+            }}
+          >
             Home / Repair / Samsung
           </div>
-          <h1 style={{ fontSize: "32px", fontWeight: "bold", color: "#212529", margin: 0 }}>
+          <h1
+            style={{
+              fontSize: "32px",
+              fontWeight: "bold",
+              color: "#212529",
+              margin: 0,
+            }}
+          >
             Samsung Repair & Replacement
           </h1>
         </div>
       </div>
 
       {/* Content */}
-      <div style={{ maxWidth: "1200px", margin: "0 auto", padding: "40px 20px" }}>
+      <div
+        style={{
+          maxWidth: "1200px",
+          margin: "0 auto",
+          padding: "40px 20px",
+        }}
+      >
         {/* Search Box */}
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
           <input
@@ -302,13 +336,19 @@ const SamsungPage = () => {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
             gap: "20px",
+            marginBottom: "40px",
           }}
         >
-          {filteredModels.map((model, index) => (
+          {filteredModels.map((model) => (
             <div
-              key={index}
+              onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
+              key={model.id}
               style={{
                 backgroundColor: "white",
                 border: "1px solid #dee2e6",
@@ -333,16 +373,65 @@ const SamsungPage = () => {
                 alt={model.name}
                 style={{
                   width: "80px",
-                  height: "80px",
+                  height: "50px",
                   objectFit: "contain",
                   marginBottom: "15px",
                 }}
               />
-              <h3 style={{ fontSize: "14px", fontWeight: "600", margin: "10px 0 5px" }}>
+              <h3
+                style={{
+                  fontSize: "16px",
+                  fontWeight: "600",
+                  margin: "10px 0 5px",
+                }}
+              >
                 {model.name}
               </h3>
             </div>
           ))}
+        </div>
+
+        {/* Bottom Section */}
+        <div
+          style={{
+            backgroundColor: "white",
+            border: "1px solid #dee2e6",
+            borderRadius: "10px",
+            padding: "40px",
+            textAlign: "center",
+          }}
+        >
+          <h2
+            style={{
+              fontSize: "24px",
+              fontWeight: "bold",
+              marginBottom: "20px",
+            }}
+          >
+            SAMSUNG REPAIR & REPLACEMENT
+          </h2>
+          <p
+            style={{
+              color: "#6c757d",
+              lineHeight: "1.6",
+              maxWidth: "800px",
+              margin: "0 auto",
+            }}
+          >
+            Your Samsung device is more than just technology; it's an essential
+            part of your everyday work and entertainment. Our expert Samsung
+            repair and replacement services ensure quick turnaround times,
+            genuine parts, and dependable performance.
+          </p>
+          <h3
+            style={{
+              fontSize: "18px",
+              fontWeight: "600",
+              marginTop: "30px",
+            }}
+          >
+            WE CAN FIX YOUR SAMSUNG
+          </h3>
         </div>
       </div>
     </div>
@@ -350,10 +439,3 @@ const SamsungPage = () => {
 };
 
 export default SamsungPage;
-
-
-
-
-
-
-

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 // Import Tecno phone images
 import tecno1 from "../../assets/techno/techno (1).png";
 import tecno2 from "../../assets/techno/techno (2).png";
@@ -21,7 +21,8 @@ import tecno16 from "../../assets/techno/techno (16).png";
 import tecno18 from "../../assets/techno/techno (18).png";
 
 const TecnoPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+ const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const tecnoModels = [
     { name: "Tecno spark Go 2021", image: tecno1 },
@@ -124,7 +125,11 @@ const TecnoPage = () => {
           }}
         >
           {filteredModels.map((model, index) => (
-            <div
+            <div  onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
               key={index}
               style={{
                 backgroundColor: "white",

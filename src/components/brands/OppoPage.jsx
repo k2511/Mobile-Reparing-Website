@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import oppo1 from "../../assets/oppo/oppo (1).png";
 import oppo2 from "../../assets/oppo/oppo (2).png";
 import oppo3 from "../../assets/oppo/oppo (3).png";
@@ -57,7 +58,8 @@ import oppo54 from "../../assets/oppo/oppo (54).png";
 // import oppo56 from "../../assets/oppo/oppo(56).png";
 
 const OppoPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+ const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const oppoModels = [
     { name: "Oppo Reno 4 Pro", image: oppo1 },
@@ -200,7 +202,12 @@ const OppoPage = () => {
           }}
         >
           {filteredModels.map((model) => (
-            <div
+            <div 
+             onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
               key={model.name}
               style={{
                 backgroundColor: "white",

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import realme1 from "../../assets/realme/realme (1).png";
 import realme2 from "../../assets/realme/realme (2).png";
 import realme3 from "../../assets/realme/realme (3).png";
@@ -107,7 +108,8 @@ import realmeWebp46 from "../../assets/realme/realme (46).webp";
 // import realmeWebp47 from "../../assets/realme/realme (47).webp";
 
 const RealmePage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+ const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const realmeModels = [
     { name: "Realme C21", image: realme1 },
@@ -300,7 +302,11 @@ const RealmePage = () => {
           }}
         >
           {filteredModels.map((model) => (
-            <div
+            <div     onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
               key={model.id}
               style={{
                 backgroundColor: "white",

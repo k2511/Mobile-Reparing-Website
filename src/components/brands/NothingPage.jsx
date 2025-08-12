@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import nothing1 from "../../assets/nothing/nothing-8.png"; // CMF by Nothing Phone 2 Pro
 import nothing2 from "../../assets/nothing/nothing-7.png"; // Nothing Phone 3a Pro
 import nothing3 from "../../assets/nothing/nothing-6.png"; // Nothing Phone 3a
@@ -8,7 +9,8 @@ import nothing7 from "../../assets/nothing/nothing-2.png"; // Nothing Phone 2
 import nothing8 from "../../assets/nothing/nothing-1.png"; // Nothing Phone 1
 
 const NothingPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+ const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const nothingModels = [
     { id: 1, name: "CMF by Nothing Phone 2 Pro", image: nothing1 },
@@ -99,7 +101,12 @@ const NothingPage = () => {
           }}
         >
           {filteredModels.map((model) => (
-            <div
+            <div 
+              onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
               key={model.id}
               style={{
                 backgroundColor: "white",

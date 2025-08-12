@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 // Import Nokia phone images
 import nokia1 from "../../assets/nokia/nokia (1).png";
 import nokia2 from "../../assets/nokia/nokia (2).png";
@@ -23,7 +23,8 @@ import nokia19 from "../../assets/nokia/nokia (19).png";
 import nokia20 from "../../assets/nokia/nokia (20).png";
 
 const NokiaPage = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+ const [searchQuery, setSearchQuery] = useState("");
+  const navigate = useNavigate();
 
   const nokiaModels = [
     { name: "Nokia 8.1", image: nokia1 },
@@ -128,7 +129,11 @@ const NokiaPage = () => {
           }}
         >
           {filteredModels.map((model, index) => (
-            <div
+            <div onClick={() => {
+                navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
+                  state: { image: model.image },
+                });
+              }}
               key={index}
               style={{
                 backgroundColor: "white",
