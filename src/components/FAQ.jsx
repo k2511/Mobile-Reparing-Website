@@ -1,10 +1,3 @@
-
-
-
-
-
-
-
 import React from "react";
 import { Container, Row, Col, Accordion } from "react-bootstrap";
 
@@ -138,7 +131,7 @@ const FAQ = () => {
       </Row>
 
       {/* Custom Styles */}
-      <style jsx="true">{`
+      <style >{`
         /* Keep default accordion colors clean */
         .accordion-button:not(.collapsed) {
           color: unset !important;
@@ -176,8 +169,8 @@ const FAQ = () => {
           .faq-section p {
             font-size: 0.9rem;
           }
-        }
-      `}</style>
+        `}
+      </style>
     </Container>
   );
 };

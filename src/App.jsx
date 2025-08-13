@@ -1,3 +1,4 @@
+
 // import React, { Suspense } from "react";
 // import { Routes, Route, Outlet } from "react-router-dom";
 // import { Helmet } from "react-helmet";
@@ -12,6 +13,27 @@
 // import "./styles/style.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
+// // SEO
+// import { cities, services } from "./data.js";
+// import HomeSEO from "./components/pages/seo/HomeSEO.jsx";
+// import DynamicSEO from "./components/pages/seo/DynamicSEO.jsx";
+
+// // Footer Navigation Links
+// import AboutUs from "./components/company/aboutUs.jsx";
+// import Articles from "./components/company/articles.jsx";
+// import PrivacyPolicy from "./components/company/cookie.jsx";
+// import EwastePolicy from "./components/company/eWaste.jsx";
+// import CookiePolicy from "./components/company/privacy.jsx";
+// import Mobile from "./components/Brand.jsx";
+// import Laptop from "./components/pages/LaptopRepairPage.jsx";
+// import Tablet from "./components/pages/TabletRepairPage.jsx";
+// import CCTV from "./components/pages/CctvRepairPage.jsx";
+// import TermCondition from "./components/help/termsCondition.jsx";
+// import Warranty from "./components/help/warranty.jsx";
+// import Partner from "./components/help/partner.jsx";
+// import Contact from "./components/help/contactUs.jsx";
+// import Faq from "./components/FAQ.jsx"
 
 // // Lazy-loaded components for home page
 // const Slider = React.lazy(() => import("./components/Slider.jsx"));
@@ -52,7 +74,10 @@
 
 // // Loading component
 // const LoadingSpinner = () => (
-//   <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
+//   <div
+//     className="d-flex justify-content-center align-items-center"
+//     style={{ minHeight: "200px" }}
+//   >
 //     <div className="spinner-border text-primary" role="status">
 //       <span className="visually-hidden">Loading...</span>
 //     </div>
@@ -73,76 +98,201 @@
 // );
 
 // // Home Page
-// const HomePage = () => (
-//   <div>
-//     <Helmet>
-//       <title>Ongofix - Mobile Repair Services</title>
-//       <meta
-//         name="description"
-//         content="We repair mobiles, tablets, MacBooks, smart watches, and iPhones in Bangalore, Chennai, Pune, and more."
-//       />
-//     </Helmet>
+// const HomePage = () => {
+//   const org = {
+//     name: "RedSetGo Repairs",
+//     url: "https://www.resetgo.in",
+//     logo: "https://www.resetgo.in/logo.png", // replace with actual logo URL
+//     phone: "+91-7676786764",
+//     address: {
+//       street: "Konark Business Hub, 2nd Floor 3S-14, Kondhwa Main Road",
+//       locality: "Pune",
+//       region: "MH",
+//       postal: "411048",
+//       country: "IN",
+//     },
+//   };
+//   const localBusinessJSONLD = {
+//     "@context": "https://schema.org",
+//     "@type": "LocalBusiness",
+//     "@id": `${org.url}#localbusiness`,
+//     name: org.name,
+//     image: org.logo,
+//     url: org.url,
+//     telephone: org.phone,
+//     address: {
+//       "@type": "PostalAddress",
+//       streetAddress: org.address.street,
+//       addressLocality: org.address.locality,
+//       addressRegion: org.address.region,
+//       postalCode: org.address.postal,
+//       addressCountry: org.address.country,
+//     },
+//     areaServed: {
+//       "@type": "City",
+//       name: "Pune",
+//     },
+//     openingHours: "Mo-Su 09:00-21:00",
+//     description:
+//       "Doorstep mobile repair in Pune. 30-minute service done in front of you with genuine parts.",
+//     sameAs: [
+//       "https://www.facebook.com/yourpage", // update
+//       "https://www.instagram.com/yourpage", // update
+//       "https://x.com/yourpage", // update
+//     ],
+//   };
+//   const websiteJSONLD = {
+//     "@context": "https://schema.org",
+//     "@type": "WebSite",
+//     url: org.url,
+//     name: org.name,
+//     potentialAction: {
+//       "@type": "SearchAction",
+//       target: `${org.url}/search?q={query}`,
+//       "query-input": "required name=query",
+//     },
+//   };
+//   const faqJSONLD = {
+//     "@context": "https://schema.org",
+//     "@type": "FAQPage",
+//     mainEntity: [
+//       {
+//         "@type": "Question",
+//         name: "Do you repair phones in front of the customer?",
+//         acceptedAnswer: {
+//           "@type": "Answer",
+//           text: "Yes. Our certified technician performs the repair at your doorstep in Pune, right in front of you for complete transparency.",
+//         },
+//       },
+//       {
+//         "@type": "Question",
+//         name: "How long does a mobile repair take?",
+//         acceptedAnswer: {
+//           "@type": "Answer",
+//           text: "Most screen and battery replacements are completed in under 30 minutes, subject to model and part availability.",
+//         },
+//       },
+//       {
+//         "@type": "Question",
+//         name: "Do you provide warranty on repairs?",
+//         acceptedAnswer: {
+//           "@type": "Answer",
+//           text: "Yes. We provide a warranty on parts and service. Warranty terms vary by part and device model.",
+//         },
+//       },
+//       {
+//         "@type": "Question",
+//         name: "Which areas in Pune do you serve?",
+//         acceptedAnswer: {
+//           "@type": "Answer",
+//           text: "We cover Koregaon Park, Viman Nagar, Kothrud, Baner, Wakad, Hinjewadi, Hadapsar, Pimpri-Chinchwad, Camp, Shivajinagar, and nearby localities.",
+//         },
+//       },
+//     ],
+//   };
 
-//     <Suspense fallback={<LoadingSpinner />}>
-//       <Slider />
-//     </Suspense>
-    
-//     <Suspense fallback={<LoadingSpinner />}>
-//       <Doorstep />
-//     </Suspense>
-    
-//     <div id="brand-section">
+//   return (
+//     <div>
+//       <Helmet>
+//         <title>
+//           Mobile Repair in Pune – Doorstep Service in 30 Minutes | RedSetGo Repairs
+//         </title>
+//         <meta
+//           name="description"
+//           content="Get doorstep mobile repair in Pune in under 30 minutes. Certified technicians fix screens, batteries, charging ports and more—right in front of you."
+//         />
+//         <link rel="canonical" href={`${org.url}/`} />
+//         <meta
+//           name="robots"
+//           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
+//         />
+//         <meta name="viewport" content="width=device-width, initial-scale=1" />
+//         <meta
+//           name="keywords"
+//           content="mobile repair pune, doorstep mobile repair pune, phone screen replacement pune, battery replacement pune, redsetgo repairs"
+//         />
+//         <meta property="og:type" content="website" />
+//         <meta
+//           property="og:title"
+//           content="Mobile Repair in Pune – Doorstep in 30 Minutes | RedSetGo Repairs"
+//         />
+//         <meta
+//           property="og:description"
+//           content="Doorstep mobile repair in Pune with 30-minute service. Repairs done in front of you using genuine parts."
+//         />
+//         <meta property="og:url" content={`${org.url}/`} />
+//         <meta property="og:image" content={org.logo} />
+//         <meta name="twitter:card" content="summary_large_image" />
+//         <meta
+//           name="twitter:title"
+//           content="Mobile Repair in Pune – Doorstep in 30 Minutes | RedSetGo Repairs"
+//         />
+//         <meta
+//           name="twitter:description"
+//           content="Doorstep mobile repair in Pune with 30-minute service. Repairs done in front of you using genuine parts."
+//         />
+//         <meta name="twitter:image" content={org.logo} />
+//         <script type="application/ld+json">
+//           {JSON.stringify(localBusinessJSONLD)}
+//         </script>
+//         <script type="application/ld+json">
+//           {JSON.stringify(websiteJSONLD)}
+//         </script>
+//         <script type="application/ld+json">{JSON.stringify(faqJSONLD)}</script>
+//         <meta name="geo.region" content="IN-MH" />
+//         <meta name="geo.placename" content="Pune" />
+//       </Helmet>
+
 //       <Suspense fallback={<LoadingSpinner />}>
-//         <Brand />
+//         <Slider />
+//       </Suspense>
+//       <Suspense fallback={<LoadingSpinner />}>
+//         <Doorstep />
+//       </Suspense>
+//       <div id="brand-section">
+//         <Suspense fallback={<LoadingSpinner />}>
+//           <Brand />
+//         </Suspense>
+//       </div>
+//       <Suspense fallback={<LoadingSpinner />}>
+//         <ProcessSteps />
+//       </Suspense>
+//       <Suspense fallback={<LoadingSpinner />}>
+//         <VideoEmbed />
+//       </Suspense>
+//       <Suspense fallback={<LoadingSpinner />}>
+//         <WhyUs />
+//       </Suspense>
+//       <Suspense fallback={<LoadingSpinner />}>
+//         <Services />
+//       </Suspense>
+//       <Suspense fallback={<LoadingSpinner />}>
+//         <ValueProps />
+//       </Suspense>
+//       <Suspense fallback={<LoadingSpinner />}>
+//         <LatestBlogs />
+//       </Suspense>
+//       <Suspense fallback={<LoadingSpinner />}>
+//         <LatestStories />
+//       </Suspense>
+//       <Suspense fallback={<LoadingSpinner />}>
+//         <FAQ />
+//       </Suspense>
+//       <Suspense fallback={<LoadingSpinner />}>
+//         <FeedBack />
 //       </Suspense>
 //     </div>
-    
-//     <Suspense fallback={<LoadingSpinner />}>
-//       <ProcessSteps />
-//     </Suspense>
-    
-//     <Suspense fallback={<LoadingSpinner />}>
-//       <VideoEmbed />
-//     </Suspense>
-    
-//     <Suspense fallback={<LoadingSpinner />}>
-//       <WhyUs />
-//     </Suspense>
-    
-//     <Suspense fallback={<LoadingSpinner />}>
-//       <Services />
-//     </Suspense>
-    
-//     <Suspense fallback={<LoadingSpinner />}>
-//       <ValueProps />
-//     </Suspense>
-    
-//     <Suspense fallback={<LoadingSpinner />}>
-//       <LatestBlogs />
-//     </Suspense>
-    
-//     <Suspense fallback={<LoadingSpinner />}>
-//       <LatestStories />
-//     </Suspense>
-    
-//     <Suspense fallback={<LoadingSpinner />}>
-//       <FAQ />
-//     </Suspense>
-    
-//     <Suspense fallback={<LoadingSpinner />}>
-//       <FeedBack />
-//     </Suspense>
-//   </div>
-// );
+//   );
+// };
 
 // // Repair Page Wrappers with Helmet
 // const LaptopPage = () => (
 //   <div>
 //     <Helmet>
-//       <title>Laptop - Ongofix</title>
+//       <title>Laptop - RedSetGo Repairs</title>
 //       <meta
 //         name="description"
-//         content="Professional MacBook repair services including screen, battery, and hardware repair."
+//         content="Professional repair services including screen, battery, and hardware repair."
 //       />
 //     </Helmet>
 //     <Suspense fallback={<LoadingSpinner />}>
@@ -154,7 +304,7 @@
 // const CctvPage = () => (
 //   <div>
 //     <Helmet>
-//       <title>CCTV Repair - Ongofix</title>
+//       <title>CCTV Repair - RedSetGo Repairs</title>
 //       <meta
 //         name="description"
 //         content="Reliable CCTV repair services for homes and businesses."
@@ -169,7 +319,7 @@
 // const TabletPage = () => (
 //   <div>
 //     <Helmet>
-//       <title>Tablet Repair - Ongofix</title>
+//       <title>Tablet Repair - RedSetGo Repairs</title>
 //       <meta
 //         name="description"
 //         content="Expert tablet repair services including screen replacement and battery repair."
@@ -201,6 +351,23 @@
 //         {/* Home page */}
 //         <Route path="/" element={<HomePage />} />
 
+//         {/* SEO Routes */}
+//         <Route path="/" element={<HomeSEO />} />
+//         {cities.map((city) =>
+//           services.map((service) => {
+//             const path = `/${city.toLowerCase()}-${service
+//               .toLowerCase()
+//               .replace(/\s+/g, "-")}`;
+//             return (
+//               <Route
+//                 key={path}
+//                 path={path}
+//                 element={<DynamicSEO city={city} service={service} />}
+//               />
+//             );
+//           })
+//         )}
+
 //         {/* Repair pages */}
 //         <Route path="/macbook-repair" element={<LaptopPage />} />
 //         <Route path="/cctv-repair" element={<CctvPage />} />
@@ -211,8 +378,8 @@
 //           path="/brand/samsung"
 //           element={
 //             <BrandPageTemplate
-//               title="Samsung Repair - Ongofix"
-//               description="Repair Samsung phones, tablets, and devices with Ongofix."
+//               title="Samsung Repair - RedSetGo Repairs"
+//               description="Repair Samsung phones, tablets, and devices with RedSetGo Repairs."
 //               Component={SamsungModels}
 //             />
 //           }
@@ -221,7 +388,7 @@
 //           path="/brand/asus"
 //           element={
 //             <BrandPageTemplate
-//               title="Asus Repair - Ongofix"
+//               title="Asus Repair - RedSetGo Repairs"
 //               description="Repair Asus phones, tablets, and laptops professionally."
 //               Component={AsusPage}
 //             />
@@ -231,7 +398,7 @@
 //           path="/brand/nothing"
 //           element={
 //             <BrandPageTemplate
-//               title="Nothing Phone Repair - Ongofix"
+//               title="Nothing Phone Repair - RedSetGo Repairs"
 //               description="Professional Nothing phone repair services."
 //               Component={NothingPage}
 //             />
@@ -241,7 +408,7 @@
 //           path="/brand/vivo"
 //           element={
 //             <BrandPageTemplate
-//               title="Vivo Repair - Ongofix"
+//               title="Vivo Repair - RedSetGo Repairs"
 //               description="Vivo mobile repair services for all models."
 //               Component={VivoPage}
 //             />
@@ -251,7 +418,7 @@
 //           path="/brand/oppo"
 //           element={
 //             <BrandPageTemplate
-//               title="Oppo Repair - Ongofix"
+//               title="Oppo Repair - RedSetGo Repairs"
 //               description="Repair Oppo smartphones professionally."
 //               Component={OppoPage}
 //             />
@@ -261,7 +428,7 @@
 //           path="/brand/realme"
 //           element={
 //             <BrandPageTemplate
-//               title="Realme Repair - Ongofix"
+//               title="Realme Repair - RedSetGo Repairs"
 //               description="Repair Realme devices with professional service."
 //               Component={RealmePage}
 //             />
@@ -271,7 +438,7 @@
 //           path="/brand/google"
 //           element={
 //             <BrandPageTemplate
-//               title="Google Phone Repair - Ongofix"
+//               title="Google Phone Repair - RedSetGo Repairs"
 //               description="Repair Google Pixel phones and devices."
 //               Component={GooglePage}
 //             />
@@ -281,7 +448,7 @@
 //           path="/brand/mi"
 //           element={
 //             <BrandPageTemplate
-//               title="Mi Repair - Ongofix"
+//               title="Mi Repair - RedSetGo Repairs"
 //               description="Repair Xiaomi/MI phones professionally."
 //               Component={MiPage}
 //             />
@@ -291,7 +458,7 @@
 //           path="/brand/oneplus"
 //           element={
 //             <BrandPageTemplate
-//               title="OnePlus Repair - Ongofix"
+//               title="OnePlus Repair - RedSetGo Repairs"
 //               description="OnePlus device repair services."
 //               Component={OnePlusPage}
 //             />
@@ -301,7 +468,7 @@
 //           path="/brand/motorola"
 //           element={
 //             <BrandPageTemplate
-//               title="Motorola Repair - Ongofix"
+//               title="Motorola Repair - RedSetGo Repairs"
 //               description="Repair Motorola phones professionally."
 //               Component={MotorolaPage}
 //             />
@@ -311,7 +478,7 @@
 //           path="/brand/iqoo"
 //           element={
 //             <BrandPageTemplate
-//               title="IQOO Repair - Ongofix"
+//               title="IQOO Repair - RedSetGo Repairs"
 //               description="IQOO smartphone repair services."
 //               Component={IqooPage}
 //             />
@@ -321,7 +488,7 @@
 //           path="/brand/poco"
 //           element={
 //             <BrandPageTemplate
-//               title="Poco Repair - Ongofix"
+//               title="Poco Repair - RedSetGo Repairs"
 //               description="Poco phone repair services."
 //               Component={PocoPage}
 //             />
@@ -331,7 +498,7 @@
 //           path="/brand/tecno"
 //           element={
 //             <BrandPageTemplate
-//               title="Tecno Repair - Ongofix"
+//               title="Tecno Repair - RedSetGo Repairs"
 //               description="Tecno mobile repair services."
 //               Component={TecnoPage}
 //             />
@@ -341,7 +508,7 @@
 //           path="/brand/nokia"
 //           element={
 //             <BrandPageTemplate
-//               title="Nokia Repair - Ongofix"
+//               title="Nokia Repair - RedSetGo Repairs"
 //               description="Nokia phone repair services."
 //               Component={NokiaPage}
 //             />
@@ -351,7 +518,7 @@
 //           path="/brand/honor"
 //           element={
 //             <BrandPageTemplate
-//               title="Honor Repair - Ongofix"
+//               title="Honor Repair - RedSetGo Repairs"
 //               description="Repair Honor devices professionally."
 //               Component={HonorPage}
 //             />
@@ -363,7 +530,7 @@
 //           path="/brand-issues/:mobileName"
 //           element={
 //             <BrandPageTemplate
-//               title="Brand Issue - Ongofix"
+//               title="Brand Issue - RedSetGo Repairs"
 //               description="Find solutions for common brand mobile issues."
 //               Component={BrandIssues}
 //             />
@@ -375,20 +542,39 @@
 //           path="/brand/:brandName"
 //           element={
 //             <BrandPageTemplate
-//               title="Mobile Repair - Ongofix"
+//               title="Mobile Repair - RedSetGo Repairs"
 //               description="Repair services for all mobile brands."
 //               Component={LaptopRepairPage} // fallback component
 //             />
 //           }
 //         />
+
+//         {/* Footer Navigation */}
+//         {/* Devices */}
+//         <Route path="/mobile-repair" element={<Mobile />} />
+//         <Route path="/laptop-repair" element={<Laptop />} />
+//         <Route path="/tablet-repair" element={<Tablet />} />
+//         <Route path="/cctv-repair" element={<CCTV />} />
+
+//         {/* Company Routes */}
+//         <Route path="/about-us" element={<AboutUs />} />
+//         <Route path="/articles" element={<Articles />} />
+//         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+//         <Route path="/e-waste-policy" element={<EwastePolicy />} />
+//         <Route path="/cookie-policy" element={<CookiePolicy />} />
+
+//         {/* Help & extra pages */}
+//         <Route path="/terms-conditions" element={<TermCondition />} />
+//         <Route path="/warranty-policy" element={<Warranty />} />
+//         <Route path="/partner-with-us" element={<Partner />} />
+//         <Route path="/contact-us" element={<Contact />} />
+//         <Route path="/faq" element={<Faq/>} />
 //       </Route>
 //     </Routes>
 //   );
 // };
 
 // export default App;
-
-
 
 import React, { Suspense } from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
@@ -405,6 +591,27 @@ import "./styles/style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
+// SEO
+import { cities, services } from "./data.js";
+import HomeSEO from "./components/pages/seo/HomeSEO.jsx";
+import DynamicSEO from "./components/pages/seo/DynamicSEO.jsx";
+
+// Footer Navigation Links
+import AboutUs from "./components/company/aboutUs.jsx";
+import Articles from "./components/company/articles.jsx";
+import PrivacyPolicy from "./components/company/cookie.jsx";
+import EwastePolicy from "./components/company/eWaste.jsx";
+import CookiePolicy from "./components/company/privacy.jsx";
+import Mobile from "./components/Brand.jsx";
+import Laptop from "./components/pages/LaptopRepairPage.jsx";
+import Tablet from "./components/pages/TabletRepairPage.jsx";
+import CCTV from "./components/pages/CctvRepairPage.jsx";
+import TermCondition from "./components/help/termsCondition.jsx";
+import Warranty from "./components/help/warranty.jsx";
+import Partner from "./components/help/partner.jsx";
+import Contact from "./components/help/contactUs.jsx";
+import FAQ from "./components/FAQ.jsx"; // Updated to match import case
+
 // Lazy-loaded components for home page
 const Slider = React.lazy(() => import("./components/Slider.jsx"));
 const ProcessSteps = React.lazy(() => import("./components/ProcessSteps.jsx"));
@@ -416,7 +623,6 @@ const FeedBack = React.lazy(() => import("./components/FeedBack.jsx"));
 const ValueProps = React.lazy(() => import("./components/valueProps.jsx"));
 const LatestBlogs = React.lazy(() => import("./components/LatestBlogs.jsx"));
 const LatestStories = React.lazy(() => import("./components/LatestStories.jsx"));
-const FAQ = React.lazy(() => import("./components/FAQ.jsx"));
 const Brand = React.lazy(() => import("./components/Brand.jsx"));
 
 // Lazy-loaded page components
@@ -444,7 +650,10 @@ const HonorPage = React.lazy(() => import("./components/brands/HonorPage.jsx"));
 
 // Loading component
 const LoadingSpinner = () => (
-  <div className="d-flex justify-content-center align-items-center" style={{ minHeight: '200px' }}>
+  <div
+    className="d-flex justify-content-center align-items-center"
+    style={{ minHeight: "200px" }}
+  >
     <div className="spinner-border text-primary" role="status">
       <span className="visually-hidden">Loading...</span>
     </div>
@@ -469,7 +678,7 @@ const HomePage = () => {
   const org = {
     name: "RedSetGo Repairs",
     url: "https://www.resetgo.in",
-    logo: "https://www.RedSetGo.in/logo.png", // replace with actual logo URL
+    logo: "https://www.resetgo.in/logo.png", // replace with actual logo URL
     phone: "+91-7676786764",
     address: {
       street: "Konark Business Hub, 2nd Floor 3S-14, Kondhwa Main Road",
@@ -503,9 +712,9 @@ const HomePage = () => {
     description:
       "Doorstep mobile repair in Pune. 30-minute service done in front of you with genuine parts.",
     sameAs: [
-      "https://www.facebook.com/yourpage", // <-- update
-      "https://www.instagram.com/yourpage", // <-- update
-      "https://x.com/yourpage", // <-- update
+      "https://www.facebook.com/yourpage", // update
+      "https://www.instagram.com/yourpage", // update
+      "https://x.com/yourpage", // update
     ],
   };
   const websiteJSONLD = {
@@ -561,7 +770,6 @@ const HomePage = () => {
   return (
     <div>
       <Helmet>
-        {/* Primary SEO */}
         <title>
           Mobile Repair in Pune – Doorstep Service in 30 Minutes | RedSetGo Repairs
         </title>
@@ -570,7 +778,6 @@ const HomePage = () => {
           content="Get doorstep mobile repair in Pune in under 30 minutes. Certified technicians fix screens, batteries, charging ports and more—right in front of you."
         />
         <link rel="canonical" href={`${org.url}/`} />
-        {/* Helpful but optional */}
         <meta
           name="robots"
           content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1"
@@ -580,7 +787,6 @@ const HomePage = () => {
           name="keywords"
           content="mobile repair pune, doorstep mobile repair pune, phone screen replacement pune, battery replacement pune, redsetgo repairs"
         />
-        {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
@@ -592,7 +798,6 @@ const HomePage = () => {
         />
         <meta property="og:url" content={`${org.url}/`} />
         <meta property="og:image" content={org.logo} />
-        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
@@ -603,19 +808,13 @@ const HomePage = () => {
           content="Doorstep mobile repair in Pune with 30-minute service. Repairs done in front of you using genuine parts."
         />
         <meta name="twitter:image" content={org.logo} />
-        {/* Local SEO JSON-LD */}
         <script type="application/ld+json">
           {JSON.stringify(localBusinessJSONLD)}
         </script>
-        {/* Website JSON-LD */}
         <script type="application/ld+json">
           {JSON.stringify(websiteJSONLD)}
         </script>
-        {/* FAQ JSON-LD */}
-        <script type="application/ld+json">
-          {JSON.stringify(faqJSONLD)}
-        </script>
-        {/* Optional: Pune geo meta */}
+        <script type="application/ld+json">{JSON.stringify(faqJSONLD)}</script>
         <meta name="geo.region" content="IN-MH" />
         <meta name="geo.placename" content="Pune" />
       </Helmet>
@@ -623,49 +822,38 @@ const HomePage = () => {
       <Suspense fallback={<LoadingSpinner />}>
         <Slider />
       </Suspense>
-      
       <Suspense fallback={<LoadingSpinner />}>
         <Doorstep />
       </Suspense>
-      
       <div id="brand-section">
         <Suspense fallback={<LoadingSpinner />}>
           <Brand />
         </Suspense>
       </div>
-      
       <Suspense fallback={<LoadingSpinner />}>
         <ProcessSteps />
       </Suspense>
-      
       <Suspense fallback={<LoadingSpinner />}>
         <VideoEmbed />
       </Suspense>
-      
       <Suspense fallback={<LoadingSpinner />}>
         <WhyUs />
       </Suspense>
-      
       <Suspense fallback={<LoadingSpinner />}>
         <Services />
       </Suspense>
-      
       <Suspense fallback={<LoadingSpinner />}>
         <ValueProps />
       </Suspense>
-      
       <Suspense fallback={<LoadingSpinner />}>
         <LatestBlogs />
       </Suspense>
-      
       <Suspense fallback={<LoadingSpinner />}>
         <LatestStories />
       </Suspense>
-      
       <Suspense fallback={<LoadingSpinner />}>
         <FAQ />
       </Suspense>
-      
       <Suspense fallback={<LoadingSpinner />}>
         <FeedBack />
       </Suspense>
@@ -680,7 +868,7 @@ const LaptopPage = () => (
       <title>Laptop - RedSetGo Repairs</title>
       <meta
         name="description"
-        content="Professional MacBook repair services including screen, battery, and hardware repair."
+        content="Professional repair services including screen, battery, and hardware repair."
       />
     </Helmet>
     <Suspense fallback={<LoadingSpinner />}>
@@ -738,6 +926,22 @@ const App = () => {
       <Route element={<MainLayout />}>
         {/* Home page */}
         <Route path="/" element={<HomePage />} />
+
+        {/* SEO Routes */}
+        {cities.map((city) =>
+          services.map((service) => {
+            const path = `/${city.toLowerCase()}-${service
+              .toLowerCase()
+              .replace(/\s+/g, "-")}`;
+            return (
+              <Route
+                key={path}
+                path={path}
+                element={<DynamicSEO city={city} service={service} />}
+              />
+            );
+          })
+        )}
 
         {/* Repair pages */}
         <Route path="/macbook-repair" element={<LaptopPage />} />
@@ -919,6 +1123,27 @@ const App = () => {
             />
           }
         />
+
+        {/* Footer Navigation */}
+        {/* Devices */}
+        <Route path="/mobile-repair" element={<Mobile />} />
+        <Route path="/laptop-repair" element={<Laptop />} />
+        <Route path="/tablet-repair" element={<Tablet />} />
+        <Route path="/cctv-repair" element={<CCTV />} />
+
+        {/* Company Routes */}
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/articles" element={<Articles />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/e-waste-policy" element={<EwastePolicy />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+
+        {/* Help & extra pages */}
+        <Route path="/terms-conditions" element={<TermCondition />} />
+        <Route path="/warranty-policy" element={<Warranty />} />
+        <Route path="/partner-with-us" element={<Partner />} />
+        <Route path="/contact-us" element={<Contact />} />
+        <Route path="/faq" element={<FAQ />} />
       </Route>
     </Routes>
   );
