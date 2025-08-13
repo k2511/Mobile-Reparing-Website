@@ -36,7 +36,7 @@ const responsive = {
   },
   tablet: {
     breakpoint: { max: 991, min: 576 },
-    items: 1.5,
+    items: 1,
   },
   mobile: {
     breakpoint: { max: 575, min: 0 },
@@ -44,6 +44,7 @@ const responsive = {
   },
 };
 
+// Custom arrows only for desktop
 const CustomArrow = ({ direction, onClick }) => {
   const Icon = direction === "left" ? FaChevronLeft : FaChevronRight;
   return (
@@ -52,6 +53,15 @@ const CustomArrow = ({ direction, onClick }) => {
     </div>
   );
 };
+
+// Custom Dot component
+const CustomDot = ({ onClick, active }) => (
+  <button
+    className={`custom-dot ${active ? 'active' : ''}`}
+    onClick={onClick}
+    aria-label="carousel dot"
+  />
+);
 
 const LatestBlogs = () => {
   return (
@@ -78,19 +88,21 @@ const LatestBlogs = () => {
           <Carousel
             responsive={responsive}
             infinite={true}
-            showDots={false}
+            showDots={true}
             arrows={true}
             autoPlay={false}
             customLeftArrow={<CustomArrow direction="left" />}
             customRightArrow={<CustomArrow direction="right" />}
+            customDot={<CustomDot />}
             containerClass="custom-carousel-container"
             itemClass="carousel-item-padding-40-px"
             centerMode={false}
+            dotListClass="custom-dots-container"
           >
             {blogs.map((blog, index) => (
               <div key={index} className="carousel-item-wrapper">
                 <Card
-                  className="h-100 shadow-sm border-0 d-flex flex-column"
+                  className="h-100 shadow-sm border-0 d-flex flex-column mx-auto"
                   style={{
                     borderRadius: "14px",
                     minHeight: "480px",
@@ -170,6 +182,7 @@ const LatestBlogs = () => {
           position: relative;
         }
 
+        /* Arrows - only visible on desktop */
         .custom-arrow {
           position: absolute;
           top: 50%;
@@ -202,22 +215,92 @@ const LatestBlogs = () => {
           right: 0;
         }
 
+        /* Custom dots styling */
+        .custom-dots-container {
+          display: flex !important;
+          justify-content: center !important;
+          align-items: center !important;
+          margin-top: 20px !important;
+          padding: 0 !important;
+          list-style: none !important;
+        }
+
+        .custom-dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: #ccc;
+          border: none;
+          margin: 0 6px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+        }
+
+        .custom-dot.active {
+          background-color: #d60000;
+          transform: scale(1.2);
+        }
+
+        .custom-dot:hover {
+          background-color: #d60000;
+        }
+
         .carousel-item-padding-40-px {
           padding: 0 12px;
         }
 
-        @media (max-width: 768px) {
+        /* Mobile and Tablet specific styles */
+        @media (max-width: 991px) {
+          /* Hide arrows on mobile and tablet */
           .custom-arrow {
-            width: 30px;
-            height: 30px;
+            display: none !important;
           }
-
+          
           .custom-carousel-container {
             padding: 0 15px;
           }
 
           .carousel-item-wrapper {
             padding: 0 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          /* Ensure cards are properly centered */
+          .carousel-item-wrapper .card {
+            margin: 0 auto;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .custom-carousel-container {
+            padding: 0 10px;
+          }
+
+          .carousel-item-wrapper {
+            padding: 0 5px;
+          }
+
+          /* Make dots slightly smaller on mobile */
+          .custom-dot {
+            width: 10px;
+            height: 10px;
+            margin: 0 4px;
+          }
+        }
+
+        /* Ensure proper centering for all screen sizes */
+        @media (max-width: 575px) {
+          .carousel-item-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
+
+          .carousel-item-wrapper .card {
+            max-width: 320px;
+            width: 100%;
           }
         }
       `}</style>

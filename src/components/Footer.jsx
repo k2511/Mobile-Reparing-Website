@@ -58,13 +58,13 @@ const Footer = () => {
             <h5 className="footer-heading">Contact Us</h5>
             <ul className="footer-list contact-info">
               <li style={{fontSize:"12px"}}>
-                <i className="fas fa-map-marker-alt"></i> Shop No - 57, Vrindavan Dham, Plot No - 5 to 8, Sector - 05, Ghansoli, Navi Mumbai 400701
+                <i className="fas fa-map-marker-alt"></i> Konark Business Hub, 2nd Floor 3S-14, Kondhwa Main Road 411048, Pune 
               </li>
               <li>
                 <i className="fas fa-envelope"></i> support@ongoffix.com
               </li>
               <li>
-                <i className="fas fa-phone"></i> +91 8070900800
+                <i className="fas fa-phone"></i> +91 7676784785
               </li>
               <li className="social-icons">
                 <i className="fab fa-facebook-f"></i>
@@ -82,7 +82,7 @@ const Footer = () => {
           <p style={{marginTop:"25px"}}>
             All product names, logos, and brands are property of their respective owners. All company, product and service names used in this website are for identification purposes only. Use of these names, logos, and brands does not imply, Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque a aliquid necessitatibus?
           </p>
-          <p style={{fontWeight:"700", fontSize:"14px"}}>© 2025 Ongofix. All rights reserved.</p>
+          <p style={{fontWeight:"700", fontSize:"14px"}}>© 2025 RedSetGo . All rights reserved.</p>
         </div>
       </Container>
       </div>
