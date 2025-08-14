@@ -13,7 +13,7 @@ import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
 function IssueBrand() {
-  const { "mobile-name": mobileName } = useParams();
+  const {  mobileName } = useParams();
 
   const [cart, setCart] = useState([]); // get mobile-name from URL
   const { state } = useLocation();
@@ -102,12 +102,13 @@ function IssueBrand() {
 
         <div className="d-flex  items-center  my-auto">
           <h2 className="fw-bold text-dark ">{mobileName}</h2>
+          
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <p className="fw-semibold gap-3">Pick Your Repair Service</p>
-      </div>
+      </div> */}
 
       <section>
         <div className="container mt-5">

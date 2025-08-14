@@ -80,11 +80,10 @@
 
 // export default TopBar;
 
-
-import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom'; // Import Link for navigation
+import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import logo from "../assets/image/logo.png";
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 const TopBar = () => {
   const [isMounted, setIsMounted] = useState(false);
@@ -94,8 +93,21 @@ const TopBar = () => {
   const brandDropdownRef = useRef();
 
   const brands = [
-    'Samsung', 'Asus', 'Nothing', 'Vivo', 'Oppo', 'Realme', 'Google', 'Mi',
-    'OnePlus', 'Motorola', 'IQOO', 'Poco', 'Tecno', 'Nokia', 'Honor'
+    "Samsung",
+    "Asus",
+    "Nothing",
+    "Vivo",
+    "Oppo",
+    "Realme",
+    "Google",
+    "Mi",
+    "OnePlus",
+    "Motorola",
+    "IQOO",
+    "Poco",
+    "Tecno",
+    "Nokia",
+    "Honor",
   ];
 
   useEffect(() => {
@@ -104,16 +116,22 @@ const TopBar = () => {
 
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (servicesDropdownRef.current && !servicesDropdownRef.current.contains(event.target)) {
+      if (
+        servicesDropdownRef.current &&
+        !servicesDropdownRef.current.contains(event.target)
+      ) {
         setShowServicesDropdown(false);
       }
-      if (brandDropdownRef.current && !brandDropdownRef.current.contains(event.target)) {
+      if (
+        brandDropdownRef.current &&
+        !brandDropdownRef.current.contains(event.target)
+      ) {
         setShowBrandDropdown(false);
       }
     };
 
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   const handleServicesToggle = () => {
@@ -125,7 +143,11 @@ const TopBar = () => {
   };
 
   return (
-    <div className={`top-bar py-2 bg-white shadow-sm ${isMounted ? 'animate-slide-down' : ''}`}>
+    <div
+      className={`top-bar py-2 bg-white shadow-sm ${
+        isMounted ? "animate-slide-down" : ""
+      }`}
+    >
       <div className="container d-flex justify-content-between align-items-center w-100 p-2">
         {/* Logo */}
         <div className="logo">
@@ -139,29 +161,70 @@ const TopBar = () => {
           <div className="collapse navbar-collapse">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <Link className="nav-link" to="/about-us">About Us</Link>
+                <Link className="nav-link" to="/about-us">
+                  About Us
+                </Link>
               </li>
-              <li className="nav-item position-relative" ref={servicesDropdownRef}>
+              <li
+                className="nav-item position-relative"
+                ref={servicesDropdownRef}
+              >
                 <div
                   className="nav-link cursor-pointer"
                   onClick={handleServicesToggle}
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 >
                   Services <i className="bi bi-caret-down-fill ms-1"></i>
                 </div>
                 {showServicesDropdown && (
-                  <ul className="dropdown-menu show mt-2" style={{ display: 'block', position: 'absolute', left: 0 }}>
+                  <ul
+                    className="dropdown-menu show mt-2"
+                    style={{ display: "block", position: "absolute", left: 0 }}
+                  >
                     <li>
-                      <Link className="dropdown-item" to="/" onClick={() => setShowServicesDropdown(false)}>Mobile</Link>
+
+
+
+
+
+
+
+                      {/* <Link className="dropdown-item" to="/" onClick={() => setShowServicesDropdown(false)} > Mobile</Link> */}
+                      <Link
+                        className="dropdown-item"
+                        to="/#brand-section"
+                        onClick={() => setShowServicesDropdown(false)}
+                      >
+                        Mobile
+                      </Link>
+                    </li>
+
+                    <li>
+                      <Link
+                        className="dropdown-item"
+                        to="/tablet-repair"
+                        onClick={() => setShowServicesDropdown(false)}
+                      >
+                        Tablet
+                      </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/tablet-repair" onClick={() => setShowServicesDropdown(false)}>Tablet</Link>
+                      <Link
+                        className="dropdown-item"
+                        to="/macbook-repair"
+                        onClick={() => setShowServicesDropdown(false)}
+                      >
+                        Laptop
+                      </Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/macbook-repair" onClick={() => setShowServicesDropdown(false)}>Laptop</Link>
-                    </li>
-                    <li>
-                      <Link className="dropdown-item" to="/cctv-repair" onClick={() => setShowServicesDropdown(false)}>CCTV</Link>
+                      <Link
+                        className="dropdown-item"
+                        to="/cctv-repair"
+                        onClick={() => setShowServicesDropdown(false)}
+                      >
+                        CCTV
+                      </Link>
                     </li>
                   </ul>
                 )}
@@ -170,15 +233,22 @@ const TopBar = () => {
                 <div
                   className="nav-link cursor-pointer"
                   onClick={handleBrandToggle}
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 >
                   Brand <i className="bi bi-caret-down-fill ms-1"></i>
                 </div>
                 {showBrandDropdown && (
-                  <ul className="dropdown-menu show mt-2" style={{ display: 'block', position: 'absolute', left: 0 }}>
+                  <ul
+                    className="dropdown-menu show mt-2"
+                    style={{ display: "block", position: "absolute", left: 0 }}
+                  >
                     {brands.map((brand) => (
                       <li key={brand}>
-                        <Link className="dropdown-item" to={`/brand/${brand.toLowerCase()}`} onClick={() => setShowBrandDropdown(false)}>
+                        <Link
+                          className="dropdown-item"
+                          to={`/brand/${brand.toLowerCase()}`}
+                          onClick={() => setShowBrandDropdown(false)}
+                        >
                           {brand}
                         </Link>
                       </li>
@@ -186,8 +256,10 @@ const TopBar = () => {
                   </ul>
                 )}
               </li>
-                 <li className="nav-item">
-                <Link className="nav-link" to="/contact-us">Contact Us</Link>
+              <li className="nav-item">
+                <Link className="nav-link" to="/contact-us">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
@@ -198,4 +270,3 @@ const TopBar = () => {
 };
 
 export default TopBar;
-

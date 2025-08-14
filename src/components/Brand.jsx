@@ -46,7 +46,7 @@ const Brand = () => {
   };
 
   return (
-    <Container className="my-5 text-center">
+    <Container className="my-5 text-center" id="mobile-section" >
       <h3 className="mb-2" style={{ fontSize: "25px", fontWeight: "700" }}>
         CHOOSE YOUR BRANDS
       </h3>

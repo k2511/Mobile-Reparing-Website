@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "../components/Doorstep.css";
 // images
 import mi1 from "../assets/mi/mi-1.png";
@@ -176,6 +177,9 @@ const Doorstep = () => {
   const [query, setQuery] = useState(""); // What user types
   const [results, setResults] = useState([]); // Search results
   const [loading, setLoading] = useState(false); // Loader
+  const location = useLocation();
+  const showSection = location.state?.showSection || false;
+
 
   const mobiles = [
     { name: "Realme C21", image: realme1 },
@@ -468,7 +472,7 @@ const Doorstep = () => {
           )}
         </div> */}
 
-        <div className="row g-4 justify-content-center">
+        <div className="row g-4 justify-content-center" >
           {query.length == 0 &&
             services.length > 0 &&
             services.map((service, index) => (
@@ -518,8 +522,7 @@ const Doorstep = () => {
               ))}
           </div>
         </div> */}
-        <div
-          style={{
+        <div   style={{
             padding: "20px",
             display: "grid",
             gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))",

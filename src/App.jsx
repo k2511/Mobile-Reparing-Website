@@ -248,11 +248,13 @@ const HomePage = () => {
       <Suspense fallback={<LoadingSpinner />}>
         <Doorstep />
       </Suspense>
+      
       <div id="brand-section">
         <Suspense fallback={<LoadingSpinner />}>
           <Brand />
         </Suspense>
       </div>
+
       <Suspense fallback={<LoadingSpinner />}>
         <ProcessSteps />
       </Suspense>
@@ -525,7 +527,7 @@ const App = () => {
 
         {/* Brand issues */}
         <Route
-          path="/brand-issues/:mobileName"
+          path="/brand-issues/:id"
           element={
             <BrandPageTemplate
               title="Brand Issue - RedSetGo Repairs"
@@ -566,7 +568,7 @@ const App = () => {
         <Route path="/warranty-policy" element={<Warranty />} />
         <Route path="/partner-with-us" element={<Partner />} />
         <Route path="/contact-us" element={<Contact />} />
-        <Route path="/faq" element={<FAQ />} />
+        <Route path="/faqs" element={<FAQ />} />
       </Route>
     </Routes>
   );

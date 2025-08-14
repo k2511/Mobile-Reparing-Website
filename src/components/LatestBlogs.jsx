@@ -321,6 +321,7 @@ import "slick-carousel/slick/slick-theme.css";
 import latest1 from "../assets/image/latest-1.png";
 import latest2 from "../assets/image/latest-2.png";
 import latest3 from "../assets/image/latest-3.png";
+import { NavLink } from "react-router-dom";
 
 const blogs = [
   {
@@ -382,9 +383,9 @@ const LatestBlogs = () => {
             <h4 className="fw-bold mb-0">LATEST BLOGS</h4>
           </Col>
           <Col xs="auto">
-            <a href="/blogs" className="text-danger fw-semibold">
+            <NavLink to="/about-us" className="text-danger fw-semibold">
               View All
-            </a>
+            </NavLink>
           </Col>
         </Row>
 

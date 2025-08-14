@@ -293,7 +293,7 @@ const SamsungPage = () => {
               fontSize: "14px",
             }}
           >
-            Home / Repair / Samsung
+            Samsung
           </div>
           <h1
             style={{
