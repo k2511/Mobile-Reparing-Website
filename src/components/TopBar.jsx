@@ -152,16 +152,16 @@ const TopBar = () => {
                 {showServicesDropdown && (
                   <ul className="dropdown-menu show mt-2" style={{ display: 'block', position: 'absolute', left: 0 }}>
                     <li>
-                      <Link className="dropdown-item" to="/services/mobile" onClick={() => setShowServicesDropdown(false)}>Mobile</Link>
+                      <Link className="dropdown-item" to="/" onClick={() => setShowServicesDropdown(false)}>Mobile</Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/services/tablet" onClick={() => setShowServicesDropdown(false)}>Tablet</Link>
+                      <Link className="dropdown-item" to="/tablet-repair" onClick={() => setShowServicesDropdown(false)}>Tablet</Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/services/laptop" onClick={() => setShowServicesDropdown(false)}>Laptop</Link>
+                      <Link className="dropdown-item" to="/macbook-repair" onClick={() => setShowServicesDropdown(false)}>Laptop</Link>
                     </li>
                     <li>
-                      <Link className="dropdown-item" to="/services/cctv" onClick={() => setShowServicesDropdown(false)}>CCTV</Link>
+                      <Link className="dropdown-item" to="/cctv-repair" onClick={() => setShowServicesDropdown(false)}>CCTV</Link>
                     </li>
                   </ul>
                 )}
@@ -185,6 +185,9 @@ const TopBar = () => {
                     ))}
                   </ul>
                 )}
+              </li>
+                 <li className="nav-item">
+                <Link className="nav-link" to="/contact-us">Contact Us</Link>
               </li>
             </ul>
           </div>
