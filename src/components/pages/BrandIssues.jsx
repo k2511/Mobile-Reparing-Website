@@ -74,10 +74,10 @@ function IssueBrand() {
     },
   ];
 
-  console.log("dfdf", cart.length);
-  for (let i = 0; i < cart.length; i++) {
-    console.log("cart data", cart[i]);
-  }
+  // console.log("dfdf", cart.length);
+  // for (let i = 0; i < cart.length; i++) {
+  //   console.log("cart data", cart[i]);
+  // }
 
   const handleToggle = (id) => {
     setSelectedIssues((prevIssues) => ({
@@ -197,7 +197,7 @@ function IssueBrand() {
         data-bs-target="#quickContactModal"
         style={{ height: "80px" }}
       >
-        <button className="btn  bg-danger">Book Now </button>
+        <button className="btn  btn-dark rounded">Book Now </button>
       </div>
 
       {/* <div
@@ -392,3 +392,7 @@ function IssueBrand() {
 }
 
 export default IssueBrand;
+
+
+
+
