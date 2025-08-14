@@ -527,7 +527,7 @@ const App = () => {
 
         {/* Brand issues */}
         <Route
-          path="/brand-issues/:id"
+          path="/brand-issues/:mobileName"
           element={
             <BrandPageTemplate
               title="Brand Issue - RedSetGo Repairs"
