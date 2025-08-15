@@ -22,34 +22,30 @@ const FAQ = () => {
             1.How long will my mobile repair take?
           </Accordion.Header>
           <Accordion.Body>
-           Most repairs are completed within the same day, depending on the issue.
+            Most repairs are completed within the same day, depending on the
+            issue.
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="1">
-          <Accordion.Header>
-            2. Do you offer on-site repairs?
-          </Accordion.Header>
+          <Accordion.Header>2. Do you offer on-site repairs?</Accordion.Header>
           <Accordion.Body>
-           Yes, we provide on-site services for selected repairs and CCTV installations.
+            Yes, we provide on-site services for selected repairs and CCTV
+            installations.
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="2">
-          <Accordion.Header>
-            3.What brands do you repair?
-          </Accordion.Header>
+          <Accordion.Header>3.What brands do you repair?</Accordion.Header>
           <Accordion.Body>
-          We work with all major brands of mobiles, tablets, and laptops.
+            We work with all major brands of mobiles, tablets, and laptops.
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="3">
-          <Accordion.Header>
-            4.Is there a warranty on repairs?
-          </Accordion.Header>
+          <Accordion.Header>4.Is there a warranty on repairs?</Accordion.Header>
           <Accordion.Body>
-           Yes, we offer a warranty on all parts and services.
+            Yes, we offer a warranty on all parts and services.
           </Accordion.Body>
         </Accordion.Item>
 
@@ -67,39 +63,35 @@ const FAQ = () => {
             6. Can you install CCTV at my home or office?
           </Accordion.Header>
           <Accordion.Body>
-          Absolutely – we offer full installation, setup, and maintenance.
+            Absolutely – we offer full installation, setup, and maintenance.
           </Accordion.Body>
         </Accordion.Item>
 
-
-           <Accordion.Item eventKey="5">
-          <Accordion.Header>
-            7.Do you use original parts?
-          </Accordion.Header>
+        <Accordion.Item eventKey="5">
+          <Accordion.Header>7.Do you use original parts?</Accordion.Header>
           <Accordion.Body>
-    We use high-quality parts that meet or exceed OEM standards.
+            We use high-quality parts that meet or exceed OEM standards.
           </Accordion.Body>
         </Accordion.Item>
 
-        
-           <Accordion.Item eventKey="5">
-          <Accordion.Header>
-            8.How much will my repair cost?
-          </Accordion.Header>
+        <Accordion.Item eventKey="5">
+          <Accordion.Header>8.How much will my repair cost?</Accordion.Header>
           <Accordion.Body>
-Prices depend on the repair type, but we offer free diagnostics and quotes.
+            Prices depend on the repair type, but we offer free diagnostics and
+            quotes.
           </Accordion.Body>
         </Accordion.Item>
-
-
-        
       </Accordion>
 
       <Row className="mt-5">
         <Col>
           <h4 className="fw-bold">Why Choose RedSet Go for Mobile Repair?</h4>
           <p className="text-muted">
-           We are committed to delivering top-notch service that exceeds expectations every time. Our approach combines expertise, dedication, and customer-centric values to ensure your complete satisfaction. Whether it’s speed, skill, or affordability, we stand out as your trusted partner for reliable solutions.
+            We are committed to delivering top-notch service that exceeds
+            expectations every time. Our approach combines expertise,
+            dedication, and customer-centric values to ensure your complete
+            satisfaction. Whether it’s speed, skill, or affordability, we stand
+            out as your trusted partner for reliable solutions.
           </p>
         </Col>
       </Row>
@@ -108,7 +100,11 @@ Prices depend on the repair type, but we offer free diagnostics and quotes.
         <Col>
           <h4 className="fw-bold">Fast & Reliable Service</h4>
           <p className="text-muted">
-          We value your time, providing quick turnarounds without compromising on quality. Our streamlined processes and responsive team ensure that your issues are addressed promptly. We also maintain strict timelines, so you can get back to your routine without unnecessary delays.
+            We value your time, providing quick turnarounds without compromising
+            on quality. Our streamlined processes and responsive team ensure
+            that your issues are addressed promptly. We also maintain strict
+            timelines, so you can get back to your routine without unnecessary
+            delays.
           </p>
         </Col>
       </Row>
@@ -129,23 +125,29 @@ Prices depend on the repair type, but we offer free diagnostics and quotes.
         <Col>
           <h4 className="fw-bold">Expert Technicians</h4>
           <p className="text-muted">
-           Our skilled team uses advanced tools to deliver precision repairs every time. Each technician is trained to handle complex tasks with accuracy and professionalism. We also stay updated with the latest industry techniques to ensure lasting results for every project.
+            Our skilled team uses advanced tools to deliver precision repairs
+            every time. Each technician is trained to handle complex tasks with
+            accuracy and professionalism. We also stay updated with the latest
+            industry techniques to ensure lasting results for every project.
           </p>
         </Col>
       </Row>
 
-
-       <Row className="mt-4">
+      <Row className="mt-4">
         <Col>
           <h4 className="fw-bold">Affordable Pricing</h4>
           <p className="text-muted">
-           We offer fair, upfront prices with no hidden charges – only honest service. Our pricing model is transparent and designed to suit different budgets. By combining quality with cost-effectiveness, we make sure you get maximum value for your investment.
+            We offer fair, upfront prices with no hidden charges – only honest
+            service. Our pricing model is transparent and designed to suit
+            different budgets. By combining quality with cost-effectiveness, we
+            make sure you get maximum value for your investment.
           </p>
         </Col>
       </Row>
 
       {/* Custom Styles */}
-      <style >{`
+      <style>
+        {`
         /* Keep default accordion colors clean */
         .accordion-button:not(.collapsed) {
           color: unset !important;

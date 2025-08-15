@@ -34,6 +34,10 @@ import Warranty from "./components/help/warranty.jsx";
 import Partner from "./components/help/partner.jsx";
 import Contact from "./components/help/contactUs.jsx";
 import FAQ from "./components/FAQ.jsx"; // Updated to match import case
+import TipsSection from "./components/TipsSection.jsx";
+import FeaturesSection from "./components/FeaturesSection.jsx";
+import WhatYouGet from "./components/WhatYouGet.jsx";
+import BlogSection from "./components/BlogSection.jsx";
 
 // Lazy-loaded components for home page
 const Slider = React.lazy(() => import("./components/Slider.jsx"));
@@ -263,6 +267,21 @@ const HomePage = () => {
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
         <WhyUs />
+   </Suspense>
+     <Suspense fallback={<LoadingSpinner />}>
+        <FeaturesSection />
+   </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        <WhatYouGet />
+   </Suspense>
+
+   <Suspense fallback={<LoadingSpinner/>}>
+   <BlogSection/>
+    
+   </Suspense>
+   
+        <Suspense fallback={<LoadingSpinner />}>
+        <TipsSection />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
         <Services />

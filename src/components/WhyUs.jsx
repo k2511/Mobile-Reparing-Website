@@ -7,23 +7,23 @@ const WhyUs = () => {
   const features = [
     {
       icon: <FaAward size={28} className="text-danger" />,
-      title: 'Genuine Parts',
-      desc: 'We use original spare parts to ensure long-lasting performance with 90 days warranty.',
+      title: 'Fast & Reliable Service',
+      desc: 'We value your time, providing quick turnarounds without compromising on quality. Our streamlined processes and responsive team ensure that your issues are addressed promptly. We also maintain strict timelines, so you can get back to your routine without unnecessary delays.',
     },
     {
       icon: <FaHome size={28} className="text-danger" />,
       title: 'Doorstep Service',
-      desc: 'Get professional repairs at your home or office with no hidden charges.',
+      desc: 'Repairs made easy — at your home or office, with honest pricing and no hidden fees.',
     },
     {
       icon: <FaTools size={28} className="text-danger" />,
       title: 'Expert Technicians',
-      desc: 'Trained professionals with deep expertise in major brands, ensuring both device care and complete data safety.',
+      desc: 'Our skilled team uses advanced tools to deliver precision repairs every time. Each technician is trained to handle complex tasks with accuracy and professionalism. We also stay updated with the latest industry techniques to ensure lasting results for every project.',
     },
     {
       icon: <FaCertificate size={28} className="text-danger" />,
-      title: 'Certified Warranty',
-      desc: 'Every repair comes with a certificate-backed warranty for peace of mind.',
+      title: 'Affordable Pricing',
+      desc: 'We offer fair, upfront prices with no hidden charges – only honest service. Our pricing model is transparent and designed to suit different budgets. By combining quality with cost-effectiveness, we make sure you get maximum value for your investment.',
     },
   ];
 
@@ -42,7 +42,7 @@ const WhyUs = () => {
                   <div className="me-3 mt-1">{item.icon}</div>
                   <div>
                     <Card.Title className="mb-1 fw-semibold">{item.title}</Card.Title>
-                    <Card.Text className="text-muted">{item.desc}</Card.Text>
+                    <Card.Text className="text-muted f-3" >{item.desc}</Card.Text>
                   </div>
                 </Card.Body>
               </Card>
