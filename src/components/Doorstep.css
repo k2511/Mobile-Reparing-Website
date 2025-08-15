@@ -110,3 +110,13 @@
     text-align: center;
   }
 }
+/* .tab-buttons .nav-link:hover {
+    background-color: #d60000;
+    color: #fff !important;
+} */
+
+.tab-buttons .nav-link.active {
+    background-color: #000;
+    color: #fff !important;
+    border-radius: 8px;
+}

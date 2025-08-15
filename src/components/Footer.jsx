@@ -111,15 +111,15 @@ const Footer = () => {
               <h5 className="footer-heading">Contact Us</h5>
               <ul className="footer-list contact-info">
                 <li style={{ fontSize: "12px" }}>
-                  <i className="fas fa-map-marker-alt"></i> Konark Business Hub,
-                  2nd Floor 3S-14, Kondhwa Main Road 411048, Pune
+                  <i className="fas fa-map-marker-alt"></i>Address: Konark Business Hub, 2nd Floor 3S-14, Kondhwa Main Road, Pune, Maharashtra 411048
                 </li>
                 <li>
-                  <i className="fas fa-envelope"></i> support@ongoffix.com
+                  <i className="fas fa-envelope"></i> support@redsetgo.com
                 </li>
                 <li>
                   <i className="fas fa-phone"></i> +91 7676784785
                 </li>
+                <li>🌐 Website: www.resetgo.in</li>
                 <li className="social-icons">
                   <i className="fab fa-facebook-f"></i>
                   <i className="fab fa-twitter"></i>
@@ -132,14 +132,10 @@ const Footer = () => {
 
           <div className="footer-disclaimer">
             <p style={{ marginTop: "25px" }}>
-              All product names, logos, and brands are property of their
-              respective owners. All company, product and service names used in
-              this website are for identification purposes only. Use of these
-              names, logos, and brands does not imply, Lorem ipsum dolor sit,
-              amet consectetur adipisicing elit. Atque a aliquid necessitatibus?
+            Broken screen? Battery dying? Don’t sweat it – we’ll fix it right where you are! Redset Go sends expert technicians to your home or office in Pune, armed with genuine parts and the skills to get your phone back in action fast. No queues. No hidden costs. Just quick, transparent, and reliable repairs you can trust. 📱 Book now and get your device revived in a flash!
             </p>
             <p style={{ fontWeight: "700", fontSize: "14px" }}>
-              © 2025 RedSetGo . All rights reserved.
+              © 2025 RedSet Go . All rights reserved.
             </p>
           </div>
         </Container>

@@ -22,7 +22,7 @@ export default function HomeSEO() {
     areaServed: { "@type": "City", name: "Pune" },
     openingHours: "Mo-Su 09:00-21:00",
     description:
-      "Doorstep mobile repair in Pune. 30-minute service done in front of you with genuine parts.",
+      "Repair Your Phone, Restore Your Day – With Redset Go’s expert technicians, genuine parts, and quick doorstep service, fixing your device has never been easier. Get back to what matters in just 30 minutes – right in front of you!.",
     sameAs: [
       "https://www.facebook.com/yourpage",
       "https://www.instagram.com/yourpage",

@@ -194,7 +194,7 @@ const HomePage = () => {
     <div>
       <Helmet>
         <title>
-          Mobile Repair in Pune – Doorstep Service in 30 Minutes | RedSetGo Repairs
+       Redset Go – Doorstep Mobile Repair Service in Pune | Fast & Reliable
         </title>
         <meta
           name="description"
@@ -213,7 +213,7 @@ const HomePage = () => {
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Mobile Repair in Pune – Doorstep in 30 Minutes | RedSetGo Repairs"
+          content="Mobile Repair in Pune – Doorstep in 30 Minutes | RedSet Go Repairs"
         />
         <meta
           property="og:description"
@@ -224,7 +224,7 @@ const HomePage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Mobile Repair in Pune – Doorstep in 30 Minutes | RedSetGo Repairs"
+          content="Mobile Repair in Pune – Doorstep in 30 Minutes | RedSet Go Repairs"
         />
         <meta
           name="twitter:description"
@@ -290,7 +290,7 @@ const HomePage = () => {
 const LaptopPage = () => (
   <div>
     <Helmet>
-      <title>Laptop - RedSetGo Repairs</title>
+      <title>Laptop - RedSet Go Repairs</title>
       <meta
         name="description"
         content="Professional repair services including screen, battery, and hardware repair."
@@ -305,7 +305,7 @@ const LaptopPage = () => (
 const CctvPage = () => (
   <div>
     <Helmet>
-      <title>CCTV Repair - RedSetGo Repairs</title>
+      <title>CCTV Repair - RedSet Go Repairs</title>
       <meta
         name="description"
         content="Reliable CCTV repair services for homes and businesses."
@@ -320,7 +320,7 @@ const CctvPage = () => (
 const TabletPage = () => (
   <div>
     <Helmet>
-      <title>Tablet Repair - RedSetGo Repairs</title>
+      <title>Tablet Repair - RedSet Go Repairs</title>
       <meta
         name="description"
         content="Expert tablet repair services including screen replacement and battery repair."
@@ -378,7 +378,7 @@ const App = () => {
           path="/brand/samsung"
           element={
             <BrandPageTemplate
-              title="Samsung Repair - RedSetGo Repairs"
+              title="Samsung Repair - RedSet Go Repairs"
               description="Repair Samsung phones, tablets, and devices with RedSetGo Repairs."
               Component={SamsungModels}
             />
@@ -388,7 +388,7 @@ const App = () => {
           path="/brand/asus"
           element={
             <BrandPageTemplate
-              title="Asus Repair - RedSetGo Repairs"
+              title="Asus Repair - RedSet Go Repairs"
               description="Repair Asus phones, tablets, and laptops professionally."
               Component={AsusPage}
             />
@@ -398,7 +398,7 @@ const App = () => {
           path="/brand/nothing"
           element={
             <BrandPageTemplate
-              title="Nothing Phone Repair - RedSetGo Repairs"
+              title="Nothing Phone Repair - RedSet Go Repairs"
               description="Professional Nothing phone repair services."
               Component={NothingPage}
             />
@@ -408,7 +408,7 @@ const App = () => {
           path="/brand/vivo"
           element={
             <BrandPageTemplate
-              title="Vivo Repair - RedSetGo Repairs"
+              title="Vivo Repair - RedSet Go Repairs"
               description="Vivo mobile repair services for all models."
               Component={VivoPage}
             />
@@ -418,7 +418,7 @@ const App = () => {
           path="/brand/oppo"
           element={
             <BrandPageTemplate
-              title="Oppo Repair - RedSetGo Repairs"
+              title="Oppo Repair - RedSet Go Repairs"
               description="Repair Oppo smartphones professionally."
               Component={OppoPage}
             />
@@ -428,7 +428,7 @@ const App = () => {
           path="/brand/realme"
           element={
             <BrandPageTemplate
-              title="Realme Repair - RedSetGo Repairs"
+              title="Realme Repair - RedSet Go Repairs"
               description="Repair Realme devices with professional service."
               Component={RealmePage}
             />
@@ -438,7 +438,7 @@ const App = () => {
           path="/brand/google"
           element={
             <BrandPageTemplate
-              title="Google Phone Repair - RedSetGo Repairs"
+              title="Google Phone Repair - RedSet Go Repairs"
               description="Repair Google Pixel phones and devices."
               Component={GooglePage}
             />
@@ -448,7 +448,7 @@ const App = () => {
           path="/brand/mi"
           element={
             <BrandPageTemplate
-              title="Mi Repair - RedSetGo Repairs"
+              title="Mi Repair - RedSet Go Repairs"
               description="Repair Xiaomi/MI phones professionally."
               Component={MiPage}
             />
@@ -458,7 +458,7 @@ const App = () => {
           path="/brand/oneplus"
           element={
             <BrandPageTemplate
-              title="OnePlus Repair - RedSetGo Repairs"
+              title="OnePlus Repair - RedSet Go Repairs"
               description="OnePlus device repair services."
               Component={OnePlusPage}
             />
@@ -468,7 +468,7 @@ const App = () => {
           path="/brand/motorola"
           element={
             <BrandPageTemplate
-              title="Motorola Repair - RedSetGo Repairs"
+              title="Motorola Repair - RedSet Go Repairs"
               description="Repair Motorola phones professionally."
               Component={MotorolaPage}
             />
@@ -478,7 +478,7 @@ const App = () => {
           path="/brand/iqoo"
           element={
             <BrandPageTemplate
-              title="IQOO Repair - RedSetGo Repairs"
+              title="IQOO Repair - RedSet Go Repairs"
               description="IQOO smartphone repair services."
               Component={IqooPage}
             />
@@ -488,7 +488,7 @@ const App = () => {
           path="/brand/poco"
           element={
             <BrandPageTemplate
-              title="Poco Repair - RedSetGo Repairs"
+              title="Poco Repair - RedSet Go Repairs"
               description="Poco phone repair services."
               Component={PocoPage}
             />
@@ -498,7 +498,7 @@ const App = () => {
           path="/brand/tecno"
           element={
             <BrandPageTemplate
-              title="Tecno Repair - RedSetGo Repairs"
+              title="Tecno Repair - RedSet Go Repairs"
               description="Tecno mobile repair services."
               Component={TecnoPage}
             />
@@ -508,7 +508,7 @@ const App = () => {
           path="/brand/nokia"
           element={
             <BrandPageTemplate
-              title="Nokia Repair - RedSetGo Repairs"
+              title="Nokia Repair - RedSet Go Repairs"
               description="Nokia phone repair services."
               Component={NokiaPage}
             />
@@ -518,7 +518,7 @@ const App = () => {
           path="/brand/honor"
           element={
             <BrandPageTemplate
-              title="Honor Repair - RedSetGo Repairs"
+              title="Honor Repair - RedSet Go Repairs"
               description="Repair Honor devices professionally."
               Component={HonorPage}
             />
@@ -530,7 +530,7 @@ const App = () => {
           path="/brand-issues/:mobileName"
           element={
             <BrandPageTemplate
-              title="Brand Issue - RedSetGo Repairs"
+              title="Brand Issue - RedSet Go Repairs"
               description="Find solutions for common brand mobile issues."
               Component={BrandIssues}
             />
@@ -542,7 +542,7 @@ const App = () => {
           path="/brand/:brandName"
           element={
             <BrandPageTemplate
-              title="Mobile Repair - RedSetGo Repairs"
+              title="Mobile Repair - RedSet Go Repairs"
               description="Repair services for all mobile brands."
               Component={LaptopRepairPage} // fallback component
             />

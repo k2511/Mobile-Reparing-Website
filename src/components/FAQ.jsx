@@ -19,89 +19,96 @@ const FAQ = () => {
       <Accordion flush alwaysOpen>
         <Accordion.Item eventKey="0">
           <Accordion.Header>
-            1. What kind of mobile repair services does Ongofix.com offer?
+            1.How long will my mobile repair take?
           </Accordion.Header>
           <Accordion.Body>
-            Ongofix provides a wide range of mobile repair services including
-            screen replacement, battery replacement, charging port fixes, and
-            more.
+           Most repairs are completed within the same day, depending on the issue.
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="1">
           <Accordion.Header>
-            2. How long does it take to repair a smartphone?
+            2. Do you offer on-site repairs?
           </Accordion.Header>
           <Accordion.Body>
-            Most smartphone repairs are completed within 1–2 hours depending on
-            the issue and availability of parts.
+           Yes, we provide on-site services for selected repairs and CCTV installations.
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="2">
           <Accordion.Header>
-            3. Does Ongofix provide warranty on mobile repair services?
+            3.What brands do you repair?
           </Accordion.Header>
           <Accordion.Body>
-            Yes, Ongofix provides a warranty on selected repairs and parts.
-            Terms and conditions apply.
+          We work with all major brands of mobiles, tablets, and laptops.
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="3">
           <Accordion.Header>
-            4. What is the cost of mobile repair online?
+            4.Is there a warranty on repairs?
           </Accordion.Header>
           <Accordion.Body>
-            The cost varies based on the brand and issue. You can get an
-            estimate online or by contacting support.
+           Yes, we offer a warranty on all parts and services.
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="4">
           <Accordion.Header>
-            5. Where can I get my mobile repair online?
+            5. Do I need to book an appointment?
           </Accordion.Header>
           <Accordion.Body>
-            You can schedule a doorstep pickup or visit a nearby Ongofix center
-            through our website.
+            Walk-ins are welcome, but booking ensures faster service.
           </Accordion.Body>
         </Accordion.Item>
 
         <Accordion.Item eventKey="5">
           <Accordion.Header>
-            6. Is online mobile repair service safe and secure?
+            6. Can you install CCTV at my home or office?
           </Accordion.Header>
           <Accordion.Body>
-            Absolutely. We use encrypted systems, genuine parts, and certified
-            technicians to ensure secure and quality repairs.
+          Absolutely – we offer full installation, setup, and maintenance.
           </Accordion.Body>
         </Accordion.Item>
+
+
+           <Accordion.Item eventKey="5">
+          <Accordion.Header>
+            7.Do you use original parts?
+          </Accordion.Header>
+          <Accordion.Body>
+    We use high-quality parts that meet or exceed OEM standards.
+          </Accordion.Body>
+        </Accordion.Item>
+
+        
+           <Accordion.Item eventKey="5">
+          <Accordion.Header>
+            8.How much will my repair cost?
+          </Accordion.Header>
+          <Accordion.Body>
+Prices depend on the repair type, but we offer free diagnostics and quotes.
+          </Accordion.Body>
+        </Accordion.Item>
+
+
+        
       </Accordion>
 
       <Row className="mt-5">
         <Col>
-          <h4 className="fw-bold">Why Choose Ongofix for Mobile Repair?</h4>
+          <h4 className="fw-bold">Why Choose RedSet Go for Mobile Repair?</h4>
           <p className="text-muted">
-            Discover unparalleled expertise at Ongofix, your trusted Mobile
-            Repair Service in Mumbai. Our certified technicians ensure top-notch
-            repairs, using genuine parts and innovative solutions. Be it a
-            broken screen, display, back glass replacement, battery, charging
-            port, earpiece issue, or anything else, we fix everything. Choose us
-            for reliable, efficient, and customer-centric mobile repair
-            services, prioritizing your satisfaction.
+           We are committed to delivering top-notch service that exceeds expectations every time. Our approach combines expertise, dedication, and customer-centric values to ensure your complete satisfaction. Whether it’s speed, skill, or affordability, we stand out as your trusted partner for reliable solutions.
           </p>
         </Col>
       </Row>
 
       <Row className="mt-4">
         <Col>
-          <h4 className="fw-bold">How Does Ongofix Work?</h4>
+          <h4 className="fw-bold">Fast & Reliable Service</h4>
           <p className="text-muted">
-            Ongofix simplifies mobile repair. Schedule a service online, and our
-            skilled technicians come to your location. Enjoy hassle-free
-            diagnostics, transparent pricing, and swift repairs, ensuring your
-            device's seamless performance.
+          We value your time, providing quick turnarounds without compromising on quality. Our streamlined processes and responsive team ensure that your issues are addressed promptly. We also maintain strict timelines, so you can get back to your routine without unnecessary delays.
           </p>
         </Col>
       </Row>
@@ -120,12 +127,19 @@ const FAQ = () => {
 
       <Row className="mt-4">
         <Col>
-          <h4 className="fw-bold">Mobile Battery Repair</h4>
+          <h4 className="fw-bold">Expert Technicians</h4>
           <p className="text-muted">
-            Experience Ongofix's expertise in mobile battery repair. We employ
-            cutting-edge techniques to diagnose and fix battery issues swiftly.
-            Count on us for reliable solutions that extend your device's battery
-            life, ensuring uninterrupted performance.
+           Our skilled team uses advanced tools to deliver precision repairs every time. Each technician is trained to handle complex tasks with accuracy and professionalism. We also stay updated with the latest industry techniques to ensure lasting results for every project.
+          </p>
+        </Col>
+      </Row>
+
+
+       <Row className="mt-4">
+        <Col>
+          <h4 className="fw-bold">Affordable Pricing</h4>
+          <p className="text-muted">
+           We offer fair, upfront prices with no hidden charges – only honest service. Our pricing model is transparent and designed to suit different budgets. By combining quality with cost-effectiveness, we make sure you get maximum value for your investment.
           </p>
         </Col>
       </Row>

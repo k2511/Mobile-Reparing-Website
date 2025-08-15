@@ -496,32 +496,7 @@ const Doorstep = () => {
             ))}
         </div>
 
-        {/* <div style={{ padding: "20px" }}>
-          <div style={{ display: "flex", gap: "20px", flexWrap: "wrap" }}>
-            {filteredMobiles.length > 0 &&
-              filteredMobiles.map((mobile, index) => (
-                <div
-                  key={index}
-                  style={{ textAlign: "center" }}
-                  onClick={() => {
-                    navigate(
-                      `/brand-issues/${encodeURIComponent(mobile.name)}`,
-                      {
-                        state: { image: mobile.image },
-                      }
-                    );
-                  }}
-                >
-                  <img
-                    src={mobile.image}
-                    alt={mobile.name}
-                    style={{ width: "100px" }}
-                  />
-                  <p>{mobile.name}</p>
-                </div>
-              ))}
-          </div>
-        </div> */}
+       
         <div   style={{
             padding: "20px",
             display: "grid",
