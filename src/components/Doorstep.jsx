@@ -426,52 +426,7 @@ const Doorstep = () => {
           </div>
         </div>
 
-        {/* Services */}
-        {/* <div className="row g-4 justify-content-center">
-          {services.length > 0 ? (
-            services.map((service, index) => (
-              <div key={index} className="col-6 col-sm-6 col-md-4 col-lg-2 d-flex">
-                <div
-                  className="service-card w-100"
-                  onClick={() => handleServiceClick(service)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <img src={service.img} alt={service.gadget} className="img-fluid" />
-                  <h6>{service.gadget}</h6>
-                </div>
-              </div>
-            ))
-          ) : (
-            <div className="text-center text-muted">No results found.</div>
-          )}
-        </div> */}
-
-        {/* <div className="row g-4 justify-content-center">
-          {query.length == 0 && services.length > 0 ? (
-            services.map((service, index) => (
-              <div
-                key={index}
-                className="col-6 col-sm-6 col-md-4 col-lg-2 d-flex"
-              >
-                <div
-                  className="service-card w-100"
-                  onClick={() => handleServiceClick(service)}
-                  style={{ cursor: "pointer" }}
-                >
-                  <img
-                    src={service.img}
-                    alt={service.gadget}
-                    className="img-fluid"
-                  />
-                  <h6>{service.gadget}</h6>
-                </div>
-              </div>
-            ))
-          ) : (
-            <div className="text-center text-muted">No results found.</div>
-          )}
-        </div> */}
-
+        
         <div className="row g-4 justify-content-center" >
           {query.length == 0 &&
             services.length > 0 &&

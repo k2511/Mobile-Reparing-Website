@@ -1,4 +1,3 @@
-
 import React, { Suspense } from "react";
 import { Routes, Route, Outlet } from "react-router-dom";
 import { Helmet } from "react-helmet";
@@ -33,7 +32,7 @@ import TermCondition from "./components/help/termsCondition.jsx";
 import Warranty from "./components/help/warranty.jsx";
 import Partner from "./components/help/partner.jsx";
 import Contact from "./components/help/contactUs.jsx";
-import FAQ from "./components/FAQ.jsx"; // Updated to match import case
+import FAQ from "./components/FAQ.jsx";
 import TipsSection from "./components/TipsSection.jsx";
 import FeaturesSection from "./components/FeaturesSection.jsx";
 import WhatYouGet from "./components/WhatYouGet.jsx";
@@ -49,31 +48,55 @@ const WhyUs = React.lazy(() => import("./components/WhyUs.jsx"));
 const FeedBack = React.lazy(() => import("./components/FeedBack.jsx"));
 const ValueProps = React.lazy(() => import("./components/valueProps.jsx"));
 const LatestBlogs = React.lazy(() => import("./components/LatestBlogs.jsx"));
-const LatestStories = React.lazy(() => import("./components/LatestStories.jsx"));
+const LatestStories = React.lazy(() =>
+  import("./components/LatestStories.jsx")
+);
 const Brand = React.lazy(() => import("./components/Brand.jsx"));
 
 // Lazy-loaded page components
-const LaptopRepairPage = React.lazy(() => import("./components/pages/LaptopRepairPage.jsx"));
-const CctvRepairPage = React.lazy(() => import("./components/pages/CctvRepairPage.jsx"));
-const TabletRepairPage = React.lazy(() => import("./components/pages/TabletRepairPage.jsx"));
-const BrandIssues = React.lazy(() => import("./components/pages/BrandIssues.jsx"));
+const LaptopRepairPage = React.lazy(() =>
+  import("./components/pages/LaptopRepairPage.jsx")
+);
+const CctvRepairPage = React.lazy(() =>
+  import("./components/pages/CctvRepairPage.jsx")
+);
+const TabletRepairPage = React.lazy(() =>
+  import("./components/pages/TabletRepairPage.jsx")
+);
+const BrandIssues = React.lazy(() =>
+  import("./components/pages/BrandIssues.jsx")
+);
 
 // Lazy-loaded brand pages
-const SamsungModels = React.lazy(() => import("./components/brands/SamsungPage.jsx"));
+const SamsungModels = React.lazy(() =>
+  import("./components/brands/SamsungPage.jsx")
+);
 const AsusPage = React.lazy(() => import("./components/brands/AsusPage.jsx"));
-const NothingPage = React.lazy(() => import("./components/brands/NothingPage.jsx"));
+const NothingPage = React.lazy(() =>
+  import("./components/brands/NothingPage.jsx")
+);
 const VivoPage = React.lazy(() => import("./components/brands/VivoPage.jsx"));
 const OppoPage = React.lazy(() => import("./components/brands/OppoPage.jsx"));
-const RealmePage = React.lazy(() => import("./components/brands/RealmePage.jsx"));
-const GooglePage = React.lazy(() => import("./components/brands/GooglePage.jsx"));
+const RealmePage = React.lazy(() =>
+  import("./components/brands/RealmePage.jsx")
+);
+const GooglePage = React.lazy(() =>
+  import("./components/brands/GooglePage.jsx")
+);
 const MiPage = React.lazy(() => import("./components/brands/MiPage.jsx"));
-const OnePlusPage = React.lazy(() => import("./components/brands/OnePlusPage.jsx"));
-const MotorolaPage = React.lazy(() => import("./components/brands/MotorolaPage.jsx"));
+const OnePlusPage = React.lazy(() =>
+  import("./components/brands/OnePlusPage.jsx")
+);
+const MotorolaPage = React.lazy(() =>
+  import("./components/brands/MotorolaPage.jsx")
+);
 const IqooPage = React.lazy(() => import("./components/brands/IQOOPAGE.jsx"));
 const PocoPage = React.lazy(() => import("./components/brands/PocoPage.jsx"));
 const TecnoPage = React.lazy(() => import("./components/brands/TecnoPage.jsx"));
 const NokiaPage = React.lazy(() => import("./components/brands/NokiaPage.jsx"));
 const HonorPage = React.lazy(() => import("./components/brands/HonorPage.jsx"));
+
+//Tab Section
 
 // Loading component
 const LoadingSpinner = () => (
@@ -194,11 +217,13 @@ const HomePage = () => {
     ],
   };
 
+
+
   return (
     <div>
       <Helmet>
         <title>
-       Redset Go – Doorstep Mobile Repair Service in Pune | Fast & Reliable
+          Redset Go – Doorstep Mobile Repair Service in Pune | Fast & Reliable
         </title>
         <meta
           name="description"
@@ -252,7 +277,7 @@ const HomePage = () => {
       <Suspense fallback={<LoadingSpinner />}>
         <Doorstep />
       </Suspense>
-      
+
       <div id="brand-section">
         <Suspense fallback={<LoadingSpinner />}>
           <Brand />
@@ -267,20 +292,19 @@ const HomePage = () => {
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
         <WhyUs />
-   </Suspense>
-     <Suspense fallback={<LoadingSpinner />}>
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
         <FeaturesSection />
-   </Suspense>
+      </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
         <WhatYouGet />
-   </Suspense>
+      </Suspense>
 
-   <Suspense fallback={<LoadingSpinner/>}>
-   <BlogSection/>
-    
-   </Suspense>
-   
-        <Suspense fallback={<LoadingSpinner />}>
+      <Suspense fallback={<LoadingSpinner />}>
+        <BlogSection />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSpinner />}>
         <TipsSection />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
@@ -346,6 +370,7 @@ const TabletPage = () => (
       />
     </Helmet>
     <Suspense fallback={<LoadingSpinner />}>
+      {/* <TabletBrands /> */}
       <TabletRepairPage />
     </Suspense>
   </div>
@@ -363,6 +388,8 @@ const BrandPageTemplate = ({ title, description, Component }) => (
     </Suspense>
   </div>
 );
+
+
 
 const App = () => {
   return (
@@ -588,9 +615,19 @@ const App = () => {
         <Route path="/partner-with-us" element={<Partner />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/faqs" element={<FAQ />} />
+
+        {/*Tablet Page*/}
+
+        
       </Route>
     </Routes>
   );
 };
 
 export default App;
+
+
+
+
+
+
