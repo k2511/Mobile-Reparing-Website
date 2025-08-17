@@ -38,6 +38,7 @@ import FeaturesSection from "./components/FeaturesSection.jsx";
 import WhatYouGet from "./components/WhatYouGet.jsx";
 import BlogSection from "./components/BlogSection.jsx";
 
+
 // Lazy-loaded components for home page
 const Slider = React.lazy(() => import("./components/Slider.jsx"));
 const ProcessSteps = React.lazy(() => import("./components/ProcessSteps.jsx"));
@@ -97,6 +98,39 @@ const NokiaPage = React.lazy(() => import("./components/brands/NokiaPage.jsx"));
 const HonorPage = React.lazy(() => import("./components/brands/HonorPage.jsx"));
 
 //Tab Section
+
+import TabletBrandPage from "./components/TabletBrand.jsx";
+import SamsungTab  from "./components/Tab/SamsungTab.jsx"
+import OppoTab from "./components/Tab/OppoTab.jsx";
+import MiTab from "./components/Tab/miTab.jsx";
+import LenovoTab from "./components/Tab/LenovoTab.jsx"
+import OnePlusTab from "./components/Tab/OnePlus.jsx"
+import RealmeTab from "./components/Tab/realmeTab.jsx";
+import GoogleTab from "./components/Tab/GoogleTab.jsx";
+import Motorola from "./components/Tab/motorolaTab.jsx"
+import MotorolaTab from "./components/Tab/motorolaTab.jsx";
+import IQOOTab from "./components/Tab/iqooTab.jsx";
+import PocoTab from "./components/Tab/PocoTab.jsx";
+import NokiaTab from "./components/Tab/NokiaTab.jsx";
+import HonorTab from "./components/Tab/HonorTab.jsx";
+import AsusTab from "./components/Tab/asusTab.jsx";
+import HuaweiTab from  "./components/Tab/HuaweiTab.jsx"
+import LavaTab from "./components/Tab/LavaTab.jsx";
+import MicrosoftTab from "./components/Tab/MicrosoftTab.jsx";
+import MicromaxTab from "./components/Tab/micromaxTab.jsx";
+
+
+//Laptop Section
+import LaptopBrandPage from "./components/LaptopBrandPage.jsx";
+import DellLap from "./components/Laptop/dellLap.jsx";
+import HPLap from "./components/Laptop/HPLap.jsx";
+import AsusLap from "./components/Laptop/AsusLap.jsx";
+import LenovoLap from "./components/Laptop/LenovoLap.jsx";
+import MsiLap from "./components/Laptop/MsiLap.jsx";
+import AcerLap from "./components/Laptop/AcerLap.jsx";
+import SamsungLap from "./components/Laptop/samsungLap.jsx";
+import MicrosoftLap from "./components/Laptop/MicrosoftLap.jsx";
+
 
 // Loading component
 const LoadingSpinner = () => (
@@ -216,8 +250,6 @@ const HomePage = () => {
       },
     ],
   };
-
-
 
   return (
     <div>
@@ -388,8 +420,6 @@ const BrandPageTemplate = ({ title, description, Component }) => (
     </Suspense>
   </div>
 );
-
-
 
 const App = () => {
   return (
@@ -617,17 +647,42 @@ const App = () => {
         <Route path="/faqs" element={<FAQ />} />
 
         {/*Tablet Page*/}
+ 
+         <Route path="/tablets/:brandName" element={<TabletBrandPage />} />
+         <Route path="/tablets/samsung" element={<SamsungTab />} />
+         <Route path="/tablets/oppo" element={<OppoTab/> }/>
+         <Route path="tablets/mi" element={<MiTab/>}/>
+         <Route path="tablets/lenovo" element={<LenovoTab/>} />
+         <Route path="tablets/oneplus" element={<OnePlusTab/>} />
+         <Route path="tablets/realme" element={<RealmeTab/>} />
+          <Route path="tablets/google" element={<GoogleTab/>}/>
+          <Route path="tablets/motorola" element={<MotorolaTab/>}/>
+          <Route path="tablets/iqoo" element={<IQOOTab/>}/>
+          <Route path="tablets/poco" element={<PocoTab/>}/>
+          <Route path="tablets/nokia" element={<NokiaTab/>}/>
+          <Route path="tablets/Honor" element={<HonorTab/>}/>
+          <Route path="tablets/Asus" element={<AsusTab/>}/>
+          <Route path="tablets/Hawei" element={<HuaweiTab/>} />
+          <Route path="tablets/lava" element={<LavaTab/>}/>
+          <Route path="tablets/microsoft" element={<MicrosoftTab/>}/>
+          <Route path="tablets/micromax" element={<MicromaxTab/>}/>
 
-        
+          {/**Laptop Brand Page */}
+           <Route path="/laptops/:brand" element={<LaptopBrandPage />} />
+           <Route path="/laptops/dell" element={<DellLap/>}/>
+           <Route path="/laptops/hp" element={<HPLap/>}/>
+           <Route path="/laptops/asus" element={<AsusLap/>}/>
+           <Route path="/laptops/lenovo" element={<LenovoLap/>}/>
+           <Route path="/laptops/msi" element={<MsiLap/>}/>
+           <Route path="/laptops/acer" element={<AcerLap/>}/>
+           <Route path="/laptops/samsung" element={<SamsungLap/>}/>
+           <Route path="/laptops/microsoft" element={<MicrosoftLap/>}/>
+         
       </Route>
     </Routes>
   );
 };
 
 export default App;
-
-
-
-
 
 

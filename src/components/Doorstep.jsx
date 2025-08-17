@@ -366,6 +366,11 @@ const Doorstep = () => {
       img: "https://m.media-amazon.com/images/I/41oK-1w0oLL._AC_UY327_FMwebp_QL65_.jpg",
       gadget: "CCTV",
     },
+
+    {
+      img:"https://creativestudio24.in/wp-content/uploads/2024/04/AMC-responsive-1.jpg",
+      gadget:"Annual Maintenance Contract",
+    }
   ];
 
   const filteredServices = services.filter((service) =>

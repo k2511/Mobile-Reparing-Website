@@ -1,50 +1,36 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
-// Import Oppo tablet images
-import oppo1 from "../../assets/oppoTab/oppoTablet1.jpg";
-import oppo2 from "../../assets/oppoTab/oppoTablet2.jpg";
-import oppo3 from "../../assets/oppoTab/oppoTablet3.jpg";
-import oppo4 from "../../assets/oppoTab/oppoTablet4.jpg";
-import oppo5 from "../../assets/oppoTab/oppoTablet5.jpg";
-import oppo6 from "../../assets/oppoTab/oppoTablet6.jpg";
-import oppo7 from "../../assets/oppoTab/oppoTablet7.jpg";
-import oppo8 from "../../assets/oppoTab/oppoTablet8.jpg";
-import oppo9 from "../../assets/oppoTab/oppoTablet9.jpg";
-import oppo10 from "../../assets/oppoTab/oppoTablet10.jpg";
-import oppo11 from "../../assets/oppoTab/oppoTablet11.jpg";
-import oppo12 from "../../assets/oppoTab/oppoTablet12.jpg";
-import oppo13 from "../../assets/oppoTab/oppoTablet13.jpg";
-import oppo14 from "../../assets/oppoTab/oppoTablet14.jpg";
-import oppo15 from "../../assets/oppoTab/oppoTablet15.jpg";
-
-const OppoTab = () => {
-  const [searchQuery, setSearchQuery] = useState("");
+const OnePlusTab = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
-  // Oppo tablet models data
-  const oppoModels = [
-    { id: 1, name: "Oppo Pad", image: oppo1 },
-    { id: 2, name: "Oppo Pad Air", image: oppo2 },
-    { id: 3, name: "Oppo Pad 2", image: oppo3 },
-    { id: 4, name: "Oppo Pad 3", image: oppo4 },
-    { id: 5, name: "Oppo Pad 4", image: oppo5 },
-    { id: 6, name: "Oppo Pad 5", image: oppo6 },
-    { id: 7, name: "Oppo Pad 6", image: oppo7 },
-    { id: 8, name: "Oppo Pad 7", image: oppo8 },
-    { id: 9, name: "Oppo Pad 8", image: oppo9 },
-    { id: 10, name: "Oppo Pad 9", image: oppo10 },
-    { id: 11, name: "Oppo Pad 10", image: oppo11 },
-    { id: 12, name: "Oppo Pad 11", image: oppo12 },
-    { id: 13, name: "Oppo Pad 12", image: oppo13 },
-    { id: 14, name: "Oppo Pad 13", image: oppo14 },
-    { id: 15, name: "Oppo Pad 14", image: oppo15 },
+  const { brandName = "OnePlus", brandImage, models = [] } = location.state || {};
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Default OnePlus models
+  const oneplusModels = [
+    { id: 1, name: "OnePlus Pad", image: "https://via.placeholder.com/150x150?text=OnePlus+Pad" },
+    { id: 2, name: "OnePlus Pad Go", image: "https://via.placeholder.com/150x150?text=OnePlus+Pad+Go" },
+    { id: 3, name: "OnePlus Tablet X", image: "https://via.placeholder.com/150x150?text=OnePlus+Tablet+X" },
+    ...models
+      .filter(
+        (model) =>
+          !["OnePlus Pad", "OnePlus Pad Go", "OnePlus Tablet X"].includes(model)
+      )
+      .map((model, index) => ({
+        id: index + 4,
+        name: model,
+        image: brandImage || "https://via.placeholder.com/150x150?text=OnePlus+Tablet",
+      })),
   ];
 
-  const filteredModels = oppoModels.filter((model) =>
-    model.name.toLowerCase().includes(searchQuery.toLowerCase())
+  // Search filter
+  const filteredModels = oneplusModels.filter((m) =>
+    m.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
+  // Handle model click
   const handleModelClick = (model) => {
     navigate(`/brand-issues/${encodeURIComponent(model.name)}`, {
       state: { model, image: model.image },
@@ -75,7 +61,7 @@ const OppoTab = () => {
               fontSize: "14px",
             }}
           >
-            Home / Repair / Tablets / Oppo
+            Home / Repair / Tablets / {brandName}
           </div>
           <h1
             style={{
@@ -85,7 +71,7 @@ const OppoTab = () => {
               margin: 0,
             }}
           >
-            Oppo Tablet Repair & Replacement
+            {brandName} Tablet Repair & Replacement
           </h1>
         </div>
       </div>
@@ -98,11 +84,23 @@ const OppoTab = () => {
           padding: "40px 20px",
         }}
       >
-        {/* Search */}
+        {/* Brand Logo + Search */}
         <div style={{ textAlign: "center", marginBottom: "40px" }}>
+          {brandImage && (
+            <img
+              src={brandImage}
+              alt={brandName}
+              style={{
+                height: "80px",
+                objectFit: "contain",
+                marginBottom: "20px",
+                borderRadius: "8px",
+              }}
+            />
+          )}
           <input
             type="text"
-            placeholder="Search Oppo models..."
+            placeholder={`Search ${brandName} models...`}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             style={{
@@ -118,7 +116,14 @@ const OppoTab = () => {
 
         {/* Models Grid */}
         {filteredModels.length > 0 ? (
-          <div className="main">
+          <div
+            className="main"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill,minmax(200px,1fr))",
+              gap: "20px",
+            }}
+          >
             {filteredModels.map((model) => (
               <div
                 key={model.id}
@@ -134,7 +139,7 @@ const OppoTab = () => {
                   boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
                 }}
                 onMouseOver={(e) => {
-                  e.currentTarget.style.borderColor = "#dc3545";
+                  e.currentTarget.style.borderColor = "#d62828";
                   e.currentTarget.style.transform = "translateY(-2px)";
                 }}
                 onMouseOut={(e) => {
@@ -198,7 +203,7 @@ const OppoTab = () => {
               marginBottom: "20px",
             }}
           >
-            OPPO REPAIR & REPLACEMENT
+            ONEPLUS REPAIR & REPLACEMENT
           </h2>
           <p
             style={{
@@ -208,10 +213,10 @@ const OppoTab = () => {
               margin: "0 auto",
             }}
           >
-            Your Oppo device is more than just technology; it's an essential
-            part of your everyday work and entertainment. Our expert Oppo
-            repair and replacement services ensure quick turnaround times,
-            genuine parts, and dependable performance.
+            Your OnePlus device is built for performance and seamless
+            experience. Our expert OnePlus repair and replacement services
+            guarantee quick turnaround times, genuine parts, and long-lasting
+            results.
           </p>
           <h3
             style={{
@@ -220,7 +225,7 @@ const OppoTab = () => {
               marginTop: "30px",
             }}
           >
-            WE CAN FIX YOUR OPPO
+            WE CAN FIX YOUR ONEPLUS
           </h3>
         </div>
       </div>
@@ -228,4 +233,4 @@ const OppoTab = () => {
   );
 };
 
-export default OppoTab;
+export default OnePlusTab;
