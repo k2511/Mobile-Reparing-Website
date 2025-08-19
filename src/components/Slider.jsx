@@ -7,7 +7,7 @@ const HeroSection = () => {
     <div className="hero-wrapper">
       <div className="hero-box">
         <div className="hero-left">
-          <h1>Best Apple Service Center <br /> in Bangalore</h1>
+          <h1>Best Mobile Rapair Service Center <br /> in Bangalore</h1>
           <p>Caring for your Mac!</p>
           <button className="repair-btn">FIX MY DEVICE</button>
         </div>

@@ -1,0 +1,74 @@
+/* Grid layout */
+.tablet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  display: "grid",
+          
+}
+
+/* Tablet Card */
+.tablet-card {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.tablet-card:hover {
+  border-color: #007bff;
+  transform: translateY(-2px);
+}
+
+.tablet-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.tablet-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 10px 0 5px;
+}
+
+/* Bottom Section */
+.tablet-bottom {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.tablet-bottom h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.tablet-bottom p {
+  color: #6c757d;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tablet-bottom h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+
+/* ✅ Force 2 columns on mobile */
+@media (max-width: 768px) {
+  .tablet-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

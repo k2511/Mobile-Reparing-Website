@@ -123,13 +123,13 @@ const AmazonTab = () => {
 
         {/* Models Grid */}
         {filteredModels.length > 0 ? (
-          <div
-            className="main"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fill,minmax(200px,1fr))",
-              gap: "20px",
-            }}
+          <div className="tablet-grid"
+            // className="main"
+            // style={{
+            //   display: "grid",
+            //   gridTemplateColumns: "repeat(auto-fill,minmax(200px,1fr))",
+            //   gap: "20px",
+            // }}
           >
             {filteredModels.map((model) => (
               <div

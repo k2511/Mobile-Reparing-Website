@@ -107,14 +107,13 @@ import LenovoTab from "./components/Tab/LenovoTab.jsx"
 import OnePlusTab from "./components/Tab/OnePlus.jsx"
 import RealmeTab from "./components/Tab/realmeTab.jsx";
 import GoogleTab from "./components/Tab/GoogleTab.jsx";
-import Motorola from "./components/Tab/motorolaTab.jsx"
+
 import MotorolaTab from "./components/Tab/motorolaTab.jsx";
 import IQOOTab from "./components/Tab/iqooTab.jsx";
 import PocoTab from "./components/Tab/PocoTab.jsx";
 import NokiaTab from "./components/Tab/NokiaTab.jsx";
 import HonorTab from "./components/Tab/HonorTab.jsx";
 import AsusTab from "./components/Tab/asusTab.jsx";
-import HuaweiTab from  "./components/Tab/HuaweiTab.jsx"
 import LavaTab from "./components/Tab/LavaTab.jsx";
 import MicrosoftTab from "./components/Tab/MicrosoftTab.jsx";
 import MicromaxTab from "./components/Tab/micromaxTab.jsx";
@@ -122,14 +121,18 @@ import MicromaxTab from "./components/Tab/micromaxTab.jsx";
 
 //Laptop Section
 import LaptopBrandPage from "./components/LaptopBrandPage.jsx";
-import DellLap from "./components/Laptop/dellLap.jsx";
+import DellLap from "./components/Laptop/DellLap.jsx";
 import HPLap from "./components/Laptop/HPLap.jsx";
 import AsusLap from "./components/Laptop/AsusLap.jsx";
 import LenovoLap from "./components/Laptop/LenovoLap.jsx";
 import MsiLap from "./components/Laptop/MsiLap.jsx";
 import AcerLap from "./components/Laptop/AcerLap.jsx";
-import SamsungLap from "./components/Laptop/samsungLap.jsx";
+import SamsungLap from "./components/Laptop/SamsungLap.jsx"
 import MicrosoftLap from "./components/Laptop/MicrosoftLap.jsx";
+
+//AMC
+import AMCDetails from "./components/AMC/AMCPage.jsx"
+
 
 
 // Loading component
@@ -662,7 +665,6 @@ const App = () => {
           <Route path="tablets/nokia" element={<NokiaTab/>}/>
           <Route path="tablets/Honor" element={<HonorTab/>}/>
           <Route path="tablets/Asus" element={<AsusTab/>}/>
-          <Route path="tablets/Hawei" element={<HuaweiTab/>} />
           <Route path="tablets/lava" element={<LavaTab/>}/>
           <Route path="tablets/microsoft" element={<MicrosoftTab/>}/>
           <Route path="tablets/micromax" element={<MicromaxTab/>}/>
@@ -677,6 +679,11 @@ const App = () => {
            <Route path="/laptops/acer" element={<AcerLap/>}/>
            <Route path="/laptops/samsung" element={<SamsungLap/>}/>
            <Route path="/laptops/microsoft" element={<MicrosoftLap/>}/>
+         
+                 
+             {/* AMC routes */}
+        <Route path="/amc" element={<AMCDetails />} /> {/* Added route for AMC list page */}
+        <Route path="/amc-details/:planName" element={<AMCDetails />} />
          
       </Route>
     </Routes>

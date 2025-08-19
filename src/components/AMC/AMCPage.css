@@ -1,0 +1,134 @@
+.amc-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.amc-header {
+  background-color: white;
+  border-bottom: 1px solid #dee2e6;
+  padding: 20px 0;
+}
+
+.amc-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.breadcrumb {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.amc-header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #212529;
+  margin: 0;
+}
+
+.search-container {
+  margin-bottom: 40px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 12px 20px;
+  border: 1px solid #ced4da;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+}
+
+.amc-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.amc-card:hover {
+  border-color: #e60000;
+  box-shadow: 0 6px 20px rgba(230, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.amc-logo {
+  max-height: 80px;
+  max-width: 80%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.amc-card h3 {
+  margin: 15px 0 10px;
+  font-size: 20px;
+}
+
+.amc-card h4 {
+  color: #e60000;
+  margin-bottom: 15px;
+}
+
+.amc-card ul {
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.amc-card li {
+  margin-bottom: 8px;
+}
+
+.amc-card .btn-primary {
+  background-color: #e60000;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.info-section {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.info-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.info-section p {
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.info-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 15px;
+}
+
+.info-section ul {
+  color: #6c757d;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.info-section li {
+  margin-bottom: 10px;
+}

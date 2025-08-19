@@ -117,7 +117,7 @@ const Footer = () => {
                   <i className="fas fa-envelope"></i> support@redsetgo.com
                 </li>
                 <li>
-                  <i className="fas fa-phone"></i> +91 7676784785
+                  <i className="fas fa-phone"></i> +91 9916313616
                 </li>
                 <li>🌐 Website: www.resetgo.in</li>
                 <li className="social-icons">

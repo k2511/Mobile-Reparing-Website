@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
-
+import "./Tablet.css";
 const MicrosoftTab = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -82,6 +82,7 @@ const MicrosoftTab = () => {
         {/* Models Grid */}
         {filteredModels.length > 0 ? (
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill,minmax(200px,1fr))", gap: "20px" }}>
+          
             {filteredModels.map((model) => (
               <div
                 key={model.id}

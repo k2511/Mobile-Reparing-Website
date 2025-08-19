@@ -14,7 +14,7 @@ const MAP = {
     keywords: "tablet repair pune, ipad screen replacement pune",
   },
   macbook: {
-    name: "MacBook Repair",
+    name: "Laptop Repair",
     desc: "Expert MacBook repair in Pune — screen, battery, keyboard and logic board service.",
     keywords: "macbook repair pune, macbook battery replacement pune",
   },

@@ -4,18 +4,18 @@ export default function LocalBusinessSchema() {
   const localBusinessJSONLD = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://www.ongoffix.com#localbusiness", // Replace with your real URL
-    name: "Ongoffix Repairs",
-    image: "https://www.ongoffix.com/logo.png", // Replace with your actual logo URL
-    url: "https://www.ongoffix.com",
-    telephone: "+91 8070900800",
-    email: "support@ongoffix.com",
+    "@id": "https://www.redsetgo.in#localbusiness", // Replace with your real URL
+    name: "RedSet Go Repairs",
+    image: "https://www.redsetgo.in/logo.png", // Replace with your actual logo URL
+    url: "https://www.redsetgo.in",
+    telephone: "+91 9916313616",
+    email: "support@redsetgo.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Shop No – 57, Vrindavan Dham, Plot No – 5 to 8, Sector – 05, Ghansoli",
-      addressLocality: "Navi Mumbai",
+      streetAddress: "Address: Konark Business Hub, 2nd Floor 3S-14, Kondhwa Main Road, Pune, Maharashtra 411048",
+      addressLocality: "Pune",
       addressRegion: "MH",
-      postalCode: "400701",
+      postalCode: " 411048",
       addressCountry: "IN",
     },
     openingHours: "Mo-Su 09:00-21:00",
@@ -37,15 +37,15 @@ export default function LocalBusinessSchema() {
       },
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "MacBook Repair" },
+        itemOffered: { "@type": "Service", name: "Laptop Repair" },
       },
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "Smart Watch Repair" },
+        itemOffered: { "@type": "Service", name: "CCTV Repair" },
       },
       {
         "@type": "Offer",
-        itemOffered: { "@type": "Service", name: "iPhone Repair" },
+        itemOffered: { "@type": "Service", name: "AMC" },
       },
     ],
     areaServed: [
