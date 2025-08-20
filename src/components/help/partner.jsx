@@ -174,8 +174,6 @@ const Partner = () => {
           <li>✅ Expert technicians</li>
           <li>✅ Fast turnaround</li>
           <li>✅ Nationwide coverage</li>
-
-
         </ul>
 
 
