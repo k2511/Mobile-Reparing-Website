@@ -119,7 +119,7 @@ const Footer = () => {
                 <li>
                   <i className="fas fa-phone"></i> +91 9916313616
                 </li>
-                <li>🌐 Website: www.resetgo.in</li>
+                <li>🌐 Website: www.redsetgo.in</li>
                 <li className="social-icons">
                   <i className="fab fa-facebook-f"></i>
                   <i className="fab fa-twitter"></i>
