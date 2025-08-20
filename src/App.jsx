@@ -336,9 +336,9 @@ const HomePage = () => {
         <WhatYouGet />
       </Suspense>
 
-      <Suspense fallback={<LoadingSpinner />}>
-        <BlogSection />
-      </Suspense>
+       {/* <Suspense fallback={<LoadingSpinner />}> */}
+        {/* <BlogSection /> */}
+      {/* </Suspense>  */}
 
       <Suspense fallback={<LoadingSpinner />}>
         <TipsSection />

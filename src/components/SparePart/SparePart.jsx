@@ -27,6 +27,8 @@ import comp10 from "../../assets/computerParts/comp10.jpg"
 import comp11 from "../../assets/computerParts/comp11.jpg"
 import comp12 from "../../assets/computerParts/comp12.jpg"
 import comp13 from "../../assets/computerParts/comp13.jpg"
+import comp14 from "../../assets/computerParts/comp14.jpg"
+
 
 
 import "./SparePart.css";
@@ -62,7 +64,8 @@ const computerParts = [
   { name: "Mouse", img: comp10, desc: "Precision mice for smooth navigation." },
   { name: "MotherBoard", img: comp11, desc: "High-quality motherboards for system stability." },
   { name: "Graphics Card", img: comp12, desc: "Powerful graphics cards for enhanced performance." },
-  { name: "USB Extension", img: comp13, desc: "Convenient USB extension cables and hubs." }
+  { name: "USB Extension", img: comp13, desc: "Convenient USB extension cables and hubs." },
+  {name:"Hdmi cable", img:comp14, desc:"It's a digital interface that's become the standard for transmitting high-quality video and audio signals between devices"}
 ];
 
 
