@@ -6,14 +6,14 @@ const ContactButtons = () => {
       className="contact-btns"
     >
       <a
-        href="tel:+91 99163 13616"
+        href="tel:+91 9916313616"
         className="contact-button"
       >
         <i className="bi bi-telephone-fill text-white fs-6"></i>
       </a>
 
       <a
-        href="https://wa.me/99163 13616"
+        href="https://wa.me/9916313616"
         target="_blank"
         rel="noopener noreferrer"
         className="contact-button"

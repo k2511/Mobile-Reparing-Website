@@ -133,7 +133,8 @@ import MicrosoftLap from "./components/Laptop/MicrosoftLap.jsx";
 //AMC
 import AMCDetails from "./components/AMC/AMCPage.jsx"
 
-
+//Spare Parts
+import SparePart from "./components/SparePart/SparePart.jsx"
 
 // Loading component
 const LoadingSpinner = () => (
@@ -684,7 +685,8 @@ const App = () => {
              {/* AMC routes */}
         <Route path="/amc" element={<AMCDetails />} /> {/* Added route for AMC list page */}
         <Route path="/amc-details/:planName" element={<AMCDetails />} />
-         
+          {/*spare parts*/}
+           <Route path="/spare-parts" element={<SparePart />} />
       </Route>
     </Routes>
   );
