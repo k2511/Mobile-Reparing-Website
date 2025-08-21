@@ -13,7 +13,7 @@ const ContactButtons = () => {
       </a>
 
       <a
-        href="https://wa.me/9916313616"
+        href="https://wa.me/919916313616"
         target="_blank"
         rel="noopener noreferrer"
         className="contact-button"

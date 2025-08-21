@@ -31,8 +31,19 @@ const Footer = () => {
                     CCTV
                   </Link>
                 </li>
+                 <li>
+                  <Link to="/amc" style={{ textDecoration: "none", color:"black"  }}>
+                    AMC
+                  </Link>
+                </li>
+                 <li>
+                  <Link to="/spare-parts" style={{ textDecoration: "none", color:"black"  }}>
+                       Spare Parts
+                  </Link>
+                </li>
               </ul>
             </Col>
+         
 
             <Col md={2} sm={6}>
               <h5 className="footer-heading">Cities</h5>

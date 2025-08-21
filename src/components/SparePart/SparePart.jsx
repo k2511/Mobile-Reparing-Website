@@ -45,8 +45,8 @@ const SparePart = () => {
     { name: "Middle Frame", img: img6 },
     { name: "Screen Protector", img: img7 },
     { name: "CCB to Main Board Flex", img:img8 },
-    { name: "Power Button Inner", img:img9 },
-    { name: "Power Button Outer", img: img10 },
+    { name: "Power Button Outer", img:img9 },
+    { name: "Power Button Inner", img: img10 },
     { name: "SIM Tray", img:img11 },
     { name: "Battery", img:img12 }
   ];
