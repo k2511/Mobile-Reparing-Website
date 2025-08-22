@@ -905,8 +905,9 @@ const TopBar = () => {
             max-width: 200px;
             object-fit: contain;
             position: absolute;
-            top: -26px !important;
+            top: -13px !important;
             left: 100px !important;
+            right:0;
           }
         }
 
