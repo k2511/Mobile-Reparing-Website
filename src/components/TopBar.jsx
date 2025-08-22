@@ -905,18 +905,18 @@ const TopBar = () => {
             max-width: 200px;
             object-fit: contain;
             position: absolute;
-            top: -13px !important;
+            top: -26px !important;
             left: 100px !important;
           }
         }
 
         /* ✅ Medium & small devices (<992px) */
         @media (max-width: 991px) {
-          .d-flex {
-            min-height: 65px;
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
-          }
+          // .d-flex {
+          //   min-height: 65px;
+          //   padding-top: 0 !important;
+          //   padding-bottom: 0 !important;
+          // }
           .logo img {
             height: 75px;
             max-width: 130px;
@@ -933,6 +933,7 @@ const TopBar = () => {
 
             position:absolute;
             top:-16px;
+            left:0;
           }
         }
       `}</style>
