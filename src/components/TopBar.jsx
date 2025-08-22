@@ -930,6 +930,9 @@ const TopBar = () => {
             height: 98px !important;
             width: 122px !important;
             object-fit: contain;
+
+            position:absolute;
+            top:-16px;
           }
         }
       `}</style>
