@@ -22,6 +22,16 @@ body {
 
 
 /*----------------------------------------- Top Bar -----------------------------*/
+@media (max-width: 992px) {
+  .logo-device .logo-img {
+    height: 45px !important;
+    max-width: 170px !important;
+  }
+  .logo-device .navbar {
+    min-height: 65px !important;
+  }
+}
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
@@ -44,13 +54,16 @@ body {
   }
   
   .logo img {
-    height: 30px;
+    height: 60px;
   }
   
   .user-icon i {
     font-size: 1.2rem;
   }
-} */
+} 
+
+
+
 
 /* Slider Styles */
 
@@ -403,6 +416,15 @@ body {
   border-radius: unset !important;
 }
 
+
+@media (min-width: 992px) {
+  .footer-content .row {
+    display: flex;
+    justify-content: center; /* centers all columns */
+    text-align: left; /* reset text alignment inside cols */
+    gap: 10px; /* optional spacing between footer columns */
+  }
+}
 
 /*************************************************************************************************/
 .location,

@@ -1,0 +1,92 @@
+/* Base Styles (all devices) */
+.topbar-wrapper {
+  padding: 8px 12px;
+}
+
+.logo-img {
+  height: 40px;
+  max-width: 150px;
+}
+
+.nav-link {
+  color: #333 !important;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:active {
+  color: red !important;
+}
+
+.dropdown-item {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-item:hover,
+.dropdown-item:active {
+  color: red;
+  background-color: #f8f9fa;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  border-radius: 5px;
+}
+
+/* Slide-down animation */
+.animate-slide-down {
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Mobile menu */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.open {
+  max-height: 100vh;
+}
+
+/* ✅ Media Queries */
+
+/* Mobile (≤ 991px) */
+@media (max-width: 991px) {
+  .topbar-wrapper {
+    padding: 6px 10px;
+  }
+  .logo-img {
+    height: 35px;
+    max-width: 130px;
+  }
+  .navbar-toggler i {
+    font-size: 1.5rem;
+  }
+}
+
+/* Large Devices (≥ 992px) */
+@media (min-width: 992px) {
+  .topbar-wrapper {
+    padding: 20px 40px;
+    min-height: 80px;
+  }
+  .logo-img {
+    height: 50px;
+    max-width: 180px;
+  }
+  .nav .nav-item {
+    margin: 0 12px;
+  }
+}
