@@ -13,7 +13,7 @@ import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
 function IssueBrand() {
-  const {  mobileName } = useParams();
+  const { mobileName } = useParams();
 
   const [cart, setCart] = useState([]); // get mobile-name from URL
   const { state } = useLocation();

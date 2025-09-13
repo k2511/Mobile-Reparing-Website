@@ -248,7 +248,7 @@ const HomePage = () => {
       <Suspense fallback={<LoadingSpinner />}>
         <Doorstep />
       </Suspense>
-      
+
       <div id="brand-section">
         <Suspense fallback={<LoadingSpinner />}>
           <Brand />
@@ -527,7 +527,7 @@ const App = () => {
 
         {/* Brand issues */}
         <Route
-          path="/brand-issues/:id"
+          path="/brand-issues/:mobileName"
           element={
             <BrandPageTemplate
               title="Brand Issue - RedSetGo Repairs"
