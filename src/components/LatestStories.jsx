@@ -12,14 +12,14 @@ const stories = [
     name: "Akshay Godaghe",
     device: "Vivo",
     review:
-      "My Google Pixel screen was broken. A friend recommended RedSet GO. The technician arrived on time, replaced it with an original screen, and phone ready within 15 minutes. Great service!",
+      "My Vivo V40 5G  screen was broken. A friend recommended RedSet GO. The technician arrived on time, replaced it with an original screen, and phone ready within 15 minutes. Great service!",
     img: vivo,
   },
   {
     name: "Rutwik Wadate",
     device: "Google Pixel",
     review:
-      "My Galaxy Fold 4 had WiFi and hinge issues, and the service costs were too high elsewhere. RedSet Go picked up the phone from my home, repaired the flex cable and hinge on the same day, and charged a fair price. Fast and hassle-free service!",
+      "My Google Pixel 8 Pro had WiFi Battry and hinge issues, and the service costs were too high elsewhere. RedSet Go picked up the phone from my home, repaired the flex cable and hinge on the same day, and charged a fair price. Fast and hassle-free service!",
     img: pixel,
   },
   {
