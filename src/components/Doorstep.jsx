@@ -365,16 +365,9 @@ const Doorstep = () => {
     },
     {
       img: "https://yandex-images.clstorage.net/X5D2Ul200/5ff30ekXBx/7HWj4pmea8yx8SDo8yx4dOkj3PnWZ46-p1toZhHDwbvvoGQkSAO25JxVhn1RmOhN-xOXLQWShmTyt1I80Nw5dfghsa7f3nSQ5bU_vPsvfXb0fp_oyj2K470ZND9YzMznuvUPHz9wl4PkNvcMKLWpTa1ExTAbydlsz4tFUdj6B13uXZ3VmY8Q7brsdvj0DU9Q3GL1_fcfn_CtSx80SbHwmeaPHwgraYG68RbROSqhlkGrUfYYYMn-ZtW7HEPz2Spd3n6FxJiEN9C07mjF0TVldPxb2e_gDojWmEkTF2CcyozpngAmDnyXuOwNzR03jYJ8s0fyPmDn2EzRmx9C1vwxZcJnnciEoy3LofF59PcmUVffd-DayR6DxZZFDR1tj_aJ2agGLTh2ub3ACe8CF6qbSq5z9y545MRi158fc-fGJ2ndY4Dgm58K4qfwV9T8KW1W1kjx1fYdpsOmagQmWZzjkcq1Nwk5fqW-2ybOPQ-vvnmlecMJQeTwb-q7Lmn38TNz3Hu52ZqEAtK6wULCwitlYdR7_9H4I5XMnFM0IHyU-q_kgiEVDnudndgc8gcpiKN-gVTvGHLT50TGmwFG7vwLY_NtsfC7ux3SuNZt4vQJelXzavDZ1gaM5KVGLz5rocmg36Q3GTlrmoTHKNoDD7KCQoZp2T1P-f9yxa4IUv_XLUP2TbDvgIUQzITWePvoCWZA_nzR9OA_kOq9WyAicZjsrPKyEQsyd6SP7QLKODSLpnm0b8UaQMvuWee-HV3HyTNB21u_14GmMcew823e2hFbadZey-zKILHIgWkUM0yDxajhowoLPVegq8Q17i0wlZN7r3fMKUTf0VnXvCF2ztIdYPBSntWBgjzJsfZ28t4tVlnTSf76xQWT5oFWBT5enuuYwLYzLih2pbHhLtw7NZGbXYlP1RhTwP9D1rcqY9PrL3_YeIPQpYsJ6pv0ecDGCGVz8H757PQ4keOqaiQqTp0",
-      gadget: "Mobile Accersiers",
+      gadget: "Mobile Accessories",
     },
-    {
-      img:"https://creativestudio24.in/wp-content/uploads/2024/04/AMC-responsive-1.jpg",
-      gadget:"AMC",
-    },
-    {
-      img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGs37w-ug6MVUxv9YMuWBsmaGA7tZ8cT7exLgYJrl6u7xSZSHsSrYC_vAm0j4ZXe_dflA&usqp=CAU",
-      gadget:"Spare Parts",
-    }
+  
   ];
 
   const filteredServices = services.filter((service) =>
