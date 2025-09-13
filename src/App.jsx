@@ -698,7 +698,7 @@ const App = () => {
             <Route path="/mobile-accessories" element={<MobileAccessories />} />
 
             {/*Watch Watches*/}
-             <Route path="/smart-watches" element={<WatchRepairs />} />
+             <Route path="/smart-watches/:watchName" element={<WatchRepairs />} />
              
 
 

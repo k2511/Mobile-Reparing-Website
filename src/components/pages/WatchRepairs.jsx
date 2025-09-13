@@ -57,7 +57,7 @@ function WatchRepairs() {
   };
 
   return (
-    <div className="container">
+    <div className="container border-2 border-black bg-red-300 mt-10">
       {/* Header */}
       <div className="d-flex flex-row mb-3">
         {imageUrl && (
