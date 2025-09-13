@@ -1,8 +1,5 @@
-
-
-/********************************** Final code here *************************************************/
 import { useParams, useLocation } from "react-router-dom";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import batteryImg from "../../assets/image/battery.png";
 import micImg from "../../assets/image/me.png";
 import receiverImg from "../../assets/image/receiver.png";
@@ -11,16 +8,14 @@ import backGlassImg from "../../assets/image/back-glass.png";
 import screenImg from "../../assets/image/screen.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import { useState, useEffect } from "react";
 import { toast } from "react-hot-toast";
 
-function IssueBrand() {
+function MobileAccessories() {
   const { mobileName } = useParams();
-
-  const [cart, setCart] = useState([]);
   const { state } = useLocation();
   const imageUrl = state?.image;
 
+  const [cart, setCart] = useState([]);
   const [selectedIssues, setSelectedIssues] = useState({});
   const [mobile, setMobile] = useState("");
 
@@ -83,7 +78,11 @@ function IssueBrand() {
 
   return (
     <div className="container ">
+      {/* Mobile Header */}
       <div className="d-flex flex-row ">
+        <div className="d-flex  items-center  my-auto">
+  <h2 className="fw-bold text-dark mt-3">Mobile Accessories</h2>
+</div>
         <div className="d-flex items-center justify-content-start align-items-center">
           {imageUrl && (
             <img
@@ -100,6 +99,7 @@ function IssueBrand() {
         </div>
       </div>
 
+      {/* Issues Section */}
       <section>
         <div className="container mt-5">
           <div className="row">
@@ -109,7 +109,7 @@ function IssueBrand() {
                 className="col-xl-3 col-lg-6 col-md-6 col-sm-12 mb-4"
               >
                 <div
-                  className={`d-flex flex-row p-3 border  gap-3 rounded shadow-sm align-items-center cursor-pointer ${
+                  className={`d-flex flex-row p-3 border gap-3 rounded shadow-sm align-items-center cursor-pointer ${
                     selectedIssues[issue.id] ? "bg-light border-primary" : ""
                   }`}
                   onClick={() => handleToggle(issue.id)}
@@ -126,8 +126,8 @@ function IssueBrand() {
                       }}
                     />
                   </div>
-                  <div className="content d-flex  flex-column flex-grow-1">
-                    <h5 className="title  fs-6 ">{issue.title}</h5>
+                  <div className="content d-flex flex-column flex-grow-1">
+                    <h5 className="title fs-6">{issue.title}</h5>
                     <div className="d-flex gap-2 align-items-center">
                       <div className="rightSide">
                         <button
@@ -149,13 +149,14 @@ function IssueBrand() {
         </div>
       </section>
 
+      {/* Book Now Button */}
       <div
-        className="quickContactArea text-white  d-flex justify-content-center align-items-center border rounded-3"
+        className="quickContactArea text-white d-flex justify-content-center align-items-center border rounded-3"
         data-bs-toggle="modal"
         data-bs-target="#quickContactModal"
         style={{ height: "80px" }}
       >
-        <button className="btn  btn-dark rounded">Book Now </button>
+        <button className="btn btn-dark rounded">Book Now</button>
       </div>
 
       {/* WhatsApp Modal */}
@@ -186,8 +187,6 @@ function IssueBrand() {
               </h6>
 
               <form id="sendmail">
-                <input type="hidden" name="ajax_send_main" />
-
                 <div className="mb-3">
                   <input
                     type="text"
@@ -239,7 +238,7 @@ function IssueBrand() {
                   <button
                     type="submit"
                     name="submit"
-                    className="btn btn-danger "
+                    className="btn btn-danger"
                     onClick={(e) => {
                       e.preventDefault();
                       const form = e.target.form;
@@ -250,17 +249,18 @@ function IssueBrand() {
 
                       const issuesList = cart.join(", ");
 
-                      // Using standard emoji characters that work across devices
                       const text = `New Repair Request:
- Mobile: ${mobileName}
- Name: ${name}
- Email: ${email}
- Phone: ${phone}
- Area: ${area}
- Services: ${issuesList}`;
+Mobile: ${mobileName}
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Area: ${area}
+Services: ${issuesList}`;
 
                       window.open(
-                        `https://wa.me/919916313616?text=${text}`,
+                        `https://wa.me/919916313616?text=${encodeURIComponent(
+                          text
+                        )}`,
                         "_blank"
                       );
 
@@ -279,4 +279,4 @@ function IssueBrand() {
   );
 }
 
-export default IssueBrand;
+export default MobileAccessories;

@@ -377,9 +377,9 @@ const Doorstep = () => {
   const handleServiceClick = (service) => {
   if (service.gadget === "Computers") {
       navigate("/macbook-repair");
-    } else if (service.gadget === "CCTV") {
-      navigate("/cctv-repair");
-    } else if (service.gadget === "Tablet") {
+    } else if (service.gadget === "Mobile Accessories") {
+  navigate("/mobile-accessories");
+}else if (service.gadget === "Tablet") {
       navigate("/tablet-repair");
     } else if (service.gadget === "Mobile Repair") {
       const brandSection = document.getElementById("brand-section");
@@ -388,9 +388,7 @@ const Doorstep = () => {
       }
     } else if (service.gadget === "AMC") {
       navigate("/amc");
-    } else if (service.gadget === "Spare Parts") {
-      navigate("/spare-parts");
-    }else if(service.gadget === "Smart Watches"){
+    } else if(service.gadget === "Smart Watches"){
       navigate("/watch-repair");
     }
 };
