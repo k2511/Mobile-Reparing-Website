@@ -135,6 +135,7 @@ import AMCDetails from "./components/AMC/AMCPage.jsx"
 
 //Spare Parts
 import SparePart from "./components/SparePart/SparePart.jsx"
+import WatchRepair from "./components/pages/static/WatchRepair.jsx";
 
 // Loading component
 const LoadingSpinner = () => (
@@ -635,6 +636,7 @@ const App = () => {
         <Route path="/laptop-repair" element={<Laptop />} />
         <Route path="/tablet-repair" element={<Tablet />} />
         <Route path="/cctv-repair" element={<CCTV />} />
+        <Route path="/watch-repair" element={<WatchRepair />} />
 
         {/* Company Routes */}
         <Route path="/about-us" element={<AboutUs />} />

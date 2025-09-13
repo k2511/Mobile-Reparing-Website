@@ -169,53 +169,6 @@ const TopBar = () => {
                   className="nav-link dropdown-toggle bg-transparent border-0"
                   onClick={handleServicesToggleDesktop}
                 >
-{/* <<<<<<< HEAD
-                  Services <i className="bi bi-caret-down-fill ms-1"></i>
-                </div>
-                {showServicesDropdown && (
-                  <ul
-                    className="dropdown-menu show mt-2"
-                    style={{ display: "block", position: "absolute", left: 0 }}
-                  >
-                    <li>
-                      <Link
-                        className="dropdown-item"
-                        to="/#brand-section"
-                        onClick={() => setShowServicesDropdown(false)}
-                      >
-                        Mobile
-                      </Link>
-                    </li>
-
-                    <li>
-                      <Link
-                        className="dropdown-item"
-                        to="/tablet-repair"
-                        onClick={() => setShowServicesDropdown(false)}
-                      >
-                        Tablet
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="dropdown-item"
-                        to="/macbook-repair"
-                        onClick={() => setShowServicesDropdown(false)}
-                      >
-                        Laptop
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        className="dropdown-item"
-                        to="/cctv-repair"
-                        onClick={() => setShowServicesDropdown(false)}
-                      >
-                        CCTV
-                      </Link>
-                    </li>
-                  </ul>
-======= */}
                   Services
                 </button>
                 {showServicesDropdownDesktop && (

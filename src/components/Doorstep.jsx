@@ -397,6 +397,8 @@ const Doorstep = () => {
       navigate("/amc");
     } else if (service.gadget === "Spare Parts") {
       navigate("/spare-parts");
+    }else if(service.gadget === "Smart Watches"){
+      navigate("/watch-repair");
     }
 };
 
