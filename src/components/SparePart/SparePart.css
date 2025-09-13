@@ -1,0 +1,66 @@
+
+
+
+/***************************************************************************************************/
+/* Image container with fixed aspect ratio */
+.image-container {
+  width: 100%;
+  aspect-ratio: 4/3; /* Keeps consistent ratio */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #f8f9fa;
+  border-radius: 8px 8px 0 0;
+}
+
+.part-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Prevents cropping */
+  transition: transform 0.3s ease;
+}
+
+.part-img:hover {
+  transform: scale(1.08);
+}
+
+/* Card improvements */
+.part-card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.part-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Text adjustments */
+.card-body h6 {
+  font-size: 1rem;
+  color: #111;
+}
+
+.card-body p {
+  font-size: 0.85rem;
+  min-height: 40px;
+}
+
+/* Header */
+.spare-parts-header p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 1rem;
+}
+
+/* Responsive text sizes */
+@media (max-width: 768px) {
+  .card-body h6 {
+    font-size: 0.9rem;
+  }
+  .card-body p {
+    font-size: 0.75rem;
+  }
+}

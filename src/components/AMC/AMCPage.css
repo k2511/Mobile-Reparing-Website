@@ -1,0 +1,443 @@
+/* .amc-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.amc-header {
+  background-color: white;
+  border-bottom: 1px solid #dee2e6;
+  padding: 20px 0;
+}
+
+.amc-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.breadcrumb {
+  color: #6c757d;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.amc-header h1 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #212529;
+  margin: 0;
+}
+
+.search-container {
+  margin-bottom: 40px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 12px 20px;
+  border: 1px solid #ced4da;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+}
+
+.amc-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.amc-card:hover {
+  border-color: #e60000;
+  box-shadow: 0 6px 20px rgba(230, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.amc-logo {
+  max-height: 80px;
+  max-width: 80%;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.amc-card h3 {
+  margin: 15px 0 10px;
+  font-size: 20px;
+}
+
+.amc-card h4 {
+  color: #e60000;
+  margin-bottom: 15px;
+}
+
+.amc-card ul {
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.amc-card li {
+  margin-bottom: 8px;
+}
+
+.amc-card .btn-primary {
+  background-color: #e60000;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.info-section {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  padding: 40px;
+  text-align: left;
+  margin-top: 50px;
+}
+
+.info-section h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.info-section p {
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.info-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0 15px;
+}
+
+.info-section ul {
+  color: #6c757d;
+  line-height: 1.6;
+  padding-left: 20px;
+}
+
+.info-section li {
+  margin-bottom: 10px;
+} */
+
+
+
+
+
+
+
+
+
+/* SparePart.css */
+
+.amc-page {
+  min-height: 100vh;
+  background: linear-gradient(to right, #f9fafb, #eef2f7);
+}
+
+.amc-header {
+  background: linear-gradient(90deg, #2563eb, #1e40af);
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.amc-header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+.amc-header h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.header-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Search and Filter */
+.search-filter-section {
+  padding: 0 15px;
+}
+
+.search-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-btn:hover {
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.filter-btn.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+/* AMC Cards */
+.amc-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid #e5e7eb;
+}
+
+.amc-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.plan-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #10b981;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.plan-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.amc-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.coverage-info {
+  color: #6b7280;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.plan-description {
+  color: #4b5563;
+  margin-bottom: 20px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+  flex-grow: 2;
+}
+
+.features-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f3f4f6;
+  color: #374151;
+  position: relative;
+  padding-left: 20px;
+}
+
+.features-list li:before {
+  content: "✓";
+  color: #10b981;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.amc-card .btn {
+  width: 100%;
+  padding: 12px;
+  background: #2563eb;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.amc-card .btn:hover {
+  background: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* AMC Types Section */
+.amc-types-section {
+  padding: 40px 0;
+}
+
+.type-card {
+  padding: 30px;
+  border-radius: 12px;
+  height: 100%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.type-card.comprehensive {
+  background: linear-gradient(135deg, #dbeafe, #eff6ff);
+  border: 1px solid #dbeafe;
+}
+
+.type-card.non-comprehensive {
+  background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+  border: 1px solid #d1fae5;
+}
+
+.type-card h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #1f2937;
+}
+
+.type-card p {
+  color: #4b5563;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.type-features {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.type-features span {
+  font-weight: 500;
+}
+
+/* Benefits Section */
+.benefits-section {
+  padding: 40px 0;
+}
+
+.benefits-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.benefits-section .lead {
+  font-size: 1.1rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.benefits-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 20px;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-list li {
+  padding: 10px 0;
+  font-size: 1.1rem;
+  color: #374151;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .amc-header {
+    padding: 40px 0;
+  }
+  
+  .amc-header h1 {
+    font-size: 2rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1rem;
+  }
+  
+  .filter-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .filter-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .type-card {
+    margin-bottom: 20px;
+  }
+}
