@@ -199,7 +199,7 @@ const OnePlusPage = () => {
               />
               <h3
                 style={{
-                  fontSize: "16px",
+                  fontSize: "13px",
                   fontWeight: "600",
                   margin: "10px 0 5px",
                   color: "#212529",

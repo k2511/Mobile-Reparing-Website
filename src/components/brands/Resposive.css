@@ -7,11 +7,13 @@
   padding: 0 20px;
   justify-content: center !important;
     align-items: center !important;
+ 
 }
 
 @media (min-width: 768px) {
   .main {
     grid-template-columns: repeat(3, 1fr); 
+   
     
   }
 }
@@ -19,6 +21,7 @@
 @media (min-width: 1024px) {
   .main {
     grid-template-columns: repeat(6, 1fr); 
+    
   }
 }  
 

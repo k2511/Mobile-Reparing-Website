@@ -1,243 +1,139 @@
-// import React from 'react';
-
-// import img3 from '../assets/image/img-3.jpeg'; 
-
-// const HeroSection = () => {
-//   return ( 
-//     <div className="hero-wrapper">
-//       <div className="hero-box">
-//         <div className="hero-left">
-//           <h1>Best Mobile Rapair Service Center <br /> in Bangalore</h1>
-//           <p>Caring for your Mac!</p>
-//           <button className="repair-btn">FIX MY DEVICE</button>
-//         </div>
-//         <div className="hero-right">
-//           <img src={img3} alt="Apple Service Center" className="hero-img" />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HeroSection;
-
-
-/******************************************************************************* */
-
-
-// import React from 'react';
-// import { Container, Carousel } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import slide1 from '../../src/assets/slider/s1.jpg';
-// import slide2 from '../../src/assets/slider/s2.jpg';
-// import slide3 from '../../src/assets/slider/s3.jpg';
-
-// // Images array for the carousel
-// const images = [
-//   {
-//     src: slide1,
-//     alt: 'Expert Mobile Repairs',
-//     caption: 'Expert Repairs for All Devices'
-//   },
-//   {
-//     src: slide2,
-//     alt: 'Reliable Mobile Service',
-//     caption: 'Fast and Reliable Service'
-//   },
-//   {
-//     src: slide3,
-//     alt: 'Trusted Repair Quality',
-//     caption: 'Trusted by Thousands'
-//   }
-// ];
+// import React from "react";
+// import { Container, Row, Col, Button } from "react-bootstrap";
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "./Slider.css";
+// import HeroImg from "../assets/image/hero-img.png";
 
 // const HeroSection = () => {
 //   return (
-//     <div className="hero-wrapper bg-gray-50 py-4 py-md-5">
-//       <Container fluid="lg">
-//         <Carousel
-//           interval={4000}
-//           pause="hover"
-//           className="shadow-sm rounded-3 overflow-hidden"
-//           prevIcon={
-//             <span className="carousel-control-prev-icon bg-dark bg-opacity-50 rounded-circle" />
-//           }
-//           nextIcon={
-//             <span className="carousel-control-next-icon bg-dark bg-opacity-50 rounded-circle" />
-//           }
-//         >
-//           {images.map((image, index) => (
-//             <Carousel.Item key={index}>
-//               <img
-//                 className="d-block w-100"
-//                 src={image.src}
-//                 alt={image.alt}
-//                 style={{
-//                   height: 'clamp(300px, 60vw, 500px)',
-//                   objectFit: 'cover'
-//                 }}
-//               />
-//               <Carousel.Caption className="bg-dark bg-opacity-50 py-2 rounded">
-//                 <h4 className="text-white fw-semibold mb-0">{image.caption}</h4>
-//               </Carousel.Caption>
-//             </Carousel.Item>
-//           ))}
-//         </Carousel>
-//       </Container>
-//     </div>
-//   );
-// };
-
-// export default HeroSection;
-/******************************************************************************* */
-
-// import React from 'react';
-// import { Carousel, Button } from 'react-bootstrap';
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import slide1 from '../../src/assets/slider/s1.jpg';
-// import slide2 from '../../src/assets/slider/s2.jpg';
-// import slide3 from '../../src/assets/slider/s3.jpg';
-
-// const images = [
-//   {
-//     src: slide1,
-//     alt: 'Expert Mobile Repairs',
-//     caption: 'Expert Repairs for All Devices',
-//     buttonText: 'Fix My Device Now'
-//   },
-//   {
-//     src: slide2,
-//     alt: 'Reliable Mobile Service',
-//     caption: 'Fast and Reliable Service',
-//     buttonText: 'Get Quick Repairs'
-//   },
-//   {
-//     src: slide3,
-//     alt: 'Trusted Repair Quality',
-//     caption: 'Trusted by Thousands',
-//     buttonText: 'Book Your Repair'
-//   }
-// ];
-
-// const HeroSection = () => {
-//   return (
-//     <div className="hero-wrapper">
-//       <Carousel
-//         interval={4000}
-//         pause="hover"
-//         className="shadow-sm"
-//         prevIcon={<span className="carousel-control-prev-icon bg-dark bg-opacity-50 rounded-circle p-3" />}
-//         nextIcon={<span className="carousel-control-next-icon bg-dark bg-opacity-50 rounded-circle p-3" />}
-//         style={{ height: '60vh', width: '90%' }} // Increased height
-//       >
-//         {images.map((image, index) => (
-//           <Carousel.Item key={index}>
-//             <img
-//               className="d-block w-100"
-//               src={image.src}
-//               alt={image.alt}
-//               style={{
-//                 height: '60vh', // Increased height
-//                 objectFit: 'cover',
-//                 objectPosition: 'center',
-//                 filter: 'brightness(0.75)' // Slightly darker for text contrast
-//               }}
-//             />
-//             <Carousel.Caption
-//               className="d-flex flex-column justify-content-center align-items-start h-100 px-5"
-//               style={{ top: 0, bottom: 0 }} // Center vertically
-//             >
-//               <h2
-//                 className="text-white fw-bold mb-4"
-//                 style={{ fontSize: 'clamp(1.5rem, 4vw, 2.5rem)', textShadow: '2px 2px 8px rgba(0,0,0,0.7)' }}
-//               >
-//                 {image.caption}
-//               </h2>
-//               <Button
-//                 variant="primary"
-//                 size="lg"
-//                 className="fw-semibold px-4 py-3 rounded-pill text-uppercase"
-//                 style={{ backgroundColor: '#ff3b30', borderColor: '#ff3b30', boxShadow: '2px 2px 10px rgba(0,0,0,0.4)' }}
-//               >
-//                 {image.buttonText}
+//     <section className="hero-section position-relative">
+//       <Container>
+//         <Row className="align-items-center min-vh-75">
+//           {/* Text Content */}
+//           <Col lg={6} className="hero-content py-5">
+//             <h1 className="hero-title fw-bold mb-3">
+//               Device Down? Let&apos;s Power It Back Up.
+//             </h1>
+//             <p className="hero-subtitle mb-4">
+//               We repair phones, tablets, and more—restoring performance, data,
+//               and peace of mind.
+//             </p>
+//             <div className="hero-buttons d-flex flex-wrap gap-3">
+//               <Button variant="danger" size="lg" className="fw-bold">
+//                 Book an Appointment
 //               </Button>
-//             </Carousel.Caption>
-//           </Carousel.Item>
-//         ))}
-//       </Carousel>
-//     </div>
+//               <div className="d-flex align-items-center mt-2 mt-md-0">
+//                 <span className="fw-bold text-white me-2">
+//                   Customer Support
+//                 </span>
+    
+//                 <span className="support-number"> +91 9900004528</span>
+//               </div>
+//             </div>
+//           </Col>
+
+//           {/* Hero Image */}
+//           <Col lg={6} className="hero-image text-center">
+//             <div className="img-container">
+//               <img src={HeroImg} alt="Hero device" className="hero-main-img" />
+//             </div>
+//           </Col>
+//         </Row>
+//       </Container>
+
+//       {/* Wave Divider */}
+//       <div class="custom-shape-divider-bottom-1758017769">
+//         <svg
+//           data-name="Layer 1"
+//           xmlns="http://www.w3.org/2000/svg"
+//           viewBox="0 0 1200 120"
+//           preserveAspectRatio="none"
+//         >
+//           <path
+//             d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+//             class="shape-fill"
+//           ></path>
+//         </svg>
+//       </div>
+//     </section>
 //   );
 // };
 
 // export default HeroSection;
 
-import React from 'react';
-import { Container, Row, Col, Button, Carousel } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import slide1 from '../../src/assets/slider/s1.jpg';
-import slide2 from '../../src/assets/slider/s2.jpg';
-import slide3 from '../../src/assets/slider/s3.jpg';
 
-// Corrected images array with direct references to imported images
-const images = [
-  {
-    src: slide1, // Directly use the imported variable
-    alt: 'Expert Mobile Repairs',
-    caption: 'Expert Repairs for All Devices' // Fixed typo
-  },
-  {
-    src: slide2,
-    alt: 'Reliable Mobile Service',
-    caption: 'Fast and Reliable Service'
-  },
-  {
-    src: slide3,
-    alt: 'Trusted Repair Quality',
-    caption: 'Trusted by Thousands'
-  }
-];
+
+
+import React from "react";
+import { Container, Row, Col, Button } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Slider.css";
+import HeroImg from "../assets/image/hero-img.png";
 
 const HeroSection = () => {
   return (
-    <div className="hero-wrapper bg-gray-50 py-4 py-md-5">
-      <Container fluid="lg">
-        <Row className="align-items-center gx-4">
-          {/* Right Section - Carousel */}
-          <Col xs={12} md={12}>
-            <Carousel
-              interval={4000}
-              pause="hover"
-              className="shadow-sm  overflow-hidden"
-              prevIcon={
-                <span className="carousel-control-prev-icon bg-dark bg-opacity-50 rounded-circle" />
-              }
-              nextIcon={
-                <span className="carousel-control-next-icon bg-dark bg-opacity-50 rounded-circle" />
-              }
-            >
-              {images.map((image, index) => (
-                <Carousel.Item key={index}>
-                  <img
-                    className="d-block w-100"
-                    src={image.src}
-                    alt={image.alt}
-                    style={{
-                      height: 'clamp(250px, 50vw, 400px)',
-                      objectFit: 'cover'
-                    }}
-                  />
-                  <Carousel.Caption className="bg-dark bg-opacity-50 py-2 ">
-                    <h4 className="text-white fw-semibold mb-0">{image.caption}</h4>
-                  </Carousel.Caption>
-                </Carousel.Item>
-              ))}
-            </Carousel>
+    <section className="hero-section position-relative">
+      <Container>
+        <Row className="align-items-center min-vh-75">
+          {/* Text Content */}
+          <Col lg={6} className="hero-content py-5">
+            <h1 className="hero-title fw-bold mb-3">
+              Device Down? Let&apos;s Power It Back Up.
+            </h1>
+            <p className="hero-subtitle mb-4">
+              We repair phones, tablets, and more—restoring performance, data,
+              and peace of mind.
+            </p>
+            <div className="hero-buttons d-flex flex-wrap gap-3">
+              <Button variant="danger" size="lg" className="fw-bold">
+                Book an Appointment
+              </Button>
+              <div className="d-flex align-items-center mt-2 mt-md-0">
+                <span className="fw-bold text-white me-2">
+                  Customer Support
+                </span>
+
+                {/* Middle line separator */}
+                <span
+                  style={{
+                    display: "inline-block",
+                    width: "1px",
+                    height: "20px",
+                    backgroundColor: "#ccc",
+                    margin: "0 10px",
+                  }}
+                ></span>
+
+                <span className="support-number"> +91 9900004528</span>
+              </div>
+            </div>
+          </Col>
+
+          {/* Hero Image */}
+          <Col lg={6} className="hero-image text-center">
+            <div className="img-container">
+              <img src={HeroImg} alt="Hero device" className="hero-main-img" />
+            </div>
           </Col>
         </Row>
       </Container>
-    </div>
+
+      {/* Wave Divider */}
+      <div className="custom-shape-divider-bottom-1758017769">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </section>
   );
 };
 
 export default HeroSection;
-

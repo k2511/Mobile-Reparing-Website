@@ -4,28 +4,24 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 export default function BlogSection() {
   const blogs = [
     {
-      title: "5 Warning Signs Your Mobile Phone Needs Immediate Repair",
-      desc: "Is your smartphone heating up, draining battery fast, or showing unresponsive touch? Learn how to identify early signs of mobile phone damage so you can get professional mobile repair services before the problem becomes costly."
+      title: "Top 5 Signs Your Phone Needs Immediate Repair",
+      desc: "Is your phone overheating, battery draining fast, or the screen unresponsive? Learn how to spot issues early and get professional mobile repair services before it gets worse.",
+      img: "https://images.unsplash.com/photo-1580910051078-1f95c5d3a5f4?auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "Top CCTV Camera Features to Keep Your Home & Business Safe",
-      desc: "Discover the latest CCTV camera features like night vision, motion detection, and remote monitoring that ensure complete home and office security. Find out which security camera systems are worth your investment."
+      title: "Tablet Maintenance Tips for Longevity",
+      desc: "Keep your tablet performing at its best with essential maintenance tips including battery care, storage management, and software updates.",
+      img: "https://images.unsplash.com/photo-1611162617219-cb9c37d64c3b?auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "Why Your Laptop is Running Slow – Causes & Quick Fixes",
-      desc: "From low storage to outdated software, we explain the common reasons laptops slow down and how you can improve speed with expert laptop repair and optimisation services."
+      title: "Smart Watch Care: Extend Your Device Life",
+      desc: "From battery optimization to strap maintenance, discover how to take care of your smart watch so it stays accurate and lasts longer.",
+      img: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=800&q=80"
     },
     {
-      title: "Tablet vs Laptop – Choosing the Best Device for Your Needs",
-      desc: "Confused between a tablet and a laptop for work, study, or entertainment? Compare their performance, portability, and features to make the right purchase."
-    },
-    {
-      title: "The Hidden Risks of Cheap Mobile, Laptop & CCTV Repairs",
-      desc: "Opting for cheap repair services can lead to poor quality parts, unreliable work, and permanent damage. Here’s why choosing a certified repair technician saves you money in the long run."
-    },
-    {
-      title: "Data Safety During Mobile & Laptop Repairs – Our Process",
-      desc: "We explain how we protect your data during repairs with secure handling, privacy protocols, and safe storage to keep your personal and business information confidential."
+      title: "Must-Have Mobile Accessories for Your Device",
+      desc: "Protect and enhance your mobile experience with essential accessories like cases, screen protectors, chargers, and headphones.",
+      img: "https://images.unsplash.com/photo-1603791452906-9c3f797f3ec3?auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -36,11 +32,17 @@ export default function BlogSection() {
         <hr style={{ width: "80px", border: "2px solid red", margin: "0 auto 40px" }} />
         <Row>
           {blogs.map((blog, idx) => (
-            <Col md={6} lg={4} key={idx} className="mb-4">
+            <Col md={6} lg={3} key={idx} className="mb-4">
               <Card className="shadow-sm h-100 border-0">
-                <Card.Body>
+                <Card.Img
+                  variant="top"
+                  src={blog.img}
+                  alt={blog.title}
+                  style={{ height: "180px", objectFit: "cover" }}
+                />
+                <Card.Body className="d-flex flex-column">
                   <Card.Title className="fw-semibold">{blog.title}</Card.Title>
-                  <Card.Text className="text-muted" style={{ fontSize: "0.9rem" }}>
+                  <Card.Text className="text-muted" style={{ fontSize: "0.9rem", flexGrow: 1 }}>
                     {blog.desc}
                   </Card.Text>
                   <Button variant="danger" size="sm">Read More</Button>

@@ -385,7 +385,7 @@ const SamsungPage = () => {
               />
               <h3
                 style={{
-                  fontSize: "16px",
+                  fontSize: "13px",
                   fontWeight: "600",
                   margin: "10px 0 5px",
                 }}
@@ -430,7 +430,7 @@ const SamsungPage = () => {
           </p>
           <h3
             style={{
-              fontSize: "18px",
+              fontSize: "16px",
               fontWeight: "600",
               marginTop: "30px",
             }}

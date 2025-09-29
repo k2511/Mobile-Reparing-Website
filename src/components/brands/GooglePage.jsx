@@ -113,15 +113,7 @@ const GooglePage = () => {
 
         {/* Models Grid */}
         <div className="main"
-          // style={{
-          //   display: "grid",
-          //   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          //   gap: "20px",
-          //   marginBottom: "40px",
-
-          //    gridTemplateColumns:
-          //  window.innerWidth >= 1024 ? "repeat(6, 1fr)" : "repeat(3, 1fr)",
-          // }}
+    
         >
           {filteredModels.map((model, index) => (
             <div  onClick={() => {
@@ -164,7 +156,7 @@ const GooglePage = () => {
               />
               <h3
                 style={{
-                  fontSize: "16px",
+                  fontSize: "13px",
                   fontWeight: "600",
                   margin: "10px 0 5px",
                   color: "#212529",

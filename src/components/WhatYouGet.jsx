@@ -12,7 +12,7 @@ export default function WhatYouGet() {
     {
       icon: <FaLaptop size={28} className="text-danger" />,
       title: "Multi-Device Expertise",
-      desc: "From mobiles to laptops and CCTV, we handle it all with precision."
+      desc: "From mobiles to Tablet , we handle it all with precision."
     },
     {
       icon: <FaMapMarkerAlt size={28} className="text-danger" />,
@@ -39,7 +39,7 @@ export default function WhatYouGet() {
   return (
     <section style={{ backgroundColor: "#f9f9f9", padding: "60px 0" }}>
       <Container>
-        <h2 className="text-center fw-bold mb-3">WHAT YOU GET FROM REDSET GO</h2>
+        <h2 className="text-center fw-bold mb-3">WHAT YOU GET FROM SCREEN GURU</h2>
         <hr
           style={{
             width: "80px",

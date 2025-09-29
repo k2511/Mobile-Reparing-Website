@@ -4,7 +4,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-
+import Iphone from "../../assets/iphone/iphone.png";
 import Samsung from "../../assets/image/Samsung.png";
 import Mi from "../../assets/image/mi.png";
 import OnePlus from "../../assets/image/oneplus.png";
@@ -25,6 +25,7 @@ import Lava from "../../assets/image/lava.png";
 import Micromax from "../../assets/image/micromax.png";
 
 const brands = [
+  { name: "iPhone", image: Iphone },
   { name: "Samsung", image: Samsung },
   { name: "Mi", image: Mi },
   { name: "OnePlus", image: OnePlus },

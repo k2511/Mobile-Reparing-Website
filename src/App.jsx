@@ -37,7 +37,7 @@ import TipsSection from "./components/TipsSection.jsx";
 import FeaturesSection from "./components/FeaturesSection.jsx";
 import WhatYouGet from "./components/WhatYouGet.jsx";
 import BlogSection from "./components/BlogSection.jsx";
-
+import Term from "./components/company/TermConditions.jsx";
 
 // Lazy-loaded components for home page
 const Slider = React.lazy(() => import("./components/Slider.jsx"));
@@ -72,6 +72,9 @@ const BrandIssues = React.lazy(() =>
 const SamsungModels = React.lazy(() =>
   import("./components/brands/SamsungPage.jsx")
 );
+
+const iphone = React.lazy(() => import("./components/brands/IphonePage.jsx"));
+
 const AsusPage = React.lazy(() => import("./components/brands/AsusPage.jsx"));
 const NothingPage = React.lazy(() =>
   import("./components/brands/NothingPage.jsx")
@@ -100,11 +103,11 @@ const HonorPage = React.lazy(() => import("./components/brands/HonorPage.jsx"));
 //Tab Section
 
 import TabletBrandPage from "./components/TabletBrand.jsx";
-import SamsungTab  from "./components/Tab/SamsungTab.jsx"
+import SamsungTab from "./components/Tab/SamsungTab.jsx";
 import OppoTab from "./components/Tab/OppoTab.jsx";
 import MiTab from "./components/Tab/miTab.jsx";
-import LenovoTab from "./components/Tab/LenovoTab.jsx"
-import OnePlusTab from "./components/Tab/OnePlus.jsx"
+import LenovoTab from "./components/Tab/LenovoTab.jsx";
+import OnePlusTab from "./components/Tab/OnePlus.jsx";
 import RealmeTab from "./components/Tab/realmeTab.jsx";
 import GoogleTab from "./components/Tab/GoogleTab.jsx";
 
@@ -117,7 +120,7 @@ import AsusTab from "./components/Tab/asusTab.jsx";
 import LavaTab from "./components/Tab/LavaTab.jsx";
 import MicrosoftTab from "./components/Tab/MicrosoftTab.jsx";
 import MicromaxTab from "./components/Tab/micromaxTab.jsx";
-
+import IphoneTab from "./components/Tab/IphoneTab.jsx";
 
 //Laptop Section
 import LaptopBrandPage from "./components/LaptopBrandPage.jsx";
@@ -127,17 +130,30 @@ import AsusLap from "./components/Laptop/AsusLap.jsx";
 import LenovoLap from "./components/Laptop/LenovoLap.jsx";
 import MsiLap from "./components/Laptop/MsiLap.jsx";
 import AcerLap from "./components/Laptop/AcerLap.jsx";
-import SamsungLap from "./components/Laptop/SamsungLap.jsx"
+import SamsungLap from "./components/Laptop/SamsungLap.jsx";
 import MicrosoftLap from "./components/Laptop/MicrosoftLap.jsx";
 
 //AMC
-import AMCDetails from "./components/AMC/AMCPage.jsx"
+import AMCDetails from "./components/AMC/AMCPage.jsx";
 
 //Spare Parts
-import SparePart from "./components/SparePart/SparePart.jsx"
+import SparePart from "./components/SparePart/SparePart.jsx";
 import WatchRepair from "./components/pages/static/WatchRepair.jsx";
 import MobileAccessories from "./components/pages/Mobile accessories.jsx";
 import WatchRepairs from "./components/pages/WatchRepairs.jsx";
+import TechCheck from "./components/pages/TechCheck.jsx";
+import DeviceCheck from "./components/pages/DeviceCheck.jsx";
+import MobileSection from "./components/MobileSection.jsx";
+import BatteryReplacementCard from "./components/BatteryReplacementCard.jsx";
+import CertifiedPreOwnedCard from "./components/CertifiedPreOwnedCard.jsx";
+import OurValue from "./components/OurValue.jsx";
+import ConsultationSection from "./components/Consultation.jsx";
+import TrustedBrands from "./components/TrustedBrands.jsx";
+import HelpCenter from "./components/company/HelpCenter.jsx";
+import TrackRepairs from "./components/company/trackRepairs.jsx";
+import ReturnRefunds from "./components/company/ReturnRefunds.jsx";
+import PressMedia from "./components/company/PressMedia.jsx";
+import IphonePage from "./components/brands/IphonePage.jsx";
 
 // Loading component
 const LoadingSpinner = () => (
@@ -159,6 +175,7 @@ const MainLayout = () => (
     <Suspense fallback={<LoadingSpinner />}>
       <Outlet /> {/* Renders child routes */}
     </Suspense>
+
     <Footer />
     <ContactButtons />
   </div>
@@ -167,15 +184,16 @@ const MainLayout = () => (
 // Home Page
 const HomePage = () => {
   const org = {
-    name: "RedSetGo Repairs",
-    url: "https://www.resetgo.in",
-    logo: "https://www.resetgo.in/logo.png", // replace with actual logo URL
-    phone: "+91-7676786764",
+    name: "Screen Guru Repairs",
+    url: "https://www.screenguru.in",
+    logo: "https://www.screenguru.in/logo.png",
+    phone: "+91-99000 07849",
     address: {
-      street: "Konark Business Hub, 2nd Floor 3S-14, Kondhwa Main Road",
-      locality: "Pune",
-      region: "MH",
-      postal: "411048",
+      street:
+        "Shree Tulsi Krupa Plaza, 12/1, SP Road, opposite to Dasappa Hospital, Thigalarpet, Halsurpete, Nagarathpete,",
+      locality: "Bengaluru, Karnataka ",
+      region: "KA",
+      postal: "560002",
       country: "IN",
     },
   };
@@ -252,7 +270,7 @@ const HomePage = () => {
         name: "Which areas in Pune do you serve?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "We cover Koregaon Park, Viman Nagar, Kothrud, Baner, Wakad, Hinjewadi, Hadapsar, Pimpri-Chinchwad, Camp, Shivajinagar, and nearby localities.",
+          text: "Shree Tulsi Krupa Plaza, 12/1, SP Road, opposite to Dasappa Hospital, Thigalarpet, Halsurpete, Nagarathpete, Bengaluru, Karnataka 560002",
         },
       },
     ],
@@ -262,11 +280,12 @@ const HomePage = () => {
     <div>
       <Helmet>
         <title>
-          Redset Go – Doorstep Mobile Repair Service in Pune | Fast & Reliable
+          Screen Guru – Doorstep Mobile Repair Service in Banglore | Fast &
+          Reliable
         </title>
         <meta
           name="description"
-          content="Get doorstep mobile repair in Pune in under 30 minutes. Certified technicians fix screens, batteries, charging ports and more—right in front of you."
+          content="Get doorstep mobile repair in Banglore in under 30 minutes. Certified technicians fix screens, batteries, charging ports and more—right in front of you."
         />
         <link rel="canonical" href={`${org.url}/`} />
         <meta
@@ -276,12 +295,12 @@ const HomePage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="keywords"
-          content="mobile repair pune, doorstep mobile repair pune, phone screen replacement pune, battery replacement pune, redsetgo repairs"
+          content="mobile repair banglore, doorstep mobile repair pune, phone screen replacement banglore, battery replacement banglore, Screenguru repairs"
         />
         <meta property="og:type" content="website" />
         <meta
           property="og:title"
-          content="Mobile Repair in Pune – Doorstep in 30 Minutes | RedSet Go Repairs"
+          content="Mobile Repair in Banglore – Doorstep in 30 Minutes | Screen Guru Go Repairs"
         />
         <meta
           property="og:description"
@@ -292,11 +311,11 @@ const HomePage = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Mobile Repair in Pune – Doorstep in 30 Minutes | RedSet Go Repairs"
+          content="Mobile Repair in Banglore – Doorstep in 30 Minutes | Screen Guuru Go Repairs"
         />
         <meta
           name="twitter:description"
-          content="Doorstep mobile repair in Pune with 30-minute service. Repairs done in front of you using genuine parts."
+          content="Doorstep mobile repair in Banglore with 30-minute service. Repairs done in front of you using genuine parts."
         />
         <meta name="twitter:image" content={org.logo} />
         <script type="application/ld+json">
@@ -314,6 +333,12 @@ const HomePage = () => {
         <Slider />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
+        <MobileSection />
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        <TechCheck />
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
         <Doorstep />
       </Suspense>
 
@@ -324,6 +349,18 @@ const HomePage = () => {
       </div>
 
       <Suspense fallback={<LoadingSpinner />}>
+        <BatteryReplacementCard />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSpinner />}>
+        <CertifiedPreOwnedCard />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSpinner />}>
+        <OurValue />
+      </Suspense>
+
+      <Suspense fallback={<LoadingSpinner />}>
         <ProcessSteps />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
@@ -332,16 +369,16 @@ const HomePage = () => {
       <Suspense fallback={<LoadingSpinner />}>
         <WhyUs />
       </Suspense>
-      <Suspense fallback={<LoadingSpinner />}>
+      {/* <Suspense fallback={<LoadingSpinner />}>
         <FeaturesSection />
-      </Suspense>
+      </Suspense> */}
       <Suspense fallback={<LoadingSpinner />}>
         <WhatYouGet />
       </Suspense>
 
-       {/* <Suspense fallback={<LoadingSpinner />}> */}
-        {/* <BlogSection /> */}
-      {/* </Suspense>  */}
+      {/* <Suspense fallback={<LoadingSpinner />}>
+      <BlogSection />
+      </Suspense>  */}
 
       <Suspense fallback={<LoadingSpinner />}>
         <TipsSection />
@@ -362,6 +399,15 @@ const HomePage = () => {
         <FAQ />
       </Suspense>
       <Suspense fallback={<LoadingSpinner />}>
+        <ConsultationSection />
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        <TrustedBrands />
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
+        <DeviceCheck />
+      </Suspense>
+      <Suspense fallback={<LoadingSpinner />}>
         <FeedBack />
       </Suspense>
     </div>
@@ -372,7 +418,7 @@ const HomePage = () => {
 const LaptopPage = () => (
   <div>
     <Helmet>
-      <title>Laptop - RedSet Go Repairs</title>
+      <title>Laptop - Screen Guru Go Repairs</title>
       <meta
         name="description"
         content="Professional repair services including screen, battery, and hardware repair."
@@ -402,7 +448,7 @@ const CctvPage = () => (
 const TabletPage = () => (
   <div>
     <Helmet>
-      <title>Tablet Repair - RedSet Go Repairs</title>
+      <title>Tablet Repair - Screen Guru Go Repairs</title>
       <meta
         name="description"
         content="Expert tablet repair services including screen replacement and battery repair."
@@ -434,7 +480,6 @@ const App = () => {
       <Route element={<MainLayout />}>
         {/* Home page */}
         <Route path="/" element={<HomePage />} />
-
         {/* SEO Routes */}
         {cities.map((city) =>
           services.map((service) => {
@@ -450,20 +495,28 @@ const App = () => {
             );
           })
         )}
-
         {/* Repair pages */}
         <Route path="/macbook-repair" element={<LaptopPage />} />
         <Route path="/cctv-repair" element={<CctvPage />} />
         <Route path="/tablet-repair" element={<TabletPage />} />
-
         {/* Brand pages */}
         <Route
           path="/brand/samsung"
           element={
             <BrandPageTemplate
-              title="Samsung Repair - RedSet Go Repairs"
-              description="Repair Samsung phones, tablets, and devices with RedSetGo Repairs."
+              title="Samsung Repair - Screen Guru Repairs"
+              description="Repair Samsung phones, tablets, and devices with  Guru Repairs."
               Component={SamsungModels}
+            />
+          }
+        />
+        <Route
+          path="/brand/iphone"
+          element={
+            <BrandPageTemplate
+              title="iPhone Repair - Screen Guru Repairs"
+              description="Repair iPhones professionally."
+              Component={IphonePage}
             />
           }
         />
@@ -471,7 +524,7 @@ const App = () => {
           path="/brand/asus"
           element={
             <BrandPageTemplate
-              title="Asus Repair - RedSet Go Repairs"
+              title="Asus Repair - Screen Guru Repairs"
               description="Repair Asus phones, tablets, and laptops professionally."
               Component={AsusPage}
             />
@@ -481,7 +534,7 @@ const App = () => {
           path="/brand/nothing"
           element={
             <BrandPageTemplate
-              title="Nothing Phone Repair - RedSet Go Repairs"
+              title="Nothing Phone Repair - Screen Guru Repairs"
               description="Professional Nothing phone repair services."
               Component={NothingPage}
             />
@@ -491,7 +544,7 @@ const App = () => {
           path="/brand/vivo"
           element={
             <BrandPageTemplate
-              title="Vivo Repair - RedSet Go Repairs"
+              title="Vivo Repair - Screen Guru Repairs"
               description="Vivo mobile repair services for all models."
               Component={VivoPage}
             />
@@ -501,7 +554,7 @@ const App = () => {
           path="/brand/oppo"
           element={
             <BrandPageTemplate
-              title="Oppo Repair - RedSet Go Repairs"
+              title="Oppo Repair - Screen Guru Repairs"
               description="Repair Oppo smartphones professionally."
               Component={OppoPage}
             />
@@ -511,7 +564,7 @@ const App = () => {
           path="/brand/realme"
           element={
             <BrandPageTemplate
-              title="Realme Repair - RedSet Go Repairs"
+              title="Realme Repair - Screen Guru  Repairs"
               description="Repair Realme devices with professional service."
               Component={RealmePage}
             />
@@ -521,7 +574,7 @@ const App = () => {
           path="/brand/google"
           element={
             <BrandPageTemplate
-              title="Google Phone Repair - RedSet Go Repairs"
+              title="Google Phone Repair - Screen Guru  Repairs"
               description="Repair Google Pixel phones and devices."
               Component={GooglePage}
             />
@@ -531,7 +584,7 @@ const App = () => {
           path="/brand/mi"
           element={
             <BrandPageTemplate
-              title="Mi Repair - RedSet Go Repairs"
+              title="Mi Repair - Screen Guru  Repairs"
               description="Repair Xiaomi/MI phones professionally."
               Component={MiPage}
             />
@@ -541,7 +594,7 @@ const App = () => {
           path="/brand/oneplus"
           element={
             <BrandPageTemplate
-              title="OnePlus Repair - RedSet Go Repairs"
+              title="OnePlus Repair - Screen Guru  Repairs"
               description="OnePlus device repair services."
               Component={OnePlusPage}
             />
@@ -551,7 +604,7 @@ const App = () => {
           path="/brand/motorola"
           element={
             <BrandPageTemplate
-              title="Motorola Repair - RedSet Go Repairs"
+              title="Motorola Repair - Screen Guru  Repairs"
               description="Repair Motorola phones professionally."
               Component={MotorolaPage}
             />
@@ -561,7 +614,7 @@ const App = () => {
           path="/brand/iqoo"
           element={
             <BrandPageTemplate
-              title="IQOO Repair - RedSet Go Repairs"
+              title="IQOO Repair - Screen Guru Repairs"
               description="IQOO smartphone repair services."
               Component={IqooPage}
             />
@@ -571,7 +624,7 @@ const App = () => {
           path="/brand/poco"
           element={
             <BrandPageTemplate
-              title="Poco Repair - RedSet Go Repairs"
+              title="Poco Repair - Screen Guru Repairs"
               description="Poco phone repair services."
               Component={PocoPage}
             />
@@ -581,7 +634,7 @@ const App = () => {
           path="/brand/tecno"
           element={
             <BrandPageTemplate
-              title="Tecno Repair - RedSet Go Repairs"
+              title="Tecno Repair - Screen Guru Repairs"
               description="Tecno mobile repair services."
               Component={TecnoPage}
             />
@@ -591,7 +644,7 @@ const App = () => {
           path="/brand/nokia"
           element={
             <BrandPageTemplate
-              title="Nokia Repair - RedSet Go Repairs"
+              title="Nokia Repair - Screen Guru Repairs"
               description="Nokia phone repair services."
               Component={NokiaPage}
             />
@@ -601,37 +654,34 @@ const App = () => {
           path="/brand/honor"
           element={
             <BrandPageTemplate
-              title="Honor Repair - RedSet Go Repairs"
+              title="Honor Repair - Screen Guru Repairs"
               description="Repair Honor devices professionally."
               Component={HonorPage}
             />
           }
         />
-
         {/* Brand issues */}
         <Route
           path="/brand-issues/:mobileName"
           element={
             <BrandPageTemplate
-              title="Brand Issue - RedSet Go Repairs"
+              title="Brand Issue - Screen Guru Go Repairs"
               description="Find solutions for common brand mobile issues."
               Component={BrandIssues}
             />
           }
         />
-
         {/* Fallback dynamic route */}
         <Route
           path="/brand/:brandName"
           element={
             <BrandPageTemplate
-              title="Mobile Repair - RedSet Go Repairs"
+              title="Mobile Repair - Screen Guru Repairs"
               description="Repair services for all mobile brands."
               Component={LaptopRepairPage} // fallback component
             />
           }
         />
-
         {/* Footer Navigation */}
         {/* Devices */}
         <Route path="/mobile-repair" element={<Mobile />} />
@@ -639,74 +689,65 @@ const App = () => {
         <Route path="/tablet-repair" element={<Tablet />} />
         <Route path="/cctv-repair" element={<CCTV />} />
         <Route path="/watch-repair" element={<WatchRepair />} />
-
         {/* Company Routes */}
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/articles" element={<Articles />} />
+        <Route path="/help" element={<HelpCenter />} />
+        <Route path="/track" element={<TrackRepairs />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/e-waste-policy" element={<EwastePolicy />} />
         <Route path="/cookie-policy" element={<CookiePolicy />} />
-
         {/* Help & extra pages */}
         <Route path="/terms-conditions" element={<TermCondition />} />
         <Route path="/warranty-policy" element={<Warranty />} />
+        <Route path="/return" element={<ReturnRefunds />} />
+        <Route path="/press" element={<PressMedia />} />
+        <Route path="/terms" element={<Term />} />
         <Route path="/partner-with-us" element={<Partner />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/faqs" element={<FAQ />} />
-
         {/*Tablet Page*/}
- 
-         <Route path="/tablets/:brandName" element={<TabletBrandPage />} />
-         <Route path="/tablets/samsung" element={<SamsungTab />} />
-         <Route path="/tablets/oppo" element={<OppoTab/> }/>
-         <Route path="tablets/mi" element={<MiTab/>}/>
-         <Route path="tablets/lenovo" element={<LenovoTab/>} />
-         <Route path="tablets/oneplus" element={<OnePlusTab/>} />
-         <Route path="tablets/realme" element={<RealmeTab/>} />
-          <Route path="tablets/google" element={<GoogleTab/>}/>
-          <Route path="tablets/motorola" element={<MotorolaTab/>}/>
-          <Route path="tablets/iqoo" element={<IQOOTab/>}/>
-          <Route path="tablets/poco" element={<PocoTab/>}/>
-          <Route path="tablets/nokia" element={<NokiaTab/>}/>
-          <Route path="tablets/Honor" element={<HonorTab/>}/>
-          <Route path="tablets/Asus" element={<AsusTab/>}/>
-          <Route path="tablets/lava" element={<LavaTab/>}/>
-          <Route path="tablets/microsoft" element={<MicrosoftTab/>}/>
-          <Route path="tablets/micromax" element={<MicromaxTab/>}/>
-
-          {/**Laptop Brand Page */}
-           <Route path="/laptops/:brand" element={<LaptopBrandPage />} />
-           <Route path="/laptops/dell" element={<DellLap/>}/>
-           <Route path="/laptops/hp" element={<HPLap/>}/>
-           <Route path="/laptops/asus" element={<AsusLap/>}/>
-           <Route path="/laptops/lenovo" element={<LenovoLap/>}/>
-           <Route path="/laptops/msi" element={<MsiLap/>}/>
-           <Route path="/laptops/acer" element={<AcerLap/>}/>
-           <Route path="/laptops/samsung" element={<SamsungLap/>}/>
-           <Route path="/laptops/microsoft" element={<MicrosoftLap/>}/>
-         
-                 
-             {/* AMC routes */}
-        <Route path="/amc" element={<AMCDetails />} /> {/* Added route for AMC list page */}
+        <Route path="/tablets/:brandName" element={<TabletBrandPage />} />
+        <Route path="/tablets/samsung" element={<SamsungTab />} />
+        <Route path="/tablets/iphone" element={<IphoneTab />} />
+        <Route path="/tablets/oppo" element={<OppoTab />} />
+        <Route path="tablets/mi" element={<MiTab />} />
+        <Route path="tablets/lenovo" element={<LenovoTab />} />
+        <Route path="tablets/oneplus" element={<OnePlusTab />} />
+        <Route path="tablets/realme" element={<RealmeTab />} />
+        <Route path="tablets/google" element={<GoogleTab />} />
+        <Route path="tablets/motorola" element={<MotorolaTab />} />
+        <Route path="tablets/iqoo" element={<IQOOTab />} />
+        <Route path="tablets/poco" element={<PocoTab />} />
+        <Route path="tablets/nokia" element={<NokiaTab />} />
+        <Route path="tablets/Honor" element={<HonorTab />} />
+        <Route path="tablets/Asus" element={<AsusTab />} />
+        <Route path="tablets/lava" element={<LavaTab />} />
+        <Route path="tablets/microsoft" element={<MicrosoftTab />} />
+        <Route path="tablets/micromax" element={<MicromaxTab />} />
+        {/**Laptop Brand Page */}
+        <Route path="/laptops/:brand" element={<LaptopBrandPage />} />
+        <Route path="/laptops/dell" element={<DellLap />} />
+        <Route path="/laptops/hp" element={<HPLap />} />
+        <Route path="/laptops/asus" element={<AsusLap />} />
+        <Route path="/laptops/lenovo" element={<LenovoLap />} />
+        <Route path="/laptops/msi" element={<MsiLap />} />
+        <Route path="/laptops/acer" element={<AcerLap />} />
+        <Route path="/laptops/samsung" element={<SamsungLap />} />
+        <Route path="/laptops/microsoft" element={<MicrosoftLap />} />
+        {/* AMC routes */}
+        <Route path="/amc" element={<AMCDetails />} />{" "}
+        {/* Added route for AMC list page */}
         <Route path="/amc-details/:planName" element={<AMCDetails />} />
-          {/*spare parts*/}
-           <Route path="/spare-parts" element={<SparePart />} />
-
-
-
-           {/*Mobile Accersories*/}
-            <Route path="/mobile-accessories" element={<MobileAccessories />} />
-
-            {/*Watch Watches*/}
-             <Route path="/smart-watches/:watchName" element={<WatchRepairs />} />
-             
-
-
+        {/*spare parts*/}
+        <Route path="/spare-parts" element={<SparePart />} />
+        {/*Mobile Accersories*/}
+        <Route path="/mobile-accessories" element={<MobileAccessories />} />
+        {/*Watch Watches*/}
+        <Route path="/smart-watches/:watchName" element={<WatchRepairs />} />
       </Route>
     </Routes>
   );
 };
 
 export default App;
-
-

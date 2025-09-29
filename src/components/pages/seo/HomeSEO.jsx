@@ -22,7 +22,7 @@ export default function HomeSEO() {
     areaServed: { "@type": "City", name: "Pune" },
     openingHours: "Mo-Su 09:00-21:00",
     description:
-      "Repair Your Phone, Restore Your Day – With Redset Go’s expert technicians, genuine parts, and quick doorstep service, fixing your device has never been easier. Get back to what matters in just 30 minutes – right in front of you!.",
+      "Shree Tulsi Krupa Plaza, 12/1, SP Road, opposite to Dasappa Hospital, Thigalarpet, Halsurpete, Nagarathpete, Bengaluru, Karnataka 560002.",
     sameAs: [
       "https://www.facebook.com/yourpage",
       "https://www.instagram.com/yourpage",
@@ -83,15 +83,15 @@ export default function HomeSEO() {
 
   return (
     <Helmet>
-      <title>Mobile Repair in Pune – Doorstep Service in 30 Minutes | {org.name}</title>
+      <title>Mobile Repair in Banglroe – Doorstep Service in 30 Minutes | {org.name}</title>
       <meta
         name="description"
-        content="Get doorstep mobile repair in Pune in under 30 minutes. Certified technicians fix screens, batteries, charging ports and more—right in front of you."
+        content="Get doorstep mobile repair in Banglore in under 30 minutes. Certified technicians fix screens, batteries, charging ports and more—right in front of you."
       />
       <link rel="canonical" href={`${org.url}/`} />
       <meta
         name="keywords"
-        content="mobile repair pune, doorstep mobile repair pune, phone screen replacement pune, battery replacement pune, redsetgo repairs"
+        content="mobile repair Banglore doorstep mobile repair pune, phone screen replacement Banglore, battery replacement Banglore, Screen Guru repairs"
       />
       <script type="application/ld+json">{JSON.stringify(localBusinessJSONLD)}</script>
       <script type="application/ld+json">{JSON.stringify(websiteJSONLD)}</script>

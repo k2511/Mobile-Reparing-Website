@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assets/image/logo.png";
+// import logo from "../assets/image/logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -139,14 +139,14 @@ const TopBar = () => {
         <div className="d-flex justify-content-between align-items-center py-2 px-3 ">
           {/* Logo */}
           <div className="logo">
-            <Link to="/" className="d-block" onClick={handleLinkClick}>
-              <img
+            <Link to="/" className="d-block" onClick={handleLinkClick} style={{fontSize:"20px", fontWeight:"600", color:"#e60000", textDecoration:"none"}}>
+              {/* <img
                 src={logo}
                 alt="Logo"
                 height="60"
                 className="img-fluid"
                 style={{ maxWidth: "150px" }}
-              />
+              /> */}Screen Guru
             </Link>
 
           
@@ -189,17 +189,17 @@ const TopBar = () => {
                     </Link>
                     <Link
                       className="dropdown-item"
-                      to="/macbook-repair"
+                      to="/watch-repair"
                       onClick={handleLinkClick}
                     >
-                      Laptop
+                      Samrt Watches
                     </Link>
                     <Link
                       className="dropdown-item"
-                      to="/cctv-repair"
+                      to="/mobile-accessories"
                       onClick={handleLinkClick}
                     >
-                      CCTV
+                     Mobile Accessories
                     </Link>
                   </div>
 

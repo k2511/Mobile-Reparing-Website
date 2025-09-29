@@ -4,18 +4,18 @@ export default function LocalBusinessSchema() {
   const localBusinessJSONLD = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "@id": "https://www.redsetgo.in#localbusiness", // Replace with your real URL
-    name: "RedSet Go Repairs",
-    image: "https://www.redsetgo.in/logo.png", // Replace with your actual logo URL
-    url: "https://www.redsetgo.in",
-    telephone: "+91 9916313616",
-    email: "support@redsetgo.com",
+    "@id": "https://www.screengut.in#localbusiness", // Replace with your real URL
+    name: "Screen Guru Go Repairs",
+    image: "https://www.screenguru.in/logo.png", // Replace with your actual logo URL
+    url: "https://www.screenguru.in",
+    telephone: "+91 9900004531",
+    email: "info@screenguru.in",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Address: Konark Business Hub, 2nd Floor 3S-14, Kondhwa Main Road, Pune, Maharashtra 411048",
-      addressLocality: "Pune",
-      addressRegion: "MH",
-      postalCode: " 411048",
+      streetAddress: "Shree Tulsi Krupa Plaza, 12/1, SP Road, opposite to Dasappa Hospital, Thigalarpet, Halsurpete, Nagarathpete, Bengaluru, Karnataka 560002",
+      addressLocality: "Banglore",
+      addressRegion: "KA",
+      postalCode: " 560002",
       addressCountry: "IN",
     },
     openingHours: "Mo-Su 09:00-21:00",

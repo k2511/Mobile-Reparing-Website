@@ -2,15 +2,15 @@ import { Helmet } from "react-helmet";
 
 export default function DynamicSEO({ city, service }) {
   const org = {
-    name: "RedSetGo Repairs",
-    url: "https://www.resetgo.in",
-    logo: "https://www.resetgo.in/logo.png",
-    phone: "+91- 9916313616",
+    name: "Screen Guru Repairs",
+    url: "https://www.screenguru.in",
+    logo: "https://www.screengutu.in/logo.png",
+    phone: "+91-  9900004531",
     address: {
-      street: "Konark Business Hub, 2nd Floor 3S-14, Kondhwa Main Road",
+      street: "Shree Tulsi Krupa Plaza, 12/1, SP Road, opposite to Dasappa Hospital, Thigalarpet, Halsurpete, Nagarathpete, Bengaluru, Karnataka 560002",
       locality: city,
-      region: "MH",
-      postal: "411048",
+      region: "KA",
+      postal: "560002",
       country: "IN",
     },
   };

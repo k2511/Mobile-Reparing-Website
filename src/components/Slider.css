@@ -1,0 +1,129 @@
+
+/* Hero section with overlay */
+.hero-section {
+  position: relative;
+  padding-top: 2rem;
+  overflow: hidden;
+  min-height: 75vh;
+
+  background: linear-gradient(
+      rgba(30, 36, 36, 0.85),
+      rgba(30, 36, 36, 0.85)
+    ),
+    url("../assets/image/heroi-telephone.png") center/cover no-repeat;
+}
+
+/* Text styles */
+.hero-title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  color: #e9ecef;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Buttons + support */
+.support-number {
+  font-weight: bold;
+  color: #ffc107;
+  font-size: 1.05rem;
+  white-space: nowrap;
+}
+
+/* Image */
+.img-container {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  margin: auto;
+}
+
+.hero-main-img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+}
+
+/* Divider */
+.custom-shape-divider-bottom-1758017769 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1758017769 svg {
+    position: relative;
+    display: block;
+    width: calc(227% + 1.3px);
+    height: 250px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1758017769 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hero-content {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .hero-subtitle {
+    max-width: 100%;
+  }
+  .hero-buttons {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-main-img {
+    max-height: 340px;
+    
+  }
+  .img-container{
+    height: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-main-img {
+    max-height: 260px;
+  }
+  .hero-buttons .btn {
+    /* width: 100%; */
+  }
+  .support-number {
+    font-size: 0.95rem;
+  }
+}
+
+/* Keyframes for sliding in from the left */
+@keyframes slideInLeftMobile {
+  0% { 
+    transform: translateX(-100%); 
+    opacity: 0; 
+  }
+  100% { 
+    transform: translateX(0); 
+    opacity: 1; 
+  }
+}
+
+/* Apply only on mobile screens */
+@media (max-width: 576px) {
+  .hero-main-img {
+    animation: slideInLeftMobile 1s ease-out forwards;
+  }
+}

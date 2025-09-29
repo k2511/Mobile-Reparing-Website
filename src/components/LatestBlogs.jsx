@@ -1,45 +1,27 @@
 import React from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
-import img1 from "../assets/BlogSection/img1.jpg"
-import img2 from "../assets/BlogSection/img2.jpg"
-import img3 from "../assets/BlogSection/img3.jpg"
-import img4 from "../assets/BlogSection/img4.jpg"
-import img5 from "../assets/BlogSection/img5.jpg"
-import img6 from "../assets/BlogSection/img6.jpg"
-
-
 export default function BlogSection() {
   const blogs = [
     {
-      title: "5 Warning Signs Your Mobile Phone Needs Immediate Repair",
-      desc: "Is your smartphone heating up, draining battery fast, or showing unresponsive touch? Learn how to identify early signs of mobile phone damage so you can get professional mobile repair services before the problem becomes costly.",
-      img:img1, // phone repair
+      title: "Top 5 Signs Your Phone Needs Immediate Repair",
+      desc: "Is your phone overheating, battery draining fast, or the screen unresponsive? Learn how to spot issues early and get professional mobile repair services before it gets worse.",
+      img: "https://t3.ftcdn.net/jpg/16/62/78/06/360_F_1662780650_xzkOIcIn3BzAcGXJTnPpvVS4rTL6Qu5h.jpg",
     },
     {
-      title: "Top CCTV Camera Features to Keep Your Home & Business Safe",
-      desc: "Discover the latest CCTV camera features like night vision, motion detection, and remote monitoring that ensure complete home and office security. Find out which security camera systems are worth your investment.",
-      img: img2, // CCTV camera
+      title: "Tablet Maintenance Tips for Longevity",
+      desc: "Keep your tablet performing at its best with essential maintenance tips including battery care, storage management, and software updates.",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSV_kfxChAYxXgfmzWfHc0ZyBHoYKturOTGGLS08U-V67WuANvb0jh-Aw4EJt034vA5Cc&usqp=CAU",
     },
     {
-      title: "Why Your Laptop is Running Slow – Causes & Quick Fixes",
-      desc: "From low storage to outdated software, we explain the common reasons laptops slow down and how you can improve speed with expert laptop repair and optimisation services.",
-      img: img3, // slow laptop
+      title: "Smart Watch Care: Extend Your Device Life",
+      desc: "From battery optimization to strap maintenance, discover how to take care of your smart watch so it stays accurate and lasts longer.",
+      img: "https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw61458d43/images/Titan/Catalog/90188AP01_1.jpg?sw=600&sh=600",
     },
     {
-      title: "Tablet vs Laptop – Choosing the Best Device for Your Needs",
-      desc: "Confused between a tablet and a laptop for work, study, or entertainment? Compare their performance, portability, and features to make the right purchase.",
-      img: img4,// tablet vs laptop
-    },
-    {
-      title: "The Hidden Risks of Cheap Mobile, Laptop & CCTV Repairs",
-      desc: "Opting for cheap repair services can lead to poor quality parts, unreliable work, and permanent damage. Here’s why choosing a certified repair technician saves you money in the long run.",
-      img:img5, // technician repair
-    },
-    {
-      title: "Data Safety During Mobile & Laptop Repairs – Our Process",
-      desc: "We explain how we protect your data during repairs with secure handling, privacy protocols, and safe storage to keep your personal and business information confidential.",
-      img: img6, // data security
+      title: "Must-Have Mobile Accessories for Your Device",
+      desc: "Protect and enhance your mobile experience with essential accessories like cases, screen protectors, chargers, and headphones.",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu2nv3-ZvqclqdxJ0Zc6uO4pFs7Z3_M1apQg&s",
     }
   ];
 
@@ -51,19 +33,19 @@ export default function BlogSection() {
           style={{
             width: "80px",
             border: "2px solid red",
-            margin: "0 auto 40px"
+            margin: "0 auto 40px",
           }}
         />
         <Row>
           {blogs.map((blog, idx) => (
-            <Col md={6} lg={4} key={idx} className="mb-4">
-              <Card className="shadow-sm h-100 border-0">
+            <Col xs={12} sm={6} md={6} lg={3} key={idx} className="mb-4">
+              <Card className="shadow-sm h-100 border-0 d-flex flex-column">
                 <div
                   style={{
                     height: "200px",
                     overflow: "hidden",
                     borderTopLeftRadius: "8px",
-                    borderTopRightRadius: "8px"
+                    borderTopRightRadius: "8px",
                   }}
                 >
                   <Card.Img
@@ -73,19 +55,19 @@ export default function BlogSection() {
                     style={{
                       height: "100%",
                       width: "100%",
-                      objectFit: "cover"
+                      objectFit: "cover",
                     }}
                   />
                 </div>
-                <Card.Body>
+                <Card.Body className="d-flex flex-column">
                   <Card.Title className="fw-semibold">{blog.title}</Card.Title>
                   <Card.Text
                     className="text-muted"
-                    style={{ fontSize: "0.9rem" }}
+                    style={{ fontSize: "0.9rem", flexGrow: 1 }}
                   >
                     {blog.desc}
                   </Card.Text>
-                  <Button variant="danger" size="sm">
+                  <Button variant="danger" size="sm" className="mt-auto">
                     Read More
                   </Button>
                 </Card.Body>

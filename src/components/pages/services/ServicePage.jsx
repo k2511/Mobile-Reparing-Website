@@ -5,8 +5,8 @@ import { ORG } from "../seo/seoConfig";
 const MAP = {
   mobile: {
     name: "Mobile Repair",
-    desc: "Doorstep mobile repair in Pune. Screens, batteries, charging ports fixed in 30 minutes by certified technicians.",
-    keywords: "mobile repair pune, doorstep mobile repair, phone screen replacement pune",
+    desc: "Doorstep mobile repair in Banglore. Screens, batteries, charging ports fixed in 30 minutes by certified technicians.",
+    keywords: "mobile repair Banglore, doorstep mobile repair, phone screen replacement Banglore",
   },
   tablets: {
     name: "Tablet Repair",
@@ -14,19 +14,19 @@ const MAP = {
     keywords: "tablet repair pune, ipad screen replacement pune",
   },
   macbook: {
-    name: "Laptop Repair",
-    desc: "Expert MacBook repair in Pune — screen, battery, keyboard and logic board service.",
-    keywords: "macbook repair pune, macbook battery replacement pune",
+    name: "Mobile Accesories Repair",
+    desc: "Expert Mobile Accories in Banglore — screen, battery, keyboard and logic board service.",
+    keywords: "macbook repair Banglore, Mobile Accesories in Banglore",
   },
   "smart-watch": {
     name: "Smart Watch Repair",
-    desc: "Smart watch repair in Pune — screen, battery, strap and water damage service.",
-    keywords: "smart watch repair pune, apple watch repair pune",
+    desc: "Smart watch repair in Banglore — screen, battery, strap and water damage service.",
+    keywords: "smart watch repair Banglore, apple watch repair Banglore",
   },
   iphone: {
     name: "iPhone Repair",
-    desc: "iPhone repair at home in Pune. Screen & battery replacement in 30 minutes with genuine parts.",
-    keywords: "iphone repair pune, iphone screen replacement pune",
+    desc: "iPhone repair at home in Banglore. Screen & battery replacement in 30 minutes with genuine parts.",
+    keywords: "iphone repair Banglore, iphone screen replacement pune",
   },
 };
 
@@ -34,11 +34,11 @@ export default function ServicePage() {
   const { serviceSlug } = useParams();
   const data = MAP[serviceSlug] || {
     name: "Repair Service",
-    desc: "Reliable device repair service in Pune.",
+    desc: "Reliable device repair service in Banglore.",
     keywords: "repair pune",
   };
 
-  const title = `${data.name} in Pune – Doorstep Service | ${ORG.name}`;
+  const title = `${data.name} in Banglore – Doorstep Service | ${ORG.name}`;
   const url = `${ORG.url}/services/${serviceSlug}`;
 
   return (

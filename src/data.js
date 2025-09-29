@@ -1,13 +1,13 @@
 export const org = {
-  name: "RedSetGo Repairs",
-  url: "https://www.resetgo.in",
-  logo: "https://www.resetgo.in/logo.png",
-  phone: "+91-7676786764",
+  name: "Screen Guru Repairs",
+  url: "https://www.screenguru.in",
+  logo: "https://www.screenguru.in/logo.png",
+  phone: "+91-99000 07849",
   address: {
-    street: "Konark Business Hub, 2nd Floor 3S-14, Kondhwa Main Road",
-    locality: "Pune",
-    region: "MH",
-    postal: "411048",
+    street: "Shree Tulsi Krupa Plaza, 12/1, SP Road, opposite to Dasappa Hospital, Thigalarpet, Halsurpete, Nagarathpete, Bengaluru, Karnataka 560002",
+    locality: "Banglore",
+    region: "KA",
+    postal: "560002",
     country: "IN",
   },
 };
@@ -21,10 +21,10 @@ export const cities = [
 ];
 
 export const services = [
-  "Mobile Repair",
-  "Laptop Repair",
+  "Phone Repair",
+  "Smart Watches ",
   "Tablet Repair",
-  "CCTV Repair"
+  "Mobile Accesories "
 ];
 
 

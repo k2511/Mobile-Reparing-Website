@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
@@ -352,11 +351,11 @@ const Doorstep = () => {
 
   const services = [
      {
-      img: "https://ongofix.com/upload/sliders/644126phone-img.png",
-      gadget: "Mobile Repair",
+      img: "data:image/jpeg;base64,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",
+      gadget: "Phones",
     },
     {
-      img: "https://th.bing.com/th/id/OIP.fQaT_GrXWDUfdK_Npy65NwHaHa?w=169&h=180&c=7&r=0&o=7&dpr=1.6&pid=1.7&rm=3",
+      img: "https://http2.mlstatic.com/D_Q_NP_2X_989978-MEC90929828073_082025-T.webp",
       gadget: "Tablet",
     },
     {
@@ -381,7 +380,7 @@ const Doorstep = () => {
   navigate("/mobile-accessories");
 }else if (service.gadget === "Tablet") {
       navigate("/tablet-repair");
-    } else if (service.gadget === "Mobile Repair") {
+    } else if (service.gadget === "Phones") {
       const brandSection = document.getElementById("brand-section");
       if (brandSection) {
         brandSection.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -397,42 +396,13 @@ const Doorstep = () => {
 
   return (
     <div className="container-fluid g-4 my-5 doorstep-container">
-      <div className="container">
+      <div className="container doorstep-container">
         {/* Header */}
         <div className="header text-center">
           <h1>DOORSTEP PHONE REPAIRS</h1>
-          <p>The fastest doorstep mobile repair services</p>
+          <p>What would you like to fix Today</p>
         </div>
 
-        {/* Search */}
-        <div className="search-section text-center mb-4">
-          <div className="search-container">
-            <div className="position-relative">
-              <input
-                type="text"
-                className="search-input form-control ps-5"
-                placeholder="Search mobile..."
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-                style={{
-                  padding: "10px",
-                  width: "300px",
-                  marginBottom: "20px",
-                }}
-              />
-              <i
-                className="fa-solid fa-magnifying-glass position-absolute"
-                style={{
-                  left: "20px",
-                  top: "39%",
-                  transform: "translateY(-50%)",
-                  color: "#888",
-                }}
-              ></i>
-            </div>
-            <p className="model-link">How to find my model number</p>
-          </div>
-        </div>
 
         
         <div className="row g-4 justify-content-center" >
@@ -441,7 +411,8 @@ const Doorstep = () => {
             services.map((service, index) => (
               <div
                 key={index}
-                className="col-6 col-sm-6 col-md-4 col-lg-2 d-flex"
+                className="col-6 col-sm-6 col-md-6 col-lg-3 d-flex"
+                style={{marginTop:"50px"}}
               >
                 <div
                   className="service-card w-100"
@@ -482,7 +453,7 @@ const Doorstep = () => {
                   borderRadius: "8px",
                   transition: "transform 0.2s ease, box-shadow 0.2s ease",
                   border: "1px solid #e0e0e0",
-                  backgroundColor: "#fff",
+                  // backgroundColor: "#fff",
                   width: "100%",
                   maxWidth: "150px",
                 }}
@@ -530,8 +501,3 @@ const Doorstep = () => {
 };
 
 export default Doorstep;
-
-
-
-
-

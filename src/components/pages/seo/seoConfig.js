@@ -1,13 +1,13 @@
 export const ORG = {
-  name: "RedSetGo Repairs",
-  url: "https://www.resetgo.in",
-  logo: "https://www.resetgo.in/logo.png",
-  phone: "+91- 9916313616",
+  name: "Screen Guru",
+  url: "https://www.screenguru.in",
+  logo: "https://www.screenguru.in/logo.png",
+  phone: "+91- 9900004531",
   address: {
-    street: "Konark Business Hub, 2nd Floor 3S-14, Kondhwa Main Road",
-    locality: "Pune",
-    region: "MH",
-    postal: "411048",
+    street: "hree Tulsi Krupa Plaza, 12/1, SP Road, opposite to Dasappa Hospital, Thigalarpet, Halsurpete, Nagarathpete, Bengaluru, Karnataka 560002",
+    locality: "Banglore",
+    region: "KA",
+    postal: "560002",
     country: "IN",
   },
   sameAs: [
