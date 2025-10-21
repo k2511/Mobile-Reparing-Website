@@ -1,16 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import SpecialOfferModal from './offer/SpecialOfferModal';
 
-const Home = () => (
-  <section className="hero py-5 text-center">
-    <div className="container">
-      <h1 className="mb-3 fw-bold">Fast & Reliable Mobile Repair</h1>
-      <p className="lead mb-4">Screen replacement, battery issues, water damage repairs – done in under 60 minutes.</p>
-      {/* <Link to="/services" className="btn btn-outline-primary btn-lg">View Services</Link> */}
-      <div className="mt-5">
-        <img src="https://source.unsplash.com/1000x400/?mobile,repair,phone" alt="Mobile Repair" className="img-fluid rounded shadow"/>
+const Home = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const closeModal = () => setIsModalOpen(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show modal when user scrolls down 300px (adjust as needed)
+      if (window.scrollY > 300) {
+        setIsModalOpen(true);
+        window.removeEventListener("scroll", handleScroll); // show only once
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return (
+    <section className="">
+      <div className="container">
+
+        {/* Special Offer Modal */}
+        <SpecialOfferModal isOpen={isModalOpen} onClose={closeModal} />
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Home;
+
+
+

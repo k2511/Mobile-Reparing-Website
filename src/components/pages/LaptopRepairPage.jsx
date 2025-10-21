@@ -1,8 +1,9 @@
-/****----------New Code Start Here------------------------------------------ */
+// components/pages/LaptopRepairPage.jsx (no changes needed - already navigates correctly to /laptops/:brand-lowercase)
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 
+import Apple from "../../assets/iphone/iphone.png";
 import Dell from "../../assets/image/dell.png";
 import HP from "../../assets/image/hp.png";
 import Lenovo from "../../assets/image/lenovo.png";
@@ -12,8 +13,8 @@ import MSI from "../../assets/image/msi.png";
 import Microsoft from "../../assets/image/microsoft.png";
 import Samsung from "../../assets/image/Samsung.png";
 
-
 const brands = [
+  {name:"Apple", image:Apple},
   { name: "Dell", image: Dell },
   { name: "HP", image: HP },
   { name: "Lenovo", image: Lenovo },
@@ -22,7 +23,6 @@ const brands = [
   { name: "Acer", image: Acer },
   { name: "Microsoft", image: Microsoft },
   { name: "Samsung", image:Samsung }
-
 ];
 
 const LaptopRepairPage = () => {
@@ -153,10 +153,3 @@ const LaptopRepairPage = () => {
 };
 
 export default LaptopRepairPage;
-
-
-
-
-
-
-

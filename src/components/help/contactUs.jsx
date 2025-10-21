@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ContactUs = () => {
+  const [showMap, setShowMap] = useState(true);
+
   // WhatsApp number with country code
   const whatsappNumber = "919900004528"; // India +91
   const prefilledMessage = encodeURIComponent(
     "Hi Screen Guru, I want to inquire about your repair services."
   );
+
+  const handleAddressClick = () => {
+    setShowMap((prev) => !prev); // toggle iframe
+  };
 
   return (
     <div className="container py-5">
@@ -47,10 +53,35 @@ const ContactUs = () => {
             <div className="contact-info p-4 rounded-3 shadow-sm border border-light">
               <h5 className="fw-bold mb-3 text-primary">Get in Touch</h5>
 
+              {/* Clickable Address */}
               <p>
-                <strong>📍 Address:</strong> Shree Tulsi Krupa Plaza, 12/1, SP Road, opposite to Dasappa Hospital, Thigalarpet, Halsurpete, Nagarathpete, Bengaluru, Karnataka 560002
+                <strong>📍 Address: </strong>
+                <span
+                  onClick={handleAddressClick}
+                  style={{ cursor: "pointer", color: "#007bff", textDecoration: "underline" }}
+                >
+                  Shree Tulsi Krupa Plaza, 12/1, SP Road, opposite to Dasappa Hospital,
+                  Thigalarpet, Halsurpete, Nagarathpete, Bengaluru, Karnataka 560002
+                </span>
               </p>
-              <p>
+
+              {/* Show iframe if clicked */}
+              {showMap && (
+                <div className="mt-3">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.1149846293024!2d77.58144617484125!3d12.964493387350199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15835458b8e3%3A0x864090ff055cec15!2sScreenguru%3A%20Affordable%20Phone%2C%20Watch%20%26%20Tab%20Repairs%20at%20Your%20Doorstep*21%20(6%20Months%20Warranty)!5e0!3m2!1sen!2sin!4v1759245088697!5m2!1sen!2sin"
+                    width="100%"
+                    height="400"
+                    style={{ border: 0, borderRadius: "10px" }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Google Map"
+                  ></iframe>
+                </div>
+              )}
+
+              <p className="mt-3">
                 <strong>📞 Phone:</strong>{" "}
                 <a
                   href="tel:+919900004528"

@@ -1,0 +1,285 @@
+import React, { useState } from "react";
+import { toast } from "react-hot-toast";
+import "./SpecialOfferModal.css";
+
+const SpecialOfferModal = ({ isOpen, onClose }) => {
+  const [showForm, setShowForm] = useState(false);
+  const [userLocation, setUserLocation] = useState("");
+  const [detectedAddress, setDetectedAddress] = useState("");
+  const [coords, setCoords] = useState(null);
+  const [isLoadingLocation, setIsLoadingLocation] = useState(false);
+  const [selectedOffer, setSelectedOffer] = useState("");
+
+  if (!isOpen) return null;
+
+  const offers = [
+    { id: 1, title: "Display Replacement", price: "₹899", original: "₹1,499" },
+    { id: 2, title: "Glass Replacement", price: "₹499", original: "₹899" },
+  ];
+
+  const freeItems = [
+    { icon: "🔌", name: "Data Cable" },
+    { icon: "🎧", name: "Headphone" },
+    { icon: "📱", name: "Mobile Stand" },
+    { icon: "🎮", name: "PUBG Gloves" },
+    { icon: "🛡️", name: "Cable Protector" },
+  ];
+
+  const valueProps = [
+    { icon: "⚡", text: "Same Day Service" },
+    { icon: "🔧", text: "Expert Technicians" },
+    { icon: "🛡️", text: "90 Days Warranty" },
+  ];
+
+  const getUserLocation = () => {
+    setIsLoadingLocation(true);
+    setUserLocation("Detecting your location...");
+
+    if (!navigator.geolocation) {
+      setUserLocation("Geolocation not supported. Enter manually.");
+      setDetectedAddress("");
+      setIsLoadingLocation(false);
+      toast.error("Geolocation not supported.");
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude } = position.coords;
+        setCoords({ latitude, longitude });
+        try {
+          const response = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${latitude}&lon=${longitude}`
+          );
+          const data = await response.json();
+          const address = data.display_name || "Address not found";
+          setUserLocation(address);
+          setDetectedAddress(address);
+          toast.success("Location detected!");
+        } catch {
+          setUserLocation("Error getting address. Enter manually.");
+          toast.error("Error getting address");
+        } finally {
+          setIsLoadingLocation(false);
+        }
+      },
+      (error) => {
+        console.error(error);
+        setUserLocation("Location access denied or unavailable.");
+        setIsLoadingLocation(false);
+        toast.error("Location access denied");
+      },
+      { enableHighAccuracy: true, timeout: 15000, maximumAge: 60000 }
+    );
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const name = form.name.value.trim();
+    const email = form.email.value.trim();
+    const area = detectedAddress || userLocation || form.location.value.trim();
+
+    if (!name || !email || !area || !selectedOffer) {
+      toast.error("Please fill all fields and select an offer");
+      return;
+    }
+
+    const mapsLink = coords
+      ? `\n*Maps Link:* https://www.google.com/maps?q=${coords.latitude},${coords.longitude}`
+      : "";
+
+    const text = `📱 *New Repair Request*
+*Name:* ${name}
+*Email:* ${email}
+*Location:* ${area}
+*Selected Offer:* ${selectedOffer}${mapsLink}
+*Thank you!*`;
+
+    window.open(
+      `https://wa.me/919900004531?text=${encodeURIComponent(text)}`,
+      "_blank"
+    );
+    toast.success("Booking submitted via WhatsApp ✅");
+    onClose();
+  };
+
+  const handleCall = () => {
+    window.open("tel:9900004531");
+  };
+
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+        {!showForm ? (
+          <>
+            {/* Main UI */}
+            <div className="modal-header">
+              <div className="offer-badge">LIMITED TIME OFFER</div>
+              <button className="close-icon" onClick={onClose}>
+                ×
+              </button>
+            </div>
+
+            <div className="modal-body">
+              <div className="pricing-section">
+                <h3 className="section-title">Exclusive Repair Deals</h3>
+
+                <div className="price-cards">
+                  {offers.map((offer) => (
+                    <div key={offer.id} className="price-card">
+                      <div className="card-header">{offer.title}</div>
+                      <div className="price">{offer.price}</div>
+                      <div className="original-price">{offer.original}</div>
+                      <div className="discount-badge">
+                        Save{" "}
+                        {Math.round(
+                          ((parseInt(offer.original.replace("₹", "")) -
+                            parseInt(offer.price.replace("₹", ""))) /
+                            parseInt(offer.original.replace("₹", ""))) *
+                            100
+                        )}
+                        %
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="two-column-layout">
+                {/* Free items */}
+                <div className="free-items-section">
+                  <div className="free-title">
+                    <span className="free-icon">🎁</span>FREE With Display Change
+                  </div>
+
+                  <div className="free-items-grid">
+                    {freeItems.map((item, idx) => (
+                      <div key={idx} className="free-item">
+                        <div className="item-icon">{item.icon}</div>
+                        <span>{item.name}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Right column */}
+                <div className="right-column">
+                  <div className="contact-section">
+                    <div className="contact-title">
+                      📞 Call Now to Avail Offer
+                    </div>
+                    <button
+                      className="contact-number"
+                      onClick={handleCall}
+                      aria-label="Call 99000 04531"
+                    >
+                      99000 04531
+                    </button>
+                    <div className="contact-note">Tap to call directly</div>
+                  </div>
+
+                  <div className="value-proposition">
+                    {valueProps.map((v, idx) => (
+                      <div key={idx} className="value-item">
+                        <span className="value-icon">{v.icon}</span>
+                        {v.text}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="modal-footer">
+              <button
+                className="cta-button"
+                onClick={() => setShowForm(true)}
+              >
+                Claim This Offer
+              </button>
+              <div className="urgency-text">
+                🔥 Limited spots available - Offer ends soon!
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            {/* Form UI */}
+            <div className="modal-header">
+              <h5 className="modal-title">Claim Your Offer</h5>
+              <button className="close-icon" onClick={onClose}>
+                ×
+              </button>
+            </div>
+
+            <div className="modal-body">
+              <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Enter Name"
+                  className="form-control mb-2"
+                  required
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Enter Email"
+                  className="form-control mb-2"
+                  required
+                />
+
+                <button
+                  type="button"
+                  className="btn btn-outline-primary mb-2"
+                  onClick={getUserLocation}
+                  disabled={isLoadingLocation}
+                >
+                  {isLoadingLocation
+                    ? "Detecting..."
+                    : "📍 Detect Current Location"}
+                </button>
+
+                <textarea
+                  name="location"
+                  placeholder="Your area / address"
+                  className="form-control mb-2"
+                  value={userLocation}
+                  onChange={(e) => {
+                    setUserLocation(e.target.value);
+                    setDetectedAddress("");
+                  }}
+                  rows="3"
+                  required
+                />
+
+                <select
+                  className="form-control mb-2"
+                  value={selectedOffer}
+                  onChange={(e) => setSelectedOffer(e.target.value)}
+                  required
+                >
+                  <option value="">Select Offer</option>
+                  {offers.map((offer) => (
+                    <option key={offer.id} value={offer.title}>
+                      {offer.title}
+                    </option>
+                  ))}
+                </select>
+
+                <div className="modal-footer">
+                  <button type="submit" className="btn btn-danger">
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default SpecialOfferModal;

@@ -1,0 +1,78 @@
+.free-consultation-banner {
+  background-color: #1e2b27;
+  border-radius: 12px;
+  padding: 30px 25px;
+  margin: 20px auto;
+  max-width: 1100px;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Title styling */
+.banner-title {
+  color: red;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+/* Paragraph styling */
+.banner-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Buttons styling */
+.cta-button {
+  border-radius: 6px;
+  font-weight: 600;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.consult-button {
+  border-radius: 6px;
+  font-weight: 500;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 10px 20px;
+  font-size: 14px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+}
+
+.consult-button.hovered {
+  background-color: #000;
+  border-color: #000;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 767px) {
+  .free-consultation-banner {
+    padding: 20px 15px;
+    margin: 15px 10px;
+  }
+
+  .banner-title {
+    font-size: 1.2rem;
+  }
+
+  .banner-text {
+    font-size: 14px;
+  }
+
+  .cta-button,
+  .consult-button {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+}

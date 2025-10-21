@@ -139,17 +139,26 @@ const TopBar = () => {
         <div className="d-flex justify-content-between align-items-center py-2 px-3 ">
           {/* Logo */}
           <div className="logo">
-            <Link to="/" className="d-block" onClick={handleLinkClick} style={{fontSize:"20px", fontWeight:"600", color:"#e60000", textDecoration:"none"}}>
+            <Link
+              to="/"
+              className="d-block"
+              onClick={handleLinkClick}
+              style={{
+                fontSize: "20px",
+                fontWeight: "600",
+                color: "#e60000",
+                textDecoration: "none",
+              }}
+            >
               {/* <img
                 src={logo}
                 alt="Logo"
                 height="60"
                 className="img-fluid"
                 style={{ maxWidth: "150px" }}
-              /> */}Screen Guru
+              /> */}
+              Screen Guru
             </Link>
-
-          
           </div>
 
           {/* Desktop Navigation */}
@@ -199,10 +208,9 @@ const TopBar = () => {
                       to="/mobile-accessories"
                       onClick={handleLinkClick}
                     >
-                     Mobile Accessories
+                      Mobile Accessories
                     </Link>
                   </div>
-
                 )}
               </li>
               <li className="nav-item dropdown mx-2" ref={brandDropdownRef}>
@@ -238,8 +246,6 @@ const TopBar = () => {
                 >
                   Contact Us
                 </Link>
-
-               
               </li>
             </ul>
           </nav>
@@ -314,17 +320,17 @@ const TopBar = () => {
                   </Link>
                   <Link
                     className="dropdown-item d-block py-2"
-                    to="/macbook-repair"
+                    to="/watch-repair"
                     onClick={handleLinkClick}
                   >
-                    Laptop
+                    Smart Watches
                   </Link>
                   <Link
                     className="dropdown-item d-block py-2"
-                    to="/cctv-repair"
+                    to="/mobile-accessories"
                     onClick={handleLinkClick}
                   >
-                    CCTV
+                    Mobile Accessories
                   </Link>
                 </div>
               )}
@@ -435,7 +441,7 @@ const TopBar = () => {
             position: absolute;
             top: -13px !important;
             left: 100px !important;
-            right:0;
+            right: 0;
           }
         }
 
@@ -460,9 +466,9 @@ const TopBar = () => {
             width: 122px !important;
             object-fit: contain;
 
-            position:absolute;
-            top:-16px;
-            left:0;
+            position: absolute;
+            top: -16px;
+            left: 0;
           }
         }
       `}</style>

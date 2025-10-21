@@ -47,7 +47,7 @@ const Brand = () => {
   };
 
   return (
-    <Container className="my-5 text-center" id="mobile-section">
+    <Container className=" text-center" id="mobile-section">
       {/* Responsive marginTop handled via CSS */}
       <h3 className="brand-heading mb-2">
         CHOOSE YOUR BRANDS
@@ -63,7 +63,8 @@ const Brand = () => {
 
   @media (min-width: 992px) {
     .brand-heading {
-      margin-top: 100px;
+      // margin-top: 100px;
+      margin-top:300px;
     }
   }
 
