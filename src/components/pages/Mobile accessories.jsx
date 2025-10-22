@@ -456,13 +456,9 @@
 
 
 
-// MobileAccessories.jsx
+
 import React from "react";
 
-/**
- * MobileAccessories.jsx
- * Temporary placeholder — shows "Coming Soon"
- */
 
 export default function MobileAccessories() {
   return (

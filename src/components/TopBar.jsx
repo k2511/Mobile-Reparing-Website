@@ -196,12 +196,26 @@ const TopBar = () => {
                     >
                       Tablet
                     </Link>
+                        <Link
+                      className="dropdown-item"
+                      to="/macbook-repair"
+                      onClick={handleLinkClick}
+                    >
+                      Laptop
+                    </Link>
                     <Link
                       className="dropdown-item"
                       to="/watch-repair"
                       onClick={handleLinkClick}
                     >
-                      Samrt Watches
+                      Smart Watches
+                    </Link>
+                      <Link
+                      className="dropdown-item"
+                      to="/buyphones"
+                      onClick={handleLinkClick}
+                    >
+                     Buy Phones
                     </Link>
                     <Link
                       className="dropdown-item"
@@ -318,6 +332,14 @@ const TopBar = () => {
                   >
                     Tablet
                   </Link>
+
+                       <Link
+                      className="dropdown-item"
+                      to="/macbook-repair"
+                      onClick={handleLinkClick}
+                    >
+                      Laptop
+                    </Link>
                   <Link
                     className="dropdown-item d-block py-2"
                     to="/watch-repair"
@@ -325,6 +347,13 @@ const TopBar = () => {
                   >
                     Smart Watches
                   </Link>
+                         <Link
+                      className="dropdown-item"
+                      to="/buyphones"
+                      onClick={handleLinkClick}
+                    >
+                      Buy Phones
+                    </Link>
                   <Link
                     className="dropdown-item d-block py-2"
                     to="/mobile-accessories"

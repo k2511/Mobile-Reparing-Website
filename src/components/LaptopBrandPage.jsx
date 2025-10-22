@@ -22,3 +22,4 @@ const LaptopBrandPage = () => {
 };
 
 export default LaptopBrandPage;
+

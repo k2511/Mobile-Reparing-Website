@@ -1,3 +1,4 @@
+
 // import React, { useState, useEffect } from "react";
 // import { useNavigate } from "react-router-dom";
 // import { useLocation } from "react-router-dom";
@@ -358,6 +359,11 @@
 //       img: "https://http2.mlstatic.com/D_Q_NP_2X_989978-MEC90929828073_082025-T.webp",
 //       gadget: "Tablet",
 //     },
+
+//     {
+//       img:"https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111902_mbp14-silver2.png",
+//       gadget:"Laptop"
+//     },
 //     {
 //       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH_LAKWe29DvMg2d_3LkTlllWQmWIbiZWokw&s",
 //       gadget: "Smart Watches",
@@ -374,7 +380,7 @@
 //   );
 
 //   const handleServiceClick = (service) => {
-//   if (service.gadget === "Computers") {
+//   if (service.gadget === "Laptop") {
 //       navigate("/macbook-repair");
 //     } else if (service.gadget === "Mobile Accessories") {
 //   navigate("/mobile-accessories");
@@ -512,6 +518,7 @@ import { useNavigate } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import "../components/Doorstep.css";
 // images
+import buyphones from "../assets/image/buyphones.png"
 import mi1 from "../assets/mi/mi-1.png";
 import mi2 from "../assets/mi/mi-2.png";
 import mi3 from "../assets/mi/mi-3.png";
@@ -869,13 +876,19 @@ const Doorstep = () => {
     },
 
     {
-      img:"https://pyxis.nymag.com/v1/imgs/c74/0b3/1c74372712c9ec655ac6b6b191eaabf118.rsquare.w600.jpg",
+      img:"https://cdsassets.apple.com/live/SZLF0YNV/images/sp/111902_mbp14-silver2.png",
       gadget:"Laptop"
     },
     {
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH_LAKWe29DvMg2d_3LkTlllWQmWIbiZWokw&s",
       gadget: "Smart Watches",
     },
+     
+    {
+      img:buyphones,
+      gadget:"Buy Phones",
+    },
+
     {
       img: "https://yandex-images.clstorage.net/X5D2Ul200/5ff30ekXBx/7HWj4pmea8yx8SDo8yx4dOkj3PnWZ46-p1toZhHDwbvvoGQkSAO25JxVhn1RmOhN-xOXLQWShmTyt1I80Nw5dfghsa7f3nSQ5bU_vPsvfXb0fp_oyj2K470ZND9YzMznuvUPHz9wl4PkNvcMKLWpTa1ExTAbydlsz4tFUdj6B13uXZ3VmY8Q7brsdvj0DU9Q3GL1_fcfn_CtSx80SbHwmeaPHwgraYG68RbROSqhlkGrUfYYYMn-ZtW7HEPz2Spd3n6FxJiEN9C07mjF0TVldPxb2e_gDojWmEkTF2CcyozpngAmDnyXuOwNzR03jYJ8s0fyPmDn2EzRmx9C1vwxZcJnnciEoy3LofF59PcmUVffd-DayR6DxZZFDR1tj_aJ2agGLTh2ub3ACe8CF6qbSq5z9y545MRi158fc-fGJ2ndY4Dgm58K4qfwV9T8KW1W1kjx1fYdpsOmagQmWZzjkcq1Nwk5fqW-2ybOPQ-vvnmlecMJQeTwb-q7Lmn38TNz3Hu52ZqEAtK6wULCwitlYdR7_9H4I5XMnFM0IHyU-q_kgiEVDnudndgc8gcpiKN-gVTvGHLT50TGmwFG7vwLY_NtsfC7ux3SuNZt4vQJelXzavDZ1gaM5KVGLz5rocmg36Q3GTlrmoTHKNoDD7KCQoZp2T1P-f9yxa4IUv_XLUP2TbDvgIUQzITWePvoCWZA_nzR9OA_kOq9WyAicZjsrPKyEQsyd6SP7QLKODSLpnm0b8UaQMvuWee-HV3HyTNB21u_14GmMcew823e2hFbadZey-zKILHIgWkUM0yDxajhowoLPVegq8Q17i0wlZN7r3fMKUTf0VnXvCF2ztIdYPBSntWBgjzJsfZ28t4tVlnTSf76xQWT5oFWBT5enuuYwLYzLih2pbHhLtw7NZGbXYlP1RhTwP9D1rcqY9PrL3_YeIPQpYsJ6pv0ecDGCGVz8H757PQ4keOqaiQqTp0",
       gadget: "Mobile Accessories",
@@ -899,8 +912,9 @@ const Doorstep = () => {
       if (brandSection) {
         brandSection.scrollIntoView({ behavior: "smooth", block: "start" });
       }
-    } else if (service.gadget === "AMC") {
-      navigate("/amc");
+
+    } else if (service.gadget === "Buy Phones") {
+      navigate("/buyphones");
     } else if(service.gadget === "Smart Watches"){
       navigate("/watch-repair");
     }
